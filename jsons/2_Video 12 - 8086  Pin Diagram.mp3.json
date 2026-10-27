@@ -1,0 +1,4380 @@
+{
+    "chunks": [
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 0.0,
+            "end": 5.8,
+            "text": " Hello and welcome to this lecture series on microprocessor and microcontroller."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 6.44,
+            "end": 11.4,
+            "text": " And in this current video, we are going to discuss 8086 microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 11.82,
+            "end": 17.38,
+            "text": " And we are going to discuss the pin diagram of 8086 microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 17.84,
+            "end": 21.240000000000002,
+            "text": " In the earlier video lecture, that is video lecture number 11,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 21.7,
+            "end": 26.7,
+            "text": " we have studied the architecture of 8086 microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 26.7,
+            "end": 31.18,
+            "text": " So let me just quickly revise what we did in the last lecture."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 31.46,
+            "end": 36.28,
+            "text": " So in the last lecture, we have seen one slide for architecture."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 37.08,
+            "end": 41.519999999999996,
+            "text": " So for 8086 microprocessor, the architecture is this."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 42.06,
+            "end": 50.0,
+            "text": " And the main highlights of this architecture in comparison to the 8085 microprocessor was"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 50.0,
+            "end": 55.84,
+            "text": " that bus interface unit and execution unit are separate here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 55.84,
+            "end": 62.88,
+            "text": " I mean, execution unit will all deal with execution of the statements that we have made in programming,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 63.02,
+            "end": 65.92,
+            "text": " the arithmetic, shift statements, etc."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 66.52000000000001,
+            "end": 69.56,
+            "text": " These calculations will be done by the execution unit."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 69.98,
+            "end": 75.92,
+            "text": " And the bus interface unit, it will be working independent of this execution unit."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 75.92,
+            "end": 82.8,
+            "text": " So the purpose of bus execution unit will be to transfer the data from the externally interfaced"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 82.8,
+            "end": 84.48,
+            "text": " one megabyte memory."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 85.04,
+            "end": 91.88,
+            "text": " That is the maximum possible memory, which you can externally interface to 8086 microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 92.28,
+            "end": 92.4,
+            "text": " Right."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 92.82,
+            "end": 98.14,
+            "text": " So it's not that 8086 is a 16-bit microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 98.14,
+            "end": 102.44,
+            "text": " So that's why every location in the memory will also be of 16 bits."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 102.62,
+            "end": 102.74,
+            "text": " No."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 103.2,
+            "end": 109.04,
+            "text": " Every location in the memory that is externally interfaced memory will still be of 8 bits."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 109.14,
+            "end": 110.04,
+            "text": " That is 1 byte."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 110.38,
+            "end": 113.4,
+            "text": " And we will have 1 mega such locations."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 113.6,
+            "end": 116.14,
+            "text": " That is 2 raised to the power of 20 such locations."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 116.62,
+            "end": 124.54,
+            "text": " And since 8086 happens to be a 16-bit microprocessor, which means that the data bus that you see here,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 124.66,
+            "end": 126.0,
+            "text": " it's of 16 bits."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 126.0,
+            "end": 132.8,
+            "text": " However, the address bus has to be of 20 bits because 2 raised to the power of 20 is 1 mega."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 132.98,
+            "end": 140.52,
+            "text": " So that is why we can address the externally interfaced 1 megabyte memory locations there."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 141.44,
+            "end": 144.36,
+            "text": " So 8086 is a 16-bit microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 144.66,
+            "end": 150.14,
+            "text": " And on that note, we have most of the general purpose registers, which are accumulator, B register,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 150.38,
+            "end": 152.06,
+            "text": " C register, D register, etc."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 152.42000000000002,
+            "end": 153.98,
+            "text": " These are all 16 bits."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 153.98,
+            "end": 159.28,
+            "text": " However, they can also be used in this 8-bit fashion, the higher byte and the lower order byte."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 159.44,
+            "end": 161.42,
+            "text": " So they can be used in that fashion also."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 161.89999999999998,
+            "end": 167.51999999999998,
+            "text": " Then you have got stack pointer, then base pointer, source index, destination index, etc."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 167.66,
+            "end": 169.06,
+            "text": " In this execution unit."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 169.45999999999998,
+            "end": 174.06,
+            "text": " These registers that you see here, code segment, data segment, extra segment, stack segment,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 174.06,
+            "end": 175.06,
+            "text": " and instruction pointer."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 175.06,
+            "end": 177.3,
+            "text": " They are also of 16 bits."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 177.3,
+            "end": 184.98,
+            "text": " But they contain the address of the corresponding sections in the externally interfaced memory."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 184.98,
+            "end": 193.66,
+            "text": " For example, code segment in externally interfaced memory, which is 1 megabyte completely, will be of 64 kilobyte."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 193.66,
+            "end": 200.38,
+            "text": " Similarly, if you talk about data segment, it will also be of 64 kilobytes."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 200.92,
+            "end": 205.22,
+            "text": " Extra segment and stack segment will also be of 64 kilobytes each."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 205.22,
+            "end": 215.78,
+            "text": " So this code segment, it will contain the starting address of that particular code segment in the externally interfaced memory."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 215.78,
+            "end": 222.12,
+            "text": " Now you will ask the question that since the externally interfaced memory can be addressed by 20 bits."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 222.12,
+            "end": 230.48000000000002,
+            "text": " So how is it possible that the code segment, which is inside this microprocessor, this code segment register is of 16 bits?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 230.6,
+            "end": 237.72,
+            "text": " So we said that the beginning address has to be such that the last four bits have to be zero."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 237.92000000000002,
+            "end": 239.78,
+            "text": " It is by default like that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 240.16,
+            "end": 245.08,
+            "text": " So that is why since the last four bits are zero, that is why 16 bits are left."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 245.08,
+            "end": 250.8,
+            "text": " So those 16 bits will be kept in code segment, data segment, extra segment and stack segment."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 250.8,
+            "end": 252.68,
+            "text": " Instruction pointer we have discussed."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 252.68,
+            "end": 256.68,
+            "text": " It's like the program counter in 8085."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 256.68,
+            "end": 259.84000000000003,
+            "text": " We will talk about it more when we will do the programming."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 259.84000000000003,
+            "end": 265.24,
+            "text": " We have a separate instruction queue here, which is of six bytes."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 265.24,
+            "end": 272.82,
+            "text": " So in advance, this 8086 microprocessor can contain six bytes of the code that we have written."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 272.82,
+            "end": 281.09999999999997,
+            "text": " And when this queue has two empty locations, in that case only, the next two bytes will be fetched."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 281.09999999999997,
+            "end": 282.14,
+            "text": " Not before that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 282.14,
+            "end": 285.58,
+            "text": " So this is how this 8086 performs."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 285.58,
+            "end": 291.06,
+            "text": " And this bus interface unit and execution unit is independent of each other."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 291.06,
+            "end": 294.1,
+            "text": " So the fetch, execute and decode."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 294.1,
+            "end": 298.3,
+            "text": " This three phase cycle, fetch, execute and decode."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 298.3,
+            "end": 300.5,
+            "text": " These three are independent of each other."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 300.5,
+            "end": 310.78,
+            "text": " Otherwise, in 8085, what used to happen was, we usually take one byte from the externally interface memory,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 310.78,
+            "end": 315.5,
+            "text": " keep it in the instruction register, decode it and then execute it."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 315.5,
+            "end": 317.78,
+            "text": " Then we take the next byte, etc."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 317.78,
+            "end": 322.14,
+            "text": " But here we try to fetch six bytes at max in advance."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 322.14,
+            "end": 326.46,
+            "text": " So that's what happens in 8086 microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 326.46,
+            "end": 330.46,
+            "text": " So let me first check whether this video is getting recorded or not."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 330.46,
+            "end": 333.29999999999995,
+            "text": " Yeah, it's getting recorded."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 333.29999999999995,
+            "end": 340.46,
+            "text": " So after that, after this architecture part, these were the main highlights of this architecture."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 340.46,
+            "end": 347.58,
+            "text": " And now in this today's session, we are going to discuss the pin diagram of this 8086 microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 347.58,
+            "end": 350.58,
+            "text": " Now, this is a 40 pin IC."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 350.58,
+            "end": 353.58,
+            "text": " There are 40 pins here, as you can see on the slide."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 353.58,
+            "end": 356.85999999999996,
+            "text": " This starts from one and go up to 40 here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 356.85999999999996,
+            "end": 362.86,
+            "text": " And let me first just tell you how to switch on this 8086 CPU."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 362.86,
+            "end": 367.86,
+            "text": " So for that, you have obviously this VCC, which is the 40th pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 367.86,
+            "end": 373.86,
+            "text": " And this VCC can be plus 5 volts and the tolerance limit is 10%, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 373.86,
+            "end": 376.86,
+            "text": " Plus minus 10% could be the variation."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 376.86,
+            "end": 380.86,
+            "text": " So this VCC has to be supplied with a DC voltage of plus 5 volts."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 380.86,
+            "end": 382.86,
+            "text": " In that case, it will be on."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 382.86,
+            "end": 385.86,
+            "text": " Now you can see that there are two ground pins here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 385.86,
+            "end": 388.86,
+            "text": " This is the one ground pin, which is on pin number one."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 388.86,
+            "end": 392.86,
+            "text": " And on pin number 20, you can also see that there is a ground signal."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 392.86,
+            "end": 397.86,
+            "text": " So now, why two grounds are there in one IC?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 397.86,
+            "end": 401.86,
+            "text": " So what happens is when you have a bigger circuit,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 401.86,
+            "end": 405.86,
+            "text": " when you have a bigger circuit, then you will require multiple grounds."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 405.86,
+            "end": 409.86,
+            "text": " Because what happens is suppose if this pin is suppose high,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 409.86,
+            "end": 413.86,
+            "text": " then a pin is high or low with respect to the ground pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 413.86,
+            "end": 415.86,
+            "text": " So there are these two ground pins."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 415.86,
+            "end": 418.86,
+            "text": " So if the ground voltage is treated as zero,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 418.86,
+            "end": 422.86,
+            "text": " then plus 5 volt will be treated as a high volt,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 422.86,
+            "end": 425.86,
+            "text": " high or logic one at this particular pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 425.86,
+            "end": 430.86,
+            "text": " So these two have to be internally connected through some resistance,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 430.86,
+            "end": 434.86,
+            "text": " which will let you know that this point has a potential of plus 5 volt."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 434.86,
+            "end": 438.86,
+            "text": " But what happens is there are multiple number of pins in this integrated circuit."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 438.86,
+            "end": 443.86,
+            "text": " So this ground, which is supposed to be zero ideally does not remain zero."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 443.86,
+            "end": 449.86,
+            "text": " It also acquires certain kind of voltage because of these multiple pins being grounded to the same pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 449.86,
+            "end": 455.86,
+            "text": " So that is why to keep the ground voltage at zero absolutely,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 455.86,
+            "end": 457.86,
+            "text": " we have got these two pins here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 457.86,
+            "end": 462.86,
+            "text": " So the details of this might have been known to you from your electronics circuit code,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 462.86,
+            "end": 466.86,
+            "text": " the basic electronics code, where you also learn that in a big circuit,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 466.86,
+            "end": 469.86,
+            "text": " you have to have multiple number of grounds."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 469.86,
+            "end": 474.86,
+            "text": " So because of that reason only you have got multiple grounds here, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 474.86,
+            "end": 477.86,
+            "text": " So this VCC and these two ground pins,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 477.86,
+            "end": 481.86,
+            "text": " they have to be appropriately placed VCC at plus 5 volt,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 481.86,
+            "end": 483.86,
+            "text": " plus 5 volt DC battery."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 483.86,
+            "end": 486.86,
+            "text": " And then at ground pins, you have to give the ground signal."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 486.86,
+            "end": 487.86,
+            "text": " That is, you have to ground them."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 487.86,
+            "end": 490.86,
+            "text": " And then you have to provide a clock here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 490.86,
+            "end": 493.86,
+            "text": " That clock, we have already discussed how the clock should be."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 493.86,
+            "end": 498.86,
+            "text": " The frequency is 5 MHz for the base variant of 8086 CPU."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 498.86,
+            "end": 502.86,
+            "text": " And the duty cycle has to be 33%."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 502.86,
+            "end": 505.86,
+            "text": " Means in every period of that clock pulse,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 505.86,
+            "end": 508.86,
+            "text": " it should remain on for 33% of the time."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 508.86,
+            "end": 512.86,
+            "text": " So that way this clock signal has to be provided, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 512.86,
+            "end": 517.86,
+            "text": " So if you, if you apply all these signals, your microprocessor will become on, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 517.86,
+            "end": 521.86,
+            "text": " Now you see two things here, maximum mode and minimum mode."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 521.86,
+            "end": 525.86,
+            "text": " I think we have already had a discussion about this maximum mode and minimum mode."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 525.86,
+            "end": 528.86,
+            "text": " So by minimum mode, what we mean is,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 528.86,
+            "end": 533.86,
+            "text": " if the microprocessor is the only processor that is present in the circuit."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 533.86,
+            "end": 535.86,
+            "text": " So that's what we mean by minimum mode."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 535.86,
+            "end": 538.86,
+            "text": " So the signals that you see in brackets here,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 538.86,
+            "end": 540.86,
+            "text": " they are all applicable to minimum mode."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 540.86,
+            "end": 546.86,
+            "text": " And maximum mode means the mode in which there are multiple processors,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 546.86,
+            "end": 548.86,
+            "text": " which are connected in the system, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 548.86,
+            "end": 550.86,
+            "text": " So that mode is called as maximum mode."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 550.86,
+            "end": 554.86,
+            "text": " So the signals that you see here, which are not written in any bracket,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 554.86,
+            "end": 556.86,
+            "text": " they are for maximum mode, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 556.86,
+            "end": 559.86,
+            "text": " So at one particular time,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 559.86,
+            "end": 563.86,
+            "text": " this microprocessor can either operate in minimum or operate in maximum mode."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 563.86,
+            "end": 566.86,
+            "text": " It cannot operate in both of the modes at the same time."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 566.86,
+            "end": 569.86,
+            "text": " So you have to select one particular mode of operation."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 569.86,
+            "end": 574.86,
+            "text": " So based upon that, the meaning of these pins will be taken."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 574.86,
+            "end": 576.86,
+            "text": " You can see that there are some double meanings,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 576.86,
+            "end": 578.86,
+            "text": " which are written for these pins."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 578.86,
+            "end": 582.86,
+            "text": " Now, these two meanings will depend upon whether the microprocessor operates"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 582.86,
+            "end": 584.86,
+            "text": " in maximum mode or minimum mode."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 584.86,
+            "end": 585.86,
+            "text": " And which will,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 585.86,
+            "end": 590.86,
+            "text": " how will we know that our processor is operating in maximum or minimum mode?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 590.86,
+            "end": 593.86,
+            "text": " So for that, we have a pin here,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 593.86,
+            "end": 596.86,
+            "text": " MN slash MX bar, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 596.86,
+            "end": 598.86,
+            "text": " So if this pin is set as high,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 598.86,
+            "end": 600.86,
+            "text": " then it is operating in the minimum mode."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 600.86,
+            "end": 602.86,
+            "text": " And if this pin is set as low,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 602.86,
+            "end": 605.86,
+            "text": " then it is operating in the maximum mode."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 605.86,
+            "end": 610.86,
+            "text": " So that's what we mean by this minimum and maximum mode of operation here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 610.86,
+            "end": 613.86,
+            "text": " So in this diagram,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 613.86,
+            "end": 616.86,
+            "text": " I haven't shown the directional nature of these pins."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 616.86,
+            "end": 621.86,
+            "text": " So I will explain them as I carry forward my explanation, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 621.86,
+            "end": 624.86,
+            "text": " So the minimum and maximum mode, I guess, is clear to everyone."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 624.86,
+            "end": 627.86,
+            "text": " If there are multiple processors in the system."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 627.86,
+            "end": 629.86,
+            "text": " Now, one question, one very natural question could be,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 629.86,
+            "end": 633.86,
+            "text": " why would someone like to have multiple processors in their computer?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 633.86,
+            "end": 634.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 634.86,
+            "end": 638.86,
+            "text": " So think about a situation as we have seen in 8085."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 638.86,
+            "end": 642.86,
+            "text": " There was, there were only this addition and subtraction commands."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 642.86,
+            "end": 645.86,
+            "text": " No multiplication command, no division command,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 645.86,
+            "end": 648.86,
+            "text": " no command for taking the logarithm of something,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 648.86,
+            "end": 651.86,
+            "text": " no command for taking the sinusoidal of something."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 651.86,
+            "end": 653.86,
+            "text": " So these commands were not there."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 653.86,
+            "end": 657.86,
+            "text": " So for these, you have to write programs inside 8085."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 657.86,
+            "end": 658.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 658.86,
+            "end": 659.86,
+            "text": " Similarly in 8086 CPU,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 659.86,
+            "end": 662.86,
+            "text": " you will see that there will be command for addition,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 662.86,
+            "end": 666.86,
+            "text": " subtraction, multiplication, and division as well,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 666.86,
+            "end": 668.86,
+            "text": " which were not there in 8085."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 668.86,
+            "end": 670.86,
+            "text": " So in 8085,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 670.86,
+            "end": 672.86,
+            "text": " multiplication and division were not there,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 672.86,
+            "end": 673.86,
+            "text": " but here they will be there."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 673.86,
+            "end": 674.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 674.86,
+            "end": 676.86,
+            "text": " But still, in today's world,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 676.86,
+            "end": 679.86,
+            "text": " we know that we frequently use this logarithm operation,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 679.86,
+            "end": 681.86,
+            "text": " sine operation, tan operation,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 681.86,
+            "end": 684.86,
+            "text": " and there are other mathematical functions which are frequently used."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 684.86,
+            "end": 686.86,
+            "text": " So we do not write programs for that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 686.86,
+            "end": 687.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 687.86,
+            "end": 689.86,
+            "text": " We can directly just use our scientific calculators,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 689.86,
+            "end": 691.86,
+            "text": " which is provided in our machines,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 691.86,
+            "end": 694.86,
+            "text": " and we can just do things with that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 694.86,
+            "end": 698.86,
+            "text": " So, since these commands are very less,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 698.86,
+            "end": 701.86,
+            "text": " which are present in this 8086 CPU."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 701.86,
+            "end": 703.86,
+            "text": " So in that case, you know,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 703.86,
+            "end": 707.86,
+            "text": " there is something which is called as a math co-processor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 707.86,
+            "end": 711.86,
+            "text": " The math co-processor can be used with this processor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 711.86,
+            "end": 715.86,
+            "text": " Co-processor because it will operate together with this processor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 715.86,
+            "end": 718.86,
+            "text": " So that processor is 8087."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 718.86,
+            "end": 720.86,
+            "text": " This is 8086."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 720.86,
+            "end": 722.86,
+            "text": " And you can have one more processor,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 722.86,
+            "end": 725.86,
+            "text": " which will have dedicated operations for mathematics."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 725.86,
+            "end": 728.86,
+            "text": " That processor is called as 8087 microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 728.86,
+            "end": 732.86,
+            "text": " And it operates together with this CPU as the main CPU."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 732.86,
+            "end": 733.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 733.86,
+            "end": 736.86,
+            "text": " So you can have multiple processors in the system."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 736.86,
+            "end": 741.86,
+            "text": " And it's not because that three or four people who have got 8086 computer,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 741.86,
+            "end": 743.86,
+            "text": " they are trying to connect with each other."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 743.86,
+            "end": 748.86,
+            "text": " And that is the only reason that we are having multiple processors in the system."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 748.86,
+            "end": 749.86,
+            "text": " It's not like that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 749.86,
+            "end": 752.86,
+            "text": " Processors, they do different tasks."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 752.86,
+            "end": 755.86,
+            "text": " This 8086 is a general purpose CPU."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 755.86,
+            "end": 757.86,
+            "text": " It can be used for any purpose."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 757.86,
+            "end": 763.86,
+            "text": " It is not that we cannot implement a program which won't be able to perform sign function."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 763.86,
+            "end": 764.86,
+            "text": " It can do that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 764.86,
+            "end": 767.86,
+            "text": " But there is a separate dedicated processor for that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 767.86,
+            "end": 772.86,
+            "text": " So 8086, sorry, 8087 is called as math co-processor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 772.86,
+            "end": 773.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 773.86,
+            "end": 778.86,
+            "text": " So still in 8086, you will see that we have a hundred mnemonics."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 778.86,
+            "end": 781.86,
+            "text": " We have about a hundred mnemonics here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 781.86,
+            "end": 784.86,
+            "text": " And there are combinations that we can make."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 784.86,
+            "end": 788.86,
+            "text": " There are combinations that we can make are 3,800."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 788.86,
+            "end": 792.86,
+            "text": " About 3,800 combinations would be made."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 792.86,
+            "end": 796.86,
+            "text": " In 8085, we had 74 instructions."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 796.86,
+            "end": 801.86,
+            "text": " And there, I think 243 combinations can be made."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 801.86,
+            "end": 806.86,
+            "text": " However, in this 8086 CPU, we have got 100 instructions."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 806.86,
+            "end": 808.86,
+            "text": " About 100 instructions."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 808.86,
+            "end": 811.86,
+            "text": " And 3,800 combinations can be made."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 811.86,
+            "end": 817.86,
+            "text": " And out of those 3,800 combinations, you can make various permutations and combinations"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 817.86,
+            "end": 819.86,
+            "text": " and write your program."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 819.86,
+            "end": 824.86,
+            "text": " So the instruction set of this 8086 CPU is very powerful as compared to 8085."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 824.86,
+            "end": 827.86,
+            "text": " We will see that in our programming sessions."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 827.86,
+            "end": 832.86,
+            "text": " So now let me just begin by explaining each and every pin to you."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 832.86,
+            "end": 834.86,
+            "text": " Each and every pin that you see here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 834.86,
+            "end": 838.86,
+            "text": " Let us try to just elaborate on that part."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 838.86,
+            "end": 841.86,
+            "text": " So let us first begin with the address and data bus."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 841.86,
+            "end": 844.86,
+            "text": " Now the address and data bus, as you can see here,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 844.86,
+            "end": 850.86,
+            "text": " you can see these pins AD0, AD1, AD2 till AD14 here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 850.86,
+            "end": 851.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 851.86,
+            "end": 855.86,
+            "text": " And then after AD15, AD16, AD17, AD19."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 855.86,
+            "end": 864.86,
+            "text": " So from 0, from AD0 to this AD19, you have got a total of 20 pins."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 864.86,
+            "end": 866.86,
+            "text": " You have got a total of 20 pins."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 866.86,
+            "end": 871.86,
+            "text": " And you already know that the address bus of 8086 is of 20 bits."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 871.86,
+            "end": 879.86,
+            "text": " So the address is usually kept on these pins from AD0 to this AD19."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 879.86,
+            "end": 880.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 880.86,
+            "end": 882.86,
+            "text": " So this is used for address bus."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 882.86,
+            "end": 888.86,
+            "text": " Now data bus, it is of 16 bits because 8086 is a 16 bit microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 888.86,
+            "end": 893.86,
+            "text": " So you do not have separate data pins here because that will again complicate,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 893.86,
+            "end": 898.86,
+            "text": " that will again increase the size of this 8086 microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 898.86,
+            "end": 903.86,
+            "text": " And address bus is seldom used in comparison to the data bus."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 903.86,
+            "end": 907.86,
+            "text": " Address bus is not frequently used in comparison to the data bus."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 907.86,
+            "end": 911.86,
+            "text": " And we have seen why is it so in 8085 microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 911.86,
+            "end": 916.86,
+            "text": " Because at the beginning of read or write operation from memory or input output,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 916.86,
+            "end": 921.86,
+            "text": " in the T1 clock cycle only, the address buses, they will contain the address."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 921.86,
+            "end": 924.86,
+            "text": " And after that, that address might not be required."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 924.86,
+            "end": 930.86,
+            "text": " So from T2, T3, T4 clock cycles, you will have data on these address buses."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 930.86,
+            "end": 935.86,
+            "text": " So in 8086 CPU also, we have multiplexed the address and data bus."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 935.86,
+            "end": 941.86,
+            "text": " So you can see here from AD0 to AD15, you have this notation of AD."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 941.86,
+            "end": 944.86,
+            "text": " AD stands for address as well as data."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 944.86,
+            "end": 950.86,
+            "text": " However, after this AD15, you have got only A16, A17, A18 and A19."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 950.86,
+            "end": 957.86,
+            "text": " Since the address bus is of 20 bits, so you have got from 0 to 19, that is 20 address pins."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 957.86,
+            "end": 960.86,
+            "text": " And the data bus is only of 16 bits."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 960.86,
+            "end": 964.86,
+            "text": " So you have got AD0 to AD14 and then AD15."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 964.86,
+            "end": 967.86,
+            "text": " That means a total of 16 data pins."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 967.86,
+            "end": 971.86,
+            "text": " So data and address bus are multiplexed."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 971.86,
+            "end": 977.86,
+            "text": " And the lower order 16 bits of the address bus are treated as data bus."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 977.86,
+            "end": 982.86,
+            "text": " So this addresses will be floated in the T1 clock cycle."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 982.86,
+            "end": 987.86,
+            "text": " Probably you have known the meaning of T1 clock cycle from our earlier discussions."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 987.86,
+            "end": 989.86,
+            "text": " So that's why I'm using this terminology."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 989.86,
+            "end": 994.86,
+            "text": " So from T1 clock cycle, the addresses will be floated onto this."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 994.86,
+            "end": 1000.86,
+            "text": " And in subsequent clock cycles, we will have data which will be floated onto this."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1000.86,
+            "end": 1004.86,
+            "text": " Then these pins, A16, A17 and A18."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1004.86,
+            "end": 1015.86,
+            "text": " When the data is floated onto these pins, these pins, the remaining pins, which are 4 in number, will not be used as data pins."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1015.86,
+            "end": 1018.86,
+            "text": " Because of course, data is only of 16 bits."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1018.86,
+            "end": 1021.86,
+            "text": " So they have got this S3, S4, S5 and S6."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1021.86,
+            "end": 1026.8600000000001,
+            "text": " The interpretation of these is that they will be used to signify some status."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1026.8600000000001,
+            "end": 1030.8600000000001,
+            "text": " So we will talk about what these status pins are in a while."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1030.8600000000001,
+            "end": 1036.8600000000001,
+            "text": " But you see the beauty of multiplexing these address and data lines."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1036.8600000000001,
+            "end": 1042.8600000000001,
+            "text": " If it would have not been the case, then in 8086 CPU, the design part would have been complicated."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1042.8600000000001,
+            "end": 1047.8600000000001,
+            "text": " You have to make a bigger IC as well as the number of ground pins will also increase."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1047.8600000000001,
+            "end": 1050.8600000000001,
+            "text": " The cost of this thing will also increase."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1050.86,
+            "end": 1059.86,
+            "text": " And the point on which they have been multiplexed is that address lines are seldom used in comparison to the data lines."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1059.86,
+            "end": 1064.86,
+            "text": " So on that note, these address and data pins have been discussed."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1064.86,
+            "end": 1067.86,
+            "text": " Now let us move on to these status signals."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1067.86,
+            "end": 1075.86,
+            "text": " S3, S4, S5 and S6, which are multiplexed with the higher 4 bits of this address line."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1075.86,
+            "end": 1076.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1076.86,
+            "end": 1081.86,
+            "text": " So for this, let us first discuss this S3 and S4 pins."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1081.86,
+            "end": 1088.86,
+            "text": " So let me just keep the diagram to this side and bring you the status of S4 and S3 pins."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1088.86,
+            "end": 1095.86,
+            "text": " So now what this S3 and S4 pin will combinedly tell us is summarized in this particular chart."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1095.86,
+            "end": 1099.86,
+            "text": " If you see here S4, S3 and the segment."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1099.86,
+            "end": 1109.86,
+            "text": " I mean the microprocessor, if it is dealing with the externally interfaced memory, then since inside the memory, we have got four segments."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1109.86,
+            "end": 1113.86,
+            "text": " These extra segments, stack segment, code segment and data segment."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1113.86,
+            "end": 1114.86,
+            "text": " So, if you want to know which segment."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1114.86,
+            "end": 1120.86,
+            "text": " And apart from that, there is also a lot of vacant memory, which is used for different purposes, which we will come to later."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1120.86,
+            "end": 1129.86,
+            "text": " But for now, if you want to know which segment is being used currently, then you have to see these pins."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1129.86,
+            "end": 1130.86,
+            "text": " S3 and S4."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1130.86,
+            "end": 1136.86,
+            "text": " If S3 and S4, they have a value of 00, you are using extra segment."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1136.86,
+            "end": 1142.86,
+            "text": " Otherwise, if the value is 01, stack segment, 10, code segment and 11, data segment."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1142.86,
+            "end": 1146.86,
+            "text": " So, this is used to keep a track of that particular thing."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1146.86,
+            "end": 1148.86,
+            "text": " S3 and S4, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1148.86,
+            "end": 1158.86,
+            "text": " And remember that apart from these segments, there is a lot of memory which is vacant, which is definitely used for interrupts."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1158.86,
+            "end": 1169.86,
+            "text": " So, interrupts like in 8085, we saw that there were a vector interrupts and their locations, they started from 0000 and 008, then 00."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1169.86,
+            "end": 1176.86,
+            "text": " I mean, like that, there were some specified address locations at which you used to keep your programs."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1176.86,
+            "end": 1181.86,
+            "text": " So, similarly, that thing here is formally called as interrupt to vector table."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1181.86,
+            "end": 1186.86,
+            "text": " So, there are specific locations for that and there you will be writing your programs."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1186.86,
+            "end": 1190.86,
+            "text": " So, those locations are already reserved in 8086 also."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1190.86,
+            "end": 1193.86,
+            "text": " So, we will come to them a little later."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1193.86,
+            "end": 1200.86,
+            "text": " But now, let us discuss the purpose of the other pins that we have got in this thing."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1200.86,
+            "end": 1205.86,
+            "text": " That is, we have got this pin number S5 and pin number S6."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1205.86,
+            "end": 1209.86,
+            "text": " So, what is the purpose of using these pins S5 and S6?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1209.86,
+            "end": 1215.86,
+            "text": " So, S5 pin that you see here is interrupt enable flag status."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1215.86,
+            "end": 1221.86,
+            "text": " I mean, this 8086 microprocessor is also capable of handling interrupts."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1221.86,
+            "end": 1226.86,
+            "text": " So, there is a flag which is used inside 8086 CPU."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1226.86,
+            "end": 1233.86,
+            "text": " So, that IF or the interrupt enable flag, if it is on, it can be known by this S5 pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1233.86,
+            "end": 1239.86,
+            "text": " If this pin has a high value, then that can be treated as interrupt enable flag is on."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1239.86,
+            "end": 1242.86,
+            "text": " And if it has got a low value, that flag is disabled."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1242.86,
+            "end": 1246.86,
+            "text": " And that flag is especially used for maskable interrupts."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1246.86,
+            "end": 1248.86,
+            "text": " The interrupts which you can deny servicing."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1248.86,
+            "end": 1251.86,
+            "text": " So, that flag is used for those purposes."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1251.86,
+            "end": 1254.86,
+            "text": " So, this pin is being used to indicate the status of that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1254.86,
+            "end": 1259.86,
+            "text": " Now, this is again this S6 pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1259.86,
+            "end": 1264.86,
+            "text": " S6 pin is used for indicating the status."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1264.86,
+            "end": 1270.86,
+            "text": " We will see that some external device, whether it is input output device or some other processor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1270.86,
+            "end": 1278.86,
+            "text": " If it wants to gain the control of the internal buses, address and data buses of this microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1278.86,
+            "end": 1285.86,
+            "text": " If it wants to gain the control of the internal buses, then this S6 pin will be floated high."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1285.86,
+            "end": 1289.86,
+            "text": " So, the bus master can take the control."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1289.86,
+            "end": 1292.86,
+            "text": " So, that is indicated by this S6 pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1292.86,
+            "end": 1293.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1293.86,
+            "end": 1300.86,
+            "text": " So, here you can see that we have also discussed these status pins S3, S4, S5 and S6."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1300.86,
+            "end": 1301.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1301.86,
+            "end": 1306.86,
+            "text": " So, we have discussed these address lines and data lines that you can see on this particular site."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1306.86,
+            "end": 1309.86,
+            "text": " So, most of the pins on this particular site have been discussed."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1309.86,
+            "end": 1313.86,
+            "text": " We will come to these pins later on where we will discuss interrupts."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1313.86,
+            "end": 1321.86,
+            "text": " And now, let us again move on to this BHE bar slash S7 pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1321.86,
+            "end": 1322.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1322.86,
+            "end": 1330.86,
+            "text": " So, this BHE bar is actually used to indicate that bus high enable."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1330.86,
+            "end": 1332.86,
+            "text": " BHE means bus high enable."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1332.86,
+            "end": 1334.86,
+            "text": " So, what is this used for?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1334.86,
+            "end": 1341.86,
+            "text": " We already know that externally interfaced memory is 1 megabyte in its maximum locations."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1341.86,
+            "end": 1344.86,
+            "text": " And every location is of 8 bits or 1 byte."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1344.86,
+            "end": 1345.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1345.86,
+            "end": 1353.86,
+            "text": " Now, the addresses that you have in the external memory will be like 0000, 00001, 00002."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1353.86,
+            "end": 1354.86,
+            "text": " No, not like that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1354.86,
+            "end": 1356.86,
+            "text": " They will be now in 20 bits."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1356.86,
+            "end": 1359.86,
+            "text": " So, you will have an address 5 times 0."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1359.86,
+            "end": 1364.86,
+            "text": " Then you will have 00001, 00002, etc."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1364.86,
+            "end": 1366.86,
+            "text": " So, in hexadecimal."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1366.86,
+            "end": 1367.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1367.86,
+            "end": 1372.86,
+            "text": " So, there are some odd addresses and some even addresses."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1372.86,
+            "end": 1373.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1373.86,
+            "end": 1381.86,
+            "text": " So, this bus high enable, this bus high enable is used to indicate that odd addresses have been selected or not."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1381.86,
+            "end": 1382.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1382.86,
+            "end": 1394.86,
+            "text": " So, what happens is the externally interfaced memory of your 8086 is treated as a memory comprised of odd addresses and even addresses."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1394.86,
+            "end": 1396.86,
+            "text": " Which every memory is."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1396.86,
+            "end": 1409.86,
+            "text": " But then, this bus high enable signal is used to indicate that you have got an externally interfaced memory which is treated as an odd memory bank and an even memory bank."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1409.86,
+            "end": 1412.86,
+            "text": " Which corresponds to odd addresses and even addresses."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1412.86,
+            "end": 1420.86,
+            "text": " So, if you want to activate, if you want to activate the odd addresses, this signal will be enabled."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1420.86,
+            "end": 1421.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1421.86,
+            "end": 1422.86,
+            "text": " This signal will be made as high."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1422.86,
+            "end": 1428.86,
+            "text": " I will later on tell you what this odd and even memory bank means and why is it important."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1428.86,
+            "end": 1438.86,
+            "text": " But for now, you can just understand that the externally interfaced memory of 8086 microprocessor is organized as even bank and odd bank."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1438.86,
+            "end": 1442.86,
+            "text": " And to select the odd bank, this bus high enable signal is being used."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1442.86,
+            "end": 1445.86,
+            "text": " So, I will elaborate on this portion a little later."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1445.86,
+            "end": 1447.86,
+            "text": " Maybe in the next video lecture."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1447.86,
+            "end": 1449.86,
+            "text": " And this S7 does not mean anything."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1449.86,
+            "end": 1450.86,
+            "text": " It is reserved."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1450.86,
+            "end": 1451.86,
+            "text": " It is a spare."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1451.86,
+            "end": 1452.86,
+            "text": " So, it does not mean anything."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1452.86,
+            "end": 1456.86,
+            "text": " So, this pin actually is only meant for this bus high enable."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1456.86,
+            "end": 1457.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1457.86,
+            "end": 1460.86,
+            "text": " So, we already know the meaning of this minimum and maximum mode pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1460.86,
+            "end": 1463.86,
+            "text": " So, there is nothing special in that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1463.86,
+            "end": 1465.86,
+            "text": " Now, let's come to this read pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1465.86,
+            "end": 1472.86,
+            "text": " So, this read pin is similar to the pin that we have used in 8085 microprocessor also."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1472.86,
+            "end": 1478.86,
+            "text": " So, this read pin will tell us if the value of this is 0."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1478.86,
+            "end": 1483.86,
+            "text": " Then that means the microprocessor is trying to read something from the external memory."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1483.86,
+            "end": 1485.86,
+            "text": " Because a bar is placed over this."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1485.86,
+            "end": 1488.86,
+            "text": " So, this simply means that it is trying to read something."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1488.86,
+            "end": 1490.86,
+            "text": " If it is 0, it is activated."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1490.86,
+            "end": 1493.86,
+            "text": " So, microprocessor is reading something from the external memory."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1493.86,
+            "end": 1497.86,
+            "text": " So, that will be indicated by this particular pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1497.86,
+            "end": 1498.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1498.86,
+            "end": 1506.86,
+            "text": " So, now after this read pin, let's now directly come to this ready pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1506.86,
+            "end": 1507.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1507.86,
+            "end": 1509.86,
+            "text": " After this read, I am directly jumping to ready pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1509.86,
+            "end": 1515.86,
+            "text": " We will discuss these two set of pins separately when we will discuss the maximum and minimum"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1515.86,
+            "end": 1516.86,
+            "text": " mode."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1516.86,
+            "end": 1517.86,
+            "text": " So, now this ready pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1517.86,
+            "end": 1520.86,
+            "text": " Ready pin is actually used."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1520.86,
+            "end": 1528.86,
+            "text": " This ready pin is the input that informs the processor that the selected memory or the input output device"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1528.86,
+            "end": 1531.86,
+            "text": " is ready to complete the data transfer."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1531.86,
+            "end": 1539.86,
+            "text": " Then, ready signal is often used to synchronize the fast processor with slow memory or slow input output device."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1539.86,
+            "end": 1540.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1540.86,
+            "end": 1544.86,
+            "text": " So, what happens is if this ready pin is high."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1544.86,
+            "end": 1545.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1545.86,
+            "end": 1549.86,
+            "text": " This is, you have to supply an input signal at it."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1549.86,
+            "end": 1554.86,
+            "text": " I mean, this pin is definitely treated as an input pin to the microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1554.86,
+            "end": 1557.86,
+            "text": " If you put a high value at this particular pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1557.86,
+            "end": 1567.86,
+            "text": " In that case, it indicates that the externally interfaced device or memory, whatever external device is there, it is ready to transfer the data."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1567.86,
+            "end": 1571.86,
+            "text": " Because there may be some devices which are slower than this microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1571.86,
+            "end": 1574.86,
+            "text": " This microprocessor operates on 5 megahertz frequency."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1574.86,
+            "end": 1578.86,
+            "text": " There might be devices which are slower in comparison to that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1578.86,
+            "end": 1586.86,
+            "text": " So, to be able to synchronize things between these two properly, we have got this ready pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1586.86,
+            "end": 1591.86,
+            "text": " And this ready pin is actually an input signal to this particular microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1591.86,
+            "end": 1601.86,
+            "text": " And if the value at this pin is 0, then what happens is microprocessor will introduce additional bus idle cycles in their timing diagram."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1601.86,
+            "end": 1604.86,
+            "text": " We have already seen timing diagrams for 8085."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1604.86,
+            "end": 1610.86,
+            "text": " And there we know that for read or write, some T states are required."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1610.86,
+            "end": 1628.86,
+            "text": " So, if a slower device is connected here, then that will, if this pin is 0, if the value at this pin is 0 from that particular device, if it is inserted as so, then if your microprocessor is trying to read something or write something to that particular device,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1628.86,
+            "end": 1635.86,
+            "text": " then if the status at this pin is 0, the microprocessor will understand that it needs more time because it is slower."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1635.86,
+            "end": 1638.86,
+            "text": " So, it will introduce more bus idle cycles."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1638.86,
+            "end": 1643.86,
+            "text": " If it is doing the read cycle or the write cycle, it is of specific number of T cycles."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1643.86,
+            "end": 1646.86,
+            "text": " So, there it will increase its extent."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1646.86,
+            "end": 1652.86,
+            "text": " Instead of taking it regularly, it will introduce additional bus idle cycles."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1652.86,
+            "end": 1657.86,
+            "text": " So that when the device is ready, it will be able to read the data."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1657.86,
+            "end": 1661.86,
+            "text": " So, this is the usage of this ready pin here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1661.86,
+            "end": 1666.86,
+            "text": " Now, let me first discuss this INTR pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1666.86,
+            "end": 1668.86,
+            "text": " Interrupt pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1668.86,
+            "end": 1673.86,
+            "text": " So, this interrupt pin is an externally given interrupt."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1673.86,
+            "end": 1678.86,
+            "text": " But the interrupts that you give on this particular pin are maskable in nature."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1678.86,
+            "end": 1682.86,
+            "text": " I mean, there is an interrupt flag inside this 8086 CPU."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1682.86,
+            "end": 1689.86,
+            "text": " So, in that interrupt flag, if there is an interrupt request which has come from the external world to the microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1689.86,
+            "end": 1693.86,
+            "text": " So, this is also an input signal to the microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1693.86,
+            "end": 1703.86,
+            "text": " If there is an interrupt request which has come to the microprocessor, then in that case, this microprocessor can serve that interrupt request or deny that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1703.86,
+            "end": 1707.86,
+            "text": " Depending on whether the interrupt flag is on or off."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1707.86,
+            "end": 1708.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1708.86,
+            "end": 1714.86,
+            "text": " So, this is a maskable interrupt which is externally given to this microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1714.86,
+            "end": 1715.86,
+            "text": " INTR."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1715.86,
+            "end": 1716.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1716.86,
+            "end": 1717.86,
+            "text": " Similarly, NMI."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1717.86,
+            "end": 1721.86,
+            "text": " NMI that you see here is a non-maskable interrupt."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1721.86,
+            "end": 1728.86,
+            "text": " So, non-maskable interrupt means irrespective of whatever is the status of interrupt flag inside the microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1728.86,
+            "end": 1732.86,
+            "text": " This NMI, if it is high, this request has to be served."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1732.86,
+            "end": 1738.86,
+            "text": " One more point of difference between INTR and NMI is INTR is level triggered."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1738.86,
+            "end": 1741.86,
+            "text": " However, NMI happens to be edge triggered."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1741.86,
+            "end": 1742.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1742.86,
+            "end": 1745.86,
+            "text": " So, this is level triggered and this is edge triggered."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1745.86,
+            "end": 1749.86,
+            "text": " So, this is also one of the points of differences here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1749.86,
+            "end": 1752.86,
+            "text": " Now, let's discuss this test signal."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1752.86,
+            "end": 1753.86,
+            "text": " This test signal."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1753.86,
+            "end": 1759.86,
+            "text": " Test signal, it is actually used when we are using multiple processors in the system."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1759.86,
+            "end": 1760.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1760.86,
+            "end": 1772.86,
+            "text": " So, if you are using a 8087 coprocessor, MAT coprocessor with this processor, then this test signal is actually coupled with this another signal."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1772.86,
+            "end": 1777.86,
+            "text": " I mean, this test signal is examined by the weight instruction."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1777.86,
+            "end": 1782.86,
+            "text": " There is a weight instruction in 8086 microprocessor instruction set."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1782.86,
+            "end": 1788.86,
+            "text": " So, this test signal, it will be used with that particular weight instruction."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1788.86,
+            "end": 1794.86,
+            "text": " And this test signal is usually connected to the busy pin of 8087 microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1794.86,
+            "end": 1801.86,
+            "text": " So, if you have 8087 microprocessor, which is the MAT coprocessor, it is usually connected to 8086."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1801.86,
+            "end": 1808.86,
+            "text": " So, this test pin here, it is connected to the busy pin of that for a proper synchronization between these two devices."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1808.86,
+            "end": 1813.86,
+            "text": " Because from this device, if you will give a command to calculate sinusoidal value of something."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1813.86,
+            "end": 1816.86,
+            "text": " So, it will return the value after calculating."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1816.86,
+            "end": 1821.86,
+            "text": " So, this test pin is connected to the busy pin of that 8087 microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1821.86,
+            "end": 1824.86,
+            "text": " So, that will help achieve a proper synchronization."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1824.86,
+            "end": 1828.86,
+            "text": " So, that is why this test pin is being used here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1828.86,
+            "end": 1829.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1829.86,
+            "end": 1832.86,
+            "text": " So, now let's talk about this reset pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1832.86,
+            "end": 1837.86,
+            "text": " Reset pin is usually used to restart the entire computer system."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1837.86,
+            "end": 1838.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1838.86,
+            "end": 1840.86,
+            "text": " We already have a reset button on our CPUs."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1840.86,
+            "end": 1844.86,
+            "text": " So, similarly in those days, we had this reset pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1844.86,
+            "end": 1856.86,
+            "text": " So, on this pin, if you apply a signal 1, that is plus 1 or plus 5 volt, which is logic 1, for maximum of 4 T states."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1856.86,
+            "end": 1864.86,
+            "text": " For maximum of 4 clicks of the clock off microprocessor, then your microprocessor will restart."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1864.86,
+            "end": 1865.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1865.86,
+            "end": 1868.86,
+            "text": " So, this microprocessor will restart."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1868.86,
+            "end": 1870.86,
+            "text": " And what happens on restart?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1870.86,
+            "end": 1884.86,
+            "text": " On restart, the microprocessor will start executing the instructions which are written at an address of FFFF0."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1884.86,
+            "end": 1886.86,
+            "text": " That is 4 times F and 0."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1886.86,
+            "end": 1887.86,
+            "text": " So, it's a 16-bit address."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1887.86,
+            "end": 1894.86,
+            "text": " So, that 16-bit address, it will go to that particular location and whatever instructions are written there,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1894.86,
+            "end": 1896.86,
+            "text": " it will start executing those instructions."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1896.86,
+            "end": 1907.86,
+            "text": " So, it's simply like when you reset your computer, your Windows operating system or Mac operating system or whatever Linux operating system you are using, it will start to reboot."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1907.86,
+            "end": 1909.86,
+            "text": " So, this is just like that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1909.86,
+            "end": 1928.86,
+            "text": " If you will keep the value high at this particular pins for 4 number of clicks of the clock or 4 T states, in that case, this will reset and it will start executing the instructions from hexadecimal value, hexadecimal address value of FFFF0."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1928.86,
+            "end": 1929.86,
+            "text": " So, from there the execution will start."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1929.86,
+            "end": 1933.86,
+            "text": " So, these pins are, I guess, already all clear to you."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1933.86,
+            "end": 1943.86,
+            "text": " So, on this left hand side, we have covered all the pins, I guess, NMI, INTR, clock, ground and all these address pins, etc."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1943.86,
+            "end": 1948.86,
+            "text": " And on the right hand side, we have covered reset, ready, test."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1948.86,
+            "end": 1956.86,
+            "text": " So, reset, ready, test are covered and here VCC, all these things, etc. are covered."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1956.86,
+            "end": 1963.86,
+            "text": " Now, the pins that remain are the pins which correspond to minimum and maximum mode of operation."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1963.86,
+            "end": 1968.86,
+            "text": " So, let me first explain to you the minimum mode operation pins, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1968.86,
+            "end": 1976.86,
+            "text": " So, these minimum mode operation pins will have the corresponding meaning for maximum mode also."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1976.86,
+            "end": 1982.86,
+            "text": " Soon, we will be able to see that the most of the minimum mode operation pins, whatever their meaning is,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1982.86,
+            "end": 1989.86,
+            "text": " the same meaning will also be there in the maximum mode for a lot of pins with some minor differences, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1989.86,
+            "end": 1992.86,
+            "text": " So, let me start with this hold and HLDA."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1992.86,
+            "end": 1995.86,
+            "text": " This combination works simultaneously."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1995.86,
+            "end": 1998.86,
+            "text": " So, what do you mean by hold signal?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 1998.86,
+            "end": 2010.86,
+            "text": " If there is an external device which wants to gain the control of the internal buses, internal buses of this particular CPU,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2010.86,
+            "end": 2014.86,
+            "text": " then it will give you a hold request over there, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2014.86,
+            "end": 2020.86,
+            "text": " So, that hold request, that hold request will be taken here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2020.86,
+            "end": 2025.86,
+            "text": " And this microprocessor, it will complete the current task that it is executing."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2025.86,
+            "end": 2029.86,
+            "text": " And it will acknowledge that on hold acknowledgement pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2029.86,
+            "end": 2032.86,
+            "text": " HLD stands for hold and A stands for acknowledgement."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2032.86,
+            "end": 2038.86,
+            "text": " So, it will acknowledge it here that now the buses are free and now you can use them."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2038.86,
+            "end": 2045.86,
+            "text": " So, when this happens, what happens is these address lines and data lines etc."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2045.86,
+            "end": 2047.86,
+            "text": " They do not have any meaning."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2047.86,
+            "end": 2049.8599999999997,
+            "text": " So, these pins are try stated."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2049.8599999999997,
+            "end": 2050.8599999999997,
+            "text": " What do we mean by try stated?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2050.8599999999997,
+            "end": 2055.8599999999997,
+            "text": " They do not have a value of 0 or 1, but they go into a high impedance state, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2055.8599999999997,
+            "end": 2058.8599999999997,
+            "text": " So, that's what we mean by try stating these things."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2058.8599999999997,
+            "end": 2064.8599999999997,
+            "text": " So, hold acknowledgement is used for that particular purpose, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2064.86,
+            "end": 2074.86,
+            "text": " And after that, let us move on to this pin called as, I think I am missing out on INTA bar pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2074.86,
+            "end": 2077.86,
+            "text": " So, do you see this INTA bar pin here? No."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2077.86,
+            "end": 2079.86,
+            "text": " Let's discuss these only."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2079.86,
+            "end": 2082.86,
+            "text": " Hold is clear. Hold acknowledgement is clear."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2082.86,
+            "end": 2085.86,
+            "text": " Now, for writing, you have this write bar."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2085.86,
+            "end": 2088.86,
+            "text": " In a similar way, we had this read bar."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2088.86,
+            "end": 2095.86,
+            "text": " So, if the device or the microprocessor is trying to write something to the external world, be it memory or input output device."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2095.86,
+            "end": 2100.86,
+            "text": " So, it is going to use this write signal, write bar signal, active load signal, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2100.86,
+            "end": 2104.86,
+            "text": " Now, this M slash IO bar."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2104.86,
+            "end": 2108.86,
+            "text": " This is similar to the signal that we have seen in 8085."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2108.86,
+            "end": 2111.86,
+            "text": " Here, it was IO slash M bar."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2111.86,
+            "end": 2115.86,
+            "text": " So, remember that this M slash IO bar is just reversed here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2115.86,
+            "end": 2118.86,
+            "text": " In 8085, it was IO slash M bar."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2118.86,
+            "end": 2120.86,
+            "text": " Here, it is M slash IO bar."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2120.86,
+            "end": 2127.86,
+            "text": " And we already know that it is actually being used for taking this memory or input output device."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2127.86,
+            "end": 2131.86,
+            "text": " So, it indicates the status of that, this particular pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2131.86,
+            "end": 2134.86,
+            "text": " Now, this DT, data transfer or receive."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2134.86,
+            "end": 2141.86,
+            "text": " So, whether you are trying to transfer the data or receive the data, it is indicated by this particular pin, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2141.86,
+            "end": 2143.86,
+            "text": " Then you have DEN."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2143.86,
+            "end": 2147.86,
+            "text": " DEN stands for data enable output, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2147.86,
+            "end": 2156.86,
+            "text": " So, it is during, I mean, every instruction that you process in this 8086 CPU."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2156.86,
+            "end": 2161.86,
+            "text": " So, at the later portion of the bus cycle, this thing is done."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2161.86,
+            "end": 2173.86,
+            "text": " In the minimum mode of operation, this signal is issued by the processor to enable the Intel 8286 or Intel 8287 bus trans receiver, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2173.86,
+            "end": 2178.86,
+            "text": " We have seen the bus trans receiver in 8085 discussion."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2178.86,
+            "end": 2180.86,
+            "text": " So, that is used here, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2180.86,
+            "end": 2181.86,
+            "text": " Data enable."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2181.86,
+            "end": 2183.86,
+            "text": " And it is active low."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2183.86,
+            "end": 2189.86,
+            "text": " Obviously, if its value is zero, if the value of this DEN is zero, then this is activated."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2189.86,
+            "end": 2194.86,
+            "text": " And the microprocessor is ready to transmit and receive data."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2194.86,
+            "end": 2197.86,
+            "text": " So, this is indicated by that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2197.86,
+            "end": 2206.86,
+            "text": " So, the difference between DT slash R pin and DEN is, if this pin is activated, that means the microprocessor is ready to transmit or receive the data."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2206.86,
+            "end": 2209.86,
+            "text": " But, will it receive or transmit the data?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2209.86,
+            "end": 2211.86,
+            "text": " It is indicated by this particular pin."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2211.86,
+            "end": 2216.86,
+            "text": " So, these two pins might sound confusing, but the purposes are entirely different."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2216.86,
+            "end": 2228.86,
+            "text": " DEN bar, it shows the status of this processor, whether it is ready to transfer or receive the data or not."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2228.86,
+            "end": 2234.86,
+            "text": " And this DT slash R will actually tell you whether it is doing the transmission or the reception, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2234.86,
+            "end": 2240.86,
+            "text": " And this ALE has the same meaning as we had in that 8085 microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2240.86,
+            "end": 2248.86,
+            "text": " In 8085 microprocessor, we use this ALE signal to latch the address which was there."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2248.86,
+            "end": 2252.86,
+            "text": " So, here also this ALE will be performing in the same way."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2252.86,
+            "end": 2260.86,
+            "text": " So, this signal is usually provided by the 8086 to demultiplex this address and data bus which is multiplex."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2260.86,
+            "end": 2264.86,
+            "text": " So, we have an address and data bus which starts from this and it ends here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2264.86,
+            "end": 2267.86,
+            "text": " So, if you want to demultiplex that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2267.86,
+            "end": 2276.86,
+            "text": " So, for that purposes, we are using it and demultiplexing as we have seen in 8085, it is done using external latches, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2276.86,
+            "end": 2286.86,
+            "text": " So, in T1 state, we already know that addresses will be passed and after T1 state on these address and data lines, your data will be passed."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2286.86,
+            "end": 2290.86,
+            "text": " So, this ALE signal is used for latching of that address and data."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2290.86,
+            "end": 2292.86,
+            "text": " It is also similar to that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2292.86,
+            "end": 2297.86,
+            "text": " So, this INTA bar, this INTA bar signal is interrupt acknowledge."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2297.86,
+            "end": 2302.86,
+            "text": " So, this interrupt acknowledge indicates the reception of an interrupt request."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2302.86,
+            "end": 2308.86,
+            "text": " It consists of two negative going pulses in two consecutive bus cycles, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2308.86,
+            "end": 2312.86,
+            "text": " So, this is also very important in 8086, this INTA bar."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2312.86,
+            "end": 2317.86,
+            "text": " It will take two negative pulses in two consecutive bus cycles."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2317.86,
+            "end": 2319.86,
+            "text": " So, that's why it's a level triggered signal."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2319.86,
+            "end": 2324.86,
+            "text": " And the first pulse informs the interface that the request has been recognized."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2324.86,
+            "end": 2333.86,
+            "text": " And upon the receipt of the second pulse, the interface is to send the interrupt type to the processor over the data bar, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2333.86,
+            "end": 2337.86,
+            "text": " So, this interrupt acknowledge is actually the acknowledgement of the interrupt."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2337.86,
+            "end": 2339.86,
+            "text": " So, you have seen this INTR and NMI."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2339.86,
+            "end": 2343.86,
+            "text": " So, it is used in combination with that particular thing."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2343.86,
+            "end": 2346.86,
+            "text": " Now, this is for the minimum mode of operation."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2346.86,
+            "end": 2351.86,
+            "text": " We now want to talk about the maximum mode of operation also."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2351.86,
+            "end": 2356.86,
+            "text": " The maximum mode of operation, it will also have similar kinds of pins, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2356.86,
+            "end": 2363.86,
+            "text": " So, in maximum mode of operation, we already know that this processor will have other processors in the system,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2363.86,
+            "end": 2366.86,
+            "text": " which will try to interact with this particular processor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2366.86,
+            "end": 2377.86,
+            "text": " So, let us first start discussing this RQ bar slash GT 0 bar and RQ bar slash GT 1 bar."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2377.86,
+            "end": 2379.86,
+            "text": " Now, what are these pins?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2379.86,
+            "end": 2382.86,
+            "text": " RQ means request and GT means grant."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2382.86,
+            "end": 2388.86,
+            "text": " So, this will tell you whether the request has been..."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2388.86,
+            "end": 2394.86,
+            "text": " This pin actually means request grant bus access control, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2394.86,
+            "end": 2405.86,
+            "text": " So, these pins are used by other local buses master to force the processor to release the local bus at the end of the processor current bus cycle, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2405.86,
+            "end": 2411.86,
+            "text": " And then, it is similar to this hold and hold acknowledge, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2411.86,
+            "end": 2421.86,
+            "text": " So, this pin that you see here, request and request grant, it is used for just taking the requests and granting the request, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2421.86,
+            "end": 2428.86,
+            "text": " So, this RQ slash DTO, they are actually the output signals from the microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2428.86,
+            "end": 2433.86,
+            "text": " And they will indicate, they will indicate the status of what is going on there."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2433.86,
+            "end": 2445.86,
+            "text": " And if there is a tie between these two, if there is a tie between these two, then in that case, this RQ 0 or the 0 pin will be given priority."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2445.86,
+            "end": 2450.86,
+            "text": " Out of these two things, request and grant 0 and request and grant 1."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2450.86,
+            "end": 2458.86,
+            "text": " If there is a tie between these two, then definitely this 0 indexed pin will be given priority, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2458.86,
+            "end": 2463.86,
+            "text": " So, it works in a similar way that hold and hold acknowledge works, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2463.86,
+            "end": 2465.86,
+            "text": " So, now let us come to this lock."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2465.86,
+            "end": 2467.86,
+            "text": " Lock is very important."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2467.86,
+            "end": 2479.86,
+            "text": " Lock means if 8086 CPU is doing something important and it does not want to lose the control of its internal data bus or address bus or any bus."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2479.86,
+            "end": 2482.86,
+            "text": " So, in that case, it will float this signal."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2482.86,
+            "end": 2483.86,
+            "text": " It will make this signal high."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2483.86,
+            "end": 2492.86,
+            "text": " And even if there is a request from the externally interfaced microprocessors to this particular microprocessor to be able to use this bus."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2492.86,
+            "end": 2496.86,
+            "text": " This will tell them that no, at this point of time, I can't give you any access."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2496.86,
+            "end": 2500.86,
+            "text": " So, that's why lock pin is used here, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2500.86,
+            "end": 2506.86,
+            "text": " Now, let's come to these status pins S0, S1 and S2 in case of maximum mode."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2506.86,
+            "end": 2511.86,
+            "text": " So, remember these status pins S0, S1 and S2, they work in maximum mode only."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2511.86,
+            "end": 2516.86,
+            "text": " So, for explaining that, we have this chart, right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2516.86,
+            "end": 2524.86,
+            "text": " So, this S0 bar, S1 bar and S2 bar are represented here as S0 complement, S1 complement and S2 complement."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2524.86,
+            "end": 2525.86,
+            "text": " So, there is a complement."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2525.86,
+            "end": 2526.86,
+            "text": " I haven't put a bar here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2526.86,
+            "end": 2529.86,
+            "text": " So, this should be right as that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2529.86,
+            "end": 2531.86,
+            "text": " So, what does these indicate?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2531.86,
+            "end": 2534.86,
+            "text": " See, the values are here, given here."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2534.86,
+            "end": 2536.86,
+            "text": " There can be eight possible combinations, obviously."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2536.86,
+            "end": 2542.86,
+            "text": " So, if it is all 0, then it indicates that an interrupt acknowledge cycle is going on."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2542.86,
+            "end": 2546.86,
+            "text": " If it is 001, then it is reading the input output port."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2546.86,
+            "end": 2550.86,
+            "text": " If it is 010, writing the input output port."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2550.86,
+            "end": 2553.86,
+            "text": " If it is 001, the system has been halted."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2553.86,
+            "end": 2557.86,
+            "text": " If it is 100, the instruction fetch cycle is going on."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2557.86,
+            "end": 2559.86,
+            "text": " If it is 101, then read memory."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2559.86,
+            "end": 2562.86,
+            "text": " 110, then write memory."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2562.86,
+            "end": 2565.86,
+            "text": " And if it is 111, then it is passing inactive."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2565.86,
+            "end": 2574.86,
+            "text": " So, these three pins S0, S1 and S2 are used to tell the status of what microprocessor is doing in maximum mode at any given particular time."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2574.86,
+            "end": 2576.86,
+            "text": " So, these are the status pins."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2576.86,
+            "end": 2578.86,
+            "text": " So, you have to remember these statuses."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2578.86,
+            "end": 2587.86,
+            "text": " Now, after these status pins, you have got the status of Q which will be given on these pins QS0 and QS1."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2587.86,
+            "end": 2596.86,
+            "text": " These QS0 and QS1 will tell you the status of instruction Q that we already have which is of 6 bytes."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2596.86,
+            "end": 2599.86,
+            "text": " So, let me just show you that instruction Q."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2599.86,
+            "end": 2603.86,
+            "text": " In the architecture portion, you had this instruction Q."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2603.86,
+            "end": 2607.86,
+            "text": " So, what is the current status of this instruction Q?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2607.86,
+            "end": 2611.86,
+            "text": " That instruction will be shown by the pins that I am talking about."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2611.86,
+            "end": 2615.86,
+            "text": " That is, these pins QS0 and QS1."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2615.86,
+            "end": 2618.86,
+            "text": " And it is summarized in this particular chart."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2618.86,
+            "end": 2629.86,
+            "text": " So, this QS1 and QS0 for 00, 01, 10 and 11 values, it will indicate no operation, first byte, QMT and subsequent byte."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2629.86,
+            "end": 2631.86,
+            "text": " What does that mean?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2631.86,
+            "end": 2635.86,
+            "text": " If the status is 00 on both of these pins, then no operation is happening on Q."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2635.86,
+            "end": 2643.86,
+            "text": " If the status is 01, then the first byte from the Q has been read by the microprocessor."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2643.86,
+            "end": 2649.86,
+            "text": " If the status is 01, then 01 means Q has been emptied."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2649.86,
+            "end": 2651.86,
+            "text": " The Q has been emptied."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2651.86,
+            "end": 2653.86,
+            "text": " Why has it been emptied?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2653.86,
+            "end": 2661.86,
+            "text": " Because it might happen that in your program, you might have just loaded some bytes of code."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2661.86,
+            "end": 2665.86,
+            "text": " But one of the bytes happened to be jump instruction."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2665.86,
+            "end": 2670.86,
+            "text": " And when there is a jump instruction, you have to read code from an entirely different location."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2670.86,
+            "end": 2674.86,
+            "text": " So, in that case, whatever is kept on the queue, you have to just discard it."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2674.86,
+            "end": 2676.86,
+            "text": " So, in that case, the queue will be emptied."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2676.86,
+            "end": 2678.86,
+            "text": " So, that situation can also occur."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2678.86,
+            "end": 2680.86,
+            "text": " So, for 10, queue will be emptied."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2680.86,
+            "end": 2682.86,
+            "text": " So, this is an important thing."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2682.86,
+            "end": 2687.86,
+            "text": " Then after that, if 11 is the status, that means subsequent byte has been accessed."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2687.86,
+            "end": 2692.86,
+            "text": " I mean, either it is the first byte or it is the subsequent byte."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2692.86,
+            "end": 2695.86,
+            "text": " The subsequent byte may be second, third, fourth, fifth or sixth."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2695.86,
+            "end": 2701.86,
+            "text": " But if it is not the first byte, if any byte other than the first byte has been accessed,"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2701.86,
+            "end": 2703.86,
+            "text": " then it is the subsequent byte."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2703.86,
+            "end": 2708.86,
+            "text": " So, the status of this Qs0 and Qs1 will let you know that."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2708.86,
+            "end": 2709.86,
+            "text": " Right?"
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2709.86,
+            "end": 2718.86,
+            "text": " So, after discussing this Q thing, let us now move on to another thing, which is called as..."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2718.86,
+            "end": 2725.86,
+            "text": " Yeah, I mean, this complete minimum and maximum mode spins have also been discussed with their relevant meanings."
+        },
+        {
+            "number": "2",
+            "title": "Video 12 - 8086  Pin Diagram",
+            "start": 2725.86,
+            "end": 2726.86,
+            "text": " So, what..."
+        }
+    ],
+    "text": " Hello and welcome to this lecture series on microprocessor and microcontroller. And in this current video, we are going to discuss 8086 microprocessor. And we are going to discuss the pin diagram of 8086 microprocessor. In the earlier video lecture, that is video lecture number 11, we have studied the architecture of 8086 microprocessor. So let me just quickly revise what we did in the last lecture. So in the last lecture, we have seen one slide for architecture. So for 8086 microprocessor, the architecture is this. And the main highlights of this architecture in comparison to the 8085 microprocessor was that bus interface unit and execution unit are separate here. I mean, execution unit will all deal with execution of the statements that we have made in programming, the arithmetic, shift statements, etc. These calculations will be done by the execution unit. And the bus interface unit, it will be working independent of this execution unit. So the purpose of bus execution unit will be to transfer the data from the externally interfaced one megabyte memory. That is the maximum possible memory, which you can externally interface to 8086 microprocessor. Right. So it's not that 8086 is a 16-bit microprocessor. So that's why every location in the memory will also be of 16 bits. No. Every location in the memory that is externally interfaced memory will still be of 8 bits. That is 1 byte. And we will have 1 mega such locations. That is 2 raised to the power of 20 such locations. And since 8086 happens to be a 16-bit microprocessor, which means that the data bus that you see here, it's of 16 bits. However, the address bus has to be of 20 bits because 2 raised to the power of 20 is 1 mega. So that is why we can address the externally interfaced 1 megabyte memory locations there. So 8086 is a 16-bit microprocessor. And on that note, we have most of the general purpose registers, which are accumulator, B register, C register, D register, etc. These are all 16 bits. However, they can also be used in this 8-bit fashion, the higher byte and the lower order byte. So they can be used in that fashion also. Then you have got stack pointer, then base pointer, source index, destination index, etc. In this execution unit. These registers that you see here, code segment, data segment, extra segment, stack segment, and instruction pointer. They are also of 16 bits. But they contain the address of the corresponding sections in the externally interfaced memory. For example, code segment in externally interfaced memory, which is 1 megabyte completely, will be of 64 kilobyte. Similarly, if you talk about data segment, it will also be of 64 kilobytes. Extra segment and stack segment will also be of 64 kilobytes each. So this code segment, it will contain the starting address of that particular code segment in the externally interfaced memory. Now you will ask the question that since the externally interfaced memory can be addressed by 20 bits. So how is it possible that the code segment, which is inside this microprocessor, this code segment register is of 16 bits? So we said that the beginning address has to be such that the last four bits have to be zero. It is by default like that. So that is why since the last four bits are zero, that is why 16 bits are left. So those 16 bits will be kept in code segment, data segment, extra segment and stack segment. Instruction pointer we have discussed. It's like the program counter in 8085. We will talk about it more when we will do the programming. We have a separate instruction queue here, which is of six bytes. So in advance, this 8086 microprocessor can contain six bytes of the code that we have written. And when this queue has two empty locations, in that case only, the next two bytes will be fetched. Not before that. So this is how this 8086 performs. And this bus interface unit and execution unit is independent of each other. So the fetch, execute and decode. This three phase cycle, fetch, execute and decode. These three are independent of each other. Otherwise, in 8085, what used to happen was, we usually take one byte from the externally interface memory, keep it in the instruction register, decode it and then execute it. Then we take the next byte, etc. But here we try to fetch six bytes at max in advance. So that's what happens in 8086 microprocessor. So let me first check whether this video is getting recorded or not. Yeah, it's getting recorded. So after that, after this architecture part, these were the main highlights of this architecture. And now in this today's session, we are going to discuss the pin diagram of this 8086 microprocessor. Now, this is a 40 pin IC. There are 40 pins here, as you can see on the slide. This starts from one and go up to 40 here. And let me first just tell you how to switch on this 8086 CPU. So for that, you have obviously this VCC, which is the 40th pin. And this VCC can be plus 5 volts and the tolerance limit is 10%, right? Plus minus 10% could be the variation. So this VCC has to be supplied with a DC voltage of plus 5 volts. In that case, it will be on. Now you can see that there are two ground pins here. This is the one ground pin, which is on pin number one. And on pin number 20, you can also see that there is a ground signal. So now, why two grounds are there in one IC? So what happens is when you have a bigger circuit, when you have a bigger circuit, then you will require multiple grounds. Because what happens is suppose if this pin is suppose high, then a pin is high or low with respect to the ground pin. So there are these two ground pins. So if the ground voltage is treated as zero, then plus 5 volt will be treated as a high volt, high or logic one at this particular pin. So these two have to be internally connected through some resistance, which will let you know that this point has a potential of plus 5 volt. But what happens is there are multiple number of pins in this integrated circuit. So this ground, which is supposed to be zero ideally does not remain zero. It also acquires certain kind of voltage because of these multiple pins being grounded to the same pin. So that is why to keep the ground voltage at zero absolutely, we have got these two pins here. So the details of this might have been known to you from your electronics circuit code, the basic electronics code, where you also learn that in a big circuit, you have to have multiple number of grounds. So because of that reason only you have got multiple grounds here, right? So this VCC and these two ground pins, they have to be appropriately placed VCC at plus 5 volt, plus 5 volt DC battery. And then at ground pins, you have to give the ground signal. That is, you have to ground them. And then you have to provide a clock here. That clock, we have already discussed how the clock should be. The frequency is 5 MHz for the base variant of 8086 CPU. And the duty cycle has to be 33%. Means in every period of that clock pulse, it should remain on for 33% of the time. So that way this clock signal has to be provided, right? So if you, if you apply all these signals, your microprocessor will become on, right? Now you see two things here, maximum mode and minimum mode. I think we have already had a discussion about this maximum mode and minimum mode. So by minimum mode, what we mean is, if the microprocessor is the only processor that is present in the circuit. So that's what we mean by minimum mode. So the signals that you see in brackets here, they are all applicable to minimum mode. And maximum mode means the mode in which there are multiple processors, which are connected in the system, right? So that mode is called as maximum mode. So the signals that you see here, which are not written in any bracket, they are for maximum mode, right? So at one particular time, this microprocessor can either operate in minimum or operate in maximum mode. It cannot operate in both of the modes at the same time. So you have to select one particular mode of operation. So based upon that, the meaning of these pins will be taken. You can see that there are some double meanings, which are written for these pins. Now, these two meanings will depend upon whether the microprocessor operates in maximum mode or minimum mode. And which will, how will we know that our processor is operating in maximum or minimum mode? So for that, we have a pin here, MN slash MX bar, right? So if this pin is set as high, then it is operating in the minimum mode. And if this pin is set as low, then it is operating in the maximum mode. So that's what we mean by this minimum and maximum mode of operation here. So in this diagram, I haven't shown the directional nature of these pins. So I will explain them as I carry forward my explanation, right? So the minimum and maximum mode, I guess, is clear to everyone. If there are multiple processors in the system. Now, one question, one very natural question could be, why would someone like to have multiple processors in their computer? Right? So think about a situation as we have seen in 8085. There was, there were only this addition and subtraction commands. No multiplication command, no division command, no command for taking the logarithm of something, no command for taking the sinusoidal of something. So these commands were not there. So for these, you have to write programs inside 8085. Right? Similarly in 8086 CPU, you will see that there will be command for addition, subtraction, multiplication, and division as well, which were not there in 8085. So in 8085, multiplication and division were not there, but here they will be there. Right? But still, in today's world, we know that we frequently use this logarithm operation, sine operation, tan operation, and there are other mathematical functions which are frequently used. So we do not write programs for that. Right? We can directly just use our scientific calculators, which is provided in our machines, and we can just do things with that. So, since these commands are very less, which are present in this 8086 CPU. So in that case, you know, there is something which is called as a math co-processor. The math co-processor can be used with this processor. Co-processor because it will operate together with this processor. So that processor is 8087. This is 8086. And you can have one more processor, which will have dedicated operations for mathematics. That processor is called as 8087 microprocessor. And it operates together with this CPU as the main CPU. Right? So you can have multiple processors in the system. And it's not because that three or four people who have got 8086 computer, they are trying to connect with each other. And that is the only reason that we are having multiple processors in the system. It's not like that. Processors, they do different tasks. This 8086 is a general purpose CPU. It can be used for any purpose. It is not that we cannot implement a program which won't be able to perform sign function. It can do that. But there is a separate dedicated processor for that. So 8086, sorry, 8087 is called as math co-processor. Right? So still in 8086, you will see that we have a hundred mnemonics. We have about a hundred mnemonics here. And there are combinations that we can make. There are combinations that we can make are 3,800. About 3,800 combinations would be made. In 8085, we had 74 instructions. And there, I think 243 combinations can be made. However, in this 8086 CPU, we have got 100 instructions. About 100 instructions. And 3,800 combinations can be made. And out of those 3,800 combinations, you can make various permutations and combinations and write your program. So the instruction set of this 8086 CPU is very powerful as compared to 8085. We will see that in our programming sessions. So now let me just begin by explaining each and every pin to you. Each and every pin that you see here. Let us try to just elaborate on that part. So let us first begin with the address and data bus. Now the address and data bus, as you can see here, you can see these pins AD0, AD1, AD2 till AD14 here. Right? And then after AD15, AD16, AD17, AD19. So from 0, from AD0 to this AD19, you have got a total of 20 pins. You have got a total of 20 pins. And you already know that the address bus of 8086 is of 20 bits. So the address is usually kept on these pins from AD0 to this AD19. Right? So this is used for address bus. Now data bus, it is of 16 bits because 8086 is a 16 bit microprocessor. So you do not have separate data pins here because that will again complicate, that will again increase the size of this 8086 microprocessor. And address bus is seldom used in comparison to the data bus. Address bus is not frequently used in comparison to the data bus. And we have seen why is it so in 8085 microprocessor. Because at the beginning of read or write operation from memory or input output, in the T1 clock cycle only, the address buses, they will contain the address. And after that, that address might not be required. So from T2, T3, T4 clock cycles, you will have data on these address buses. So in 8086 CPU also, we have multiplexed the address and data bus. So you can see here from AD0 to AD15, you have this notation of AD. AD stands for address as well as data. However, after this AD15, you have got only A16, A17, A18 and A19. Since the address bus is of 20 bits, so you have got from 0 to 19, that is 20 address pins. And the data bus is only of 16 bits. So you have got AD0 to AD14 and then AD15. That means a total of 16 data pins. So data and address bus are multiplexed. And the lower order 16 bits of the address bus are treated as data bus. So this addresses will be floated in the T1 clock cycle. Probably you have known the meaning of T1 clock cycle from our earlier discussions. So that's why I'm using this terminology. So from T1 clock cycle, the addresses will be floated onto this. And in subsequent clock cycles, we will have data which will be floated onto this. Then these pins, A16, A17 and A18. When the data is floated onto these pins, these pins, the remaining pins, which are 4 in number, will not be used as data pins. Because of course, data is only of 16 bits. So they have got this S3, S4, S5 and S6. The interpretation of these is that they will be used to signify some status. So we will talk about what these status pins are in a while. But you see the beauty of multiplexing these address and data lines. If it would have not been the case, then in 8086 CPU, the design part would have been complicated. You have to make a bigger IC as well as the number of ground pins will also increase. The cost of this thing will also increase. And the point on which they have been multiplexed is that address lines are seldom used in comparison to the data lines. So on that note, these address and data pins have been discussed. Now let us move on to these status signals. S3, S4, S5 and S6, which are multiplexed with the higher 4 bits of this address line. Right? So for this, let us first discuss this S3 and S4 pins. So let me just keep the diagram to this side and bring you the status of S4 and S3 pins. So now what this S3 and S4 pin will combinedly tell us is summarized in this particular chart. If you see here S4, S3 and the segment. I mean the microprocessor, if it is dealing with the externally interfaced memory, then since inside the memory, we have got four segments. These extra segments, stack segment, code segment and data segment. So, if you want to know which segment. And apart from that, there is also a lot of vacant memory, which is used for different purposes, which we will come to later. But for now, if you want to know which segment is being used currently, then you have to see these pins. S3 and S4. If S3 and S4, they have a value of 00, you are using extra segment. Otherwise, if the value is 01, stack segment, 10, code segment and 11, data segment. So, this is used to keep a track of that particular thing. S3 and S4, right? And remember that apart from these segments, there is a lot of memory which is vacant, which is definitely used for interrupts. So, interrupts like in 8085, we saw that there were a vector interrupts and their locations, they started from 0000 and 008, then 00. I mean, like that, there were some specified address locations at which you used to keep your programs. So, similarly, that thing here is formally called as interrupt to vector table. So, there are specific locations for that and there you will be writing your programs. So, those locations are already reserved in 8086 also. So, we will come to them a little later. But now, let us discuss the purpose of the other pins that we have got in this thing. That is, we have got this pin number S5 and pin number S6. So, what is the purpose of using these pins S5 and S6? So, S5 pin that you see here is interrupt enable flag status. I mean, this 8086 microprocessor is also capable of handling interrupts. So, there is a flag which is used inside 8086 CPU. So, that IF or the interrupt enable flag, if it is on, it can be known by this S5 pin. If this pin has a high value, then that can be treated as interrupt enable flag is on. And if it has got a low value, that flag is disabled. And that flag is especially used for maskable interrupts. The interrupts which you can deny servicing. So, that flag is used for those purposes. So, this pin is being used to indicate the status of that. Now, this is again this S6 pin. S6 pin is used for indicating the status. We will see that some external device, whether it is input output device or some other processor. If it wants to gain the control of the internal buses, address and data buses of this microprocessor. If it wants to gain the control of the internal buses, then this S6 pin will be floated high. So, the bus master can take the control. So, that is indicated by this S6 pin. Right? So, here you can see that we have also discussed these status pins S3, S4, S5 and S6. Right? So, we have discussed these address lines and data lines that you can see on this particular site. So, most of the pins on this particular site have been discussed. We will come to these pins later on where we will discuss interrupts. And now, let us again move on to this BHE bar slash S7 pin. Right? So, this BHE bar is actually used to indicate that bus high enable. BHE means bus high enable. So, what is this used for? We already know that externally interfaced memory is 1 megabyte in its maximum locations. And every location is of 8 bits or 1 byte. Right? Now, the addresses that you have in the external memory will be like 0000, 00001, 00002. No, not like that. They will be now in 20 bits. So, you will have an address 5 times 0. Then you will have 00001, 00002, etc. So, in hexadecimal. Right? So, there are some odd addresses and some even addresses. Right? So, this bus high enable, this bus high enable is used to indicate that odd addresses have been selected or not. Right? So, what happens is the externally interfaced memory of your 8086 is treated as a memory comprised of odd addresses and even addresses. Which every memory is. But then, this bus high enable signal is used to indicate that you have got an externally interfaced memory which is treated as an odd memory bank and an even memory bank. Which corresponds to odd addresses and even addresses. So, if you want to activate, if you want to activate the odd addresses, this signal will be enabled. Right? This signal will be made as high. I will later on tell you what this odd and even memory bank means and why is it important. But for now, you can just understand that the externally interfaced memory of 8086 microprocessor is organized as even bank and odd bank. And to select the odd bank, this bus high enable signal is being used. So, I will elaborate on this portion a little later. Maybe in the next video lecture. And this S7 does not mean anything. It is reserved. It is a spare. So, it does not mean anything. So, this pin actually is only meant for this bus high enable. Right? So, we already know the meaning of this minimum and maximum mode pin. So, there is nothing special in that. Now, let's come to this read pin. So, this read pin is similar to the pin that we have used in 8085 microprocessor also. So, this read pin will tell us if the value of this is 0. Then that means the microprocessor is trying to read something from the external memory. Because a bar is placed over this. So, this simply means that it is trying to read something. If it is 0, it is activated. So, microprocessor is reading something from the external memory. So, that will be indicated by this particular pin. Right? So, now after this read pin, let's now directly come to this ready pin. Right? After this read, I am directly jumping to ready pin. We will discuss these two set of pins separately when we will discuss the maximum and minimum mode. So, now this ready pin. Ready pin is actually used. This ready pin is the input that informs the processor that the selected memory or the input output device is ready to complete the data transfer. Then, ready signal is often used to synchronize the fast processor with slow memory or slow input output device. Right? So, what happens is if this ready pin is high. Right? This is, you have to supply an input signal at it. I mean, this pin is definitely treated as an input pin to the microprocessor. If you put a high value at this particular pin. In that case, it indicates that the externally interfaced device or memory, whatever external device is there, it is ready to transfer the data. Because there may be some devices which are slower than this microprocessor. This microprocessor operates on 5 megahertz frequency. There might be devices which are slower in comparison to that. So, to be able to synchronize things between these two properly, we have got this ready pin. And this ready pin is actually an input signal to this particular microprocessor. And if the value at this pin is 0, then what happens is microprocessor will introduce additional bus idle cycles in their timing diagram. We have already seen timing diagrams for 8085. And there we know that for read or write, some T states are required. So, if a slower device is connected here, then that will, if this pin is 0, if the value at this pin is 0 from that particular device, if it is inserted as so, then if your microprocessor is trying to read something or write something to that particular device, then if the status at this pin is 0, the microprocessor will understand that it needs more time because it is slower. So, it will introduce more bus idle cycles. If it is doing the read cycle or the write cycle, it is of specific number of T cycles. So, there it will increase its extent. Instead of taking it regularly, it will introduce additional bus idle cycles. So that when the device is ready, it will be able to read the data. So, this is the usage of this ready pin here. Now, let me first discuss this INTR pin. Interrupt pin. So, this interrupt pin is an externally given interrupt. But the interrupts that you give on this particular pin are maskable in nature. I mean, there is an interrupt flag inside this 8086 CPU. So, in that interrupt flag, if there is an interrupt request which has come from the external world to the microprocessor. So, this is also an input signal to the microprocessor. If there is an interrupt request which has come to the microprocessor, then in that case, this microprocessor can serve that interrupt request or deny that. Depending on whether the interrupt flag is on or off. Right? So, this is a maskable interrupt which is externally given to this microprocessor. INTR. Right? Similarly, NMI. NMI that you see here is a non-maskable interrupt. So, non-maskable interrupt means irrespective of whatever is the status of interrupt flag inside the microprocessor. This NMI, if it is high, this request has to be served. One more point of difference between INTR and NMI is INTR is level triggered. However, NMI happens to be edge triggered. Right? So, this is level triggered and this is edge triggered. So, this is also one of the points of differences here. Now, let's discuss this test signal. This test signal. Test signal, it is actually used when we are using multiple processors in the system. Right? So, if you are using a 8087 coprocessor, MAT coprocessor with this processor, then this test signal is actually coupled with this another signal. I mean, this test signal is examined by the weight instruction. There is a weight instruction in 8086 microprocessor instruction set. So, this test signal, it will be used with that particular weight instruction. And this test signal is usually connected to the busy pin of 8087 microprocessor. So, if you have 8087 microprocessor, which is the MAT coprocessor, it is usually connected to 8086. So, this test pin here, it is connected to the busy pin of that for a proper synchronization between these two devices. Because from this device, if you will give a command to calculate sinusoidal value of something. So, it will return the value after calculating. So, this test pin is connected to the busy pin of that 8087 microprocessor. So, that will help achieve a proper synchronization. So, that is why this test pin is being used here. Right? So, now let's talk about this reset pin. Reset pin is usually used to restart the entire computer system. Right? We already have a reset button on our CPUs. So, similarly in those days, we had this reset pin. So, on this pin, if you apply a signal 1, that is plus 1 or plus 5 volt, which is logic 1, for maximum of 4 T states. For maximum of 4 clicks of the clock off microprocessor, then your microprocessor will restart. Right? So, this microprocessor will restart. And what happens on restart? On restart, the microprocessor will start executing the instructions which are written at an address of FFFF0. That is 4 times F and 0. So, it's a 16-bit address. So, that 16-bit address, it will go to that particular location and whatever instructions are written there, it will start executing those instructions. So, it's simply like when you reset your computer, your Windows operating system or Mac operating system or whatever Linux operating system you are using, it will start to reboot. So, this is just like that. If you will keep the value high at this particular pins for 4 number of clicks of the clock or 4 T states, in that case, this will reset and it will start executing the instructions from hexadecimal value, hexadecimal address value of FFFF0. So, from there the execution will start. So, these pins are, I guess, already all clear to you. So, on this left hand side, we have covered all the pins, I guess, NMI, INTR, clock, ground and all these address pins, etc. And on the right hand side, we have covered reset, ready, test. So, reset, ready, test are covered and here VCC, all these things, etc. are covered. Now, the pins that remain are the pins which correspond to minimum and maximum mode of operation. So, let me first explain to you the minimum mode operation pins, right? So, these minimum mode operation pins will have the corresponding meaning for maximum mode also. Soon, we will be able to see that the most of the minimum mode operation pins, whatever their meaning is, the same meaning will also be there in the maximum mode for a lot of pins with some minor differences, right? So, let me start with this hold and HLDA. This combination works simultaneously. So, what do you mean by hold signal? If there is an external device which wants to gain the control of the internal buses, internal buses of this particular CPU, then it will give you a hold request over there, right? So, that hold request, that hold request will be taken here. And this microprocessor, it will complete the current task that it is executing. And it will acknowledge that on hold acknowledgement pin. HLD stands for hold and A stands for acknowledgement. So, it will acknowledge it here that now the buses are free and now you can use them. So, when this happens, what happens is these address lines and data lines etc. They do not have any meaning. So, these pins are try stated. What do we mean by try stated? They do not have a value of 0 or 1, but they go into a high impedance state, right? So, that's what we mean by try stating these things. So, hold acknowledgement is used for that particular purpose, right? And after that, let us move on to this pin called as, I think I am missing out on INTA bar pin. So, do you see this INTA bar pin here? No. Let's discuss these only. Hold is clear. Hold acknowledgement is clear. Now, for writing, you have this write bar. In a similar way, we had this read bar. So, if the device or the microprocessor is trying to write something to the external world, be it memory or input output device. So, it is going to use this write signal, write bar signal, active load signal, right? Now, this M slash IO bar. This is similar to the signal that we have seen in 8085. Here, it was IO slash M bar. So, remember that this M slash IO bar is just reversed here. In 8085, it was IO slash M bar. Here, it is M slash IO bar. And we already know that it is actually being used for taking this memory or input output device. So, it indicates the status of that, this particular pin. Now, this DT, data transfer or receive. So, whether you are trying to transfer the data or receive the data, it is indicated by this particular pin, right? Then you have DEN. DEN stands for data enable output, right? So, it is during, I mean, every instruction that you process in this 8086 CPU. So, at the later portion of the bus cycle, this thing is done. In the minimum mode of operation, this signal is issued by the processor to enable the Intel 8286 or Intel 8287 bus trans receiver, right? We have seen the bus trans receiver in 8085 discussion. So, that is used here, right? Data enable. And it is active low. Obviously, if its value is zero, if the value of this DEN is zero, then this is activated. And the microprocessor is ready to transmit and receive data. So, this is indicated by that. So, the difference between DT slash R pin and DEN is, if this pin is activated, that means the microprocessor is ready to transmit or receive the data. But, will it receive or transmit the data? It is indicated by this particular pin. So, these two pins might sound confusing, but the purposes are entirely different. DEN bar, it shows the status of this processor, whether it is ready to transfer or receive the data or not. And this DT slash R will actually tell you whether it is doing the transmission or the reception, right? And this ALE has the same meaning as we had in that 8085 microprocessor. In 8085 microprocessor, we use this ALE signal to latch the address which was there. So, here also this ALE will be performing in the same way. So, this signal is usually provided by the 8086 to demultiplex this address and data bus which is multiplex. So, we have an address and data bus which starts from this and it ends here. So, if you want to demultiplex that. So, for that purposes, we are using it and demultiplexing as we have seen in 8085, it is done using external latches, right? So, in T1 state, we already know that addresses will be passed and after T1 state on these address and data lines, your data will be passed. So, this ALE signal is used for latching of that address and data. It is also similar to that. So, this INTA bar, this INTA bar signal is interrupt acknowledge. So, this interrupt acknowledge indicates the reception of an interrupt request. It consists of two negative going pulses in two consecutive bus cycles, right? So, this is also very important in 8086, this INTA bar. It will take two negative pulses in two consecutive bus cycles. So, that's why it's a level triggered signal. And the first pulse informs the interface that the request has been recognized. And upon the receipt of the second pulse, the interface is to send the interrupt type to the processor over the data bar, right? So, this interrupt acknowledge is actually the acknowledgement of the interrupt. So, you have seen this INTR and NMI. So, it is used in combination with that particular thing. Now, this is for the minimum mode of operation. We now want to talk about the maximum mode of operation also. The maximum mode of operation, it will also have similar kinds of pins, right? So, in maximum mode of operation, we already know that this processor will have other processors in the system, which will try to interact with this particular processor. So, let us first start discussing this RQ bar slash GT 0 bar and RQ bar slash GT 1 bar. Now, what are these pins? RQ means request and GT means grant. So, this will tell you whether the request has been... This pin actually means request grant bus access control, right? So, these pins are used by other local buses master to force the processor to release the local bus at the end of the processor current bus cycle, right? And then, it is similar to this hold and hold acknowledge, right? So, this pin that you see here, request and request grant, it is used for just taking the requests and granting the request, right? So, this RQ slash DTO, they are actually the output signals from the microprocessor. And they will indicate, they will indicate the status of what is going on there. And if there is a tie between these two, if there is a tie between these two, then in that case, this RQ 0 or the 0 pin will be given priority. Out of these two things, request and grant 0 and request and grant 1. If there is a tie between these two, then definitely this 0 indexed pin will be given priority, right? So, it works in a similar way that hold and hold acknowledge works, right? So, now let us come to this lock. Lock is very important. Lock means if 8086 CPU is doing something important and it does not want to lose the control of its internal data bus or address bus or any bus. So, in that case, it will float this signal. It will make this signal high. And even if there is a request from the externally interfaced microprocessors to this particular microprocessor to be able to use this bus. This will tell them that no, at this point of time, I can't give you any access. So, that's why lock pin is used here, right? Now, let's come to these status pins S0, S1 and S2 in case of maximum mode. So, remember these status pins S0, S1 and S2, they work in maximum mode only. So, for explaining that, we have this chart, right? So, this S0 bar, S1 bar and S2 bar are represented here as S0 complement, S1 complement and S2 complement. So, there is a complement. I haven't put a bar here. So, this should be right as that. So, what does these indicate? See, the values are here, given here. There can be eight possible combinations, obviously. So, if it is all 0, then it indicates that an interrupt acknowledge cycle is going on. If it is 001, then it is reading the input output port. If it is 010, writing the input output port. If it is 001, the system has been halted. If it is 100, the instruction fetch cycle is going on. If it is 101, then read memory. 110, then write memory. And if it is 111, then it is passing inactive. So, these three pins S0, S1 and S2 are used to tell the status of what microprocessor is doing in maximum mode at any given particular time. So, these are the status pins. So, you have to remember these statuses. Now, after these status pins, you have got the status of Q which will be given on these pins QS0 and QS1. These QS0 and QS1 will tell you the status of instruction Q that we already have which is of 6 bytes. So, let me just show you that instruction Q. In the architecture portion, you had this instruction Q. So, what is the current status of this instruction Q? That instruction will be shown by the pins that I am talking about. That is, these pins QS0 and QS1. And it is summarized in this particular chart. So, this QS1 and QS0 for 00, 01, 10 and 11 values, it will indicate no operation, first byte, QMT and subsequent byte. What does that mean? If the status is 00 on both of these pins, then no operation is happening on Q. If the status is 01, then the first byte from the Q has been read by the microprocessor. If the status is 01, then 01 means Q has been emptied. The Q has been emptied. Why has it been emptied? Because it might happen that in your program, you might have just loaded some bytes of code. But one of the bytes happened to be jump instruction. And when there is a jump instruction, you have to read code from an entirely different location. So, in that case, whatever is kept on the queue, you have to just discard it. So, in that case, the queue will be emptied. So, that situation can also occur. So, for 10, queue will be emptied. So, this is an important thing. Then after that, if 11 is the status, that means subsequent byte has been accessed. I mean, either it is the first byte or it is the subsequent byte. The subsequent byte may be second, third, fourth, fifth or sixth. But if it is not the first byte, if any byte other than the first byte has been accessed, then it is the subsequent byte. So, the status of this Qs0 and Qs1 will let you know that. Right? So, after discussing this Q thing, let us now move on to another thing, which is called as... Yeah, I mean, this complete minimum and maximum mode spins have also been discussed with their relevant meanings. So, what..."
+}

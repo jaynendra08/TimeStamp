@@ -1,0 +1,1958 @@
+{
+    "chunks": [
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 0.0,
+            "end": 12.22,
+            "text": " Hello and welcome to this lecture series on microprocessor and microcontroller and this is video number 20 and we are studying 8086 microprocessor."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 12.780000000000001,
+            "end": 22.900000000000002,
+            "text": " So in this particular video we are going to address a very short topic which is called as memory organization in 8086."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 22.9,
+            "end": 42.16,
+            "text": " So we will see that the externally interfaced memory which is of 1 megabyte is not used as a single chip rather it is used as a combination of two chips of size half MB each and they are organized into odd and even memory banks."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 42.16,
+            "end": 53.16,
+            "text": " So we will see what these even and odd banks are, how they are accessed, how the address and data buses are connected and when these signals are activated or deactivated."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 53.959999999999994,
+            "end": 60.16,
+            "text": " I mean odd and even memory bank it is not essential for them to be on for every time."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 60.31999999999999,
+            "end": 63.06,
+            "text": " Both of them are not on every time."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 63.199999999999996,
+            "end": 68.92,
+            "text": " Sometimes odd will be on, sometimes evil will be on and sometimes both of them might be on."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 68.92,
+            "end": 94.6,
+            "text": " So we will see all those issues but the primary advantage of using odd and even memory banks is since 8086 is a 16-bit microprocessor and if we want to write a word that is a 16-bit data inside the memory location then definitely we have to access two consecutive memory locations because every memory location is of one byte only."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 94.6,
+            "end": 102.33999999999999,
+            "text": " So if you want to write two bytes in one machine cycle then this odd even memory bank segregation will help us."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 102.82,
+            "end": 105.08,
+            "text": " So that's what this video is all about."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 105.46,
+            "end": 109.14,
+            "text": " So let me just quickly take you to the slides."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 111.72,
+            "end": 117.3,
+            "text": " Yeah so here let me first show you what we have already studied about this."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 117.72,
+            "end": 123.63999999999999,
+            "text": " We have already seen this table when we were studying the beginning lectures of architecture and pin diagrams."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 123.64,
+            "end": 130.48,
+            "text": " So here you see if your a0 is 0 and bhe bar is 0 right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 130.9,
+            "end": 136.5,
+            "text": " So in that case whole word from and to even address will be transferred right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 136.96,
+            "end": 146.94,
+            "text": " So what does this mean is since the externally interfaced memory that you see here this externally interfaced memory every location that you see is of one byte right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 147.06,
+            "end": 148.78,
+            "text": " Every location is of one byte."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 148.78,
+            "end": 158.3,
+            "text": " So in this externally interfaced memory if you want to write one word then that will simply mean that you have got two bytes to write."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 158.78,
+            "end": 167.56,
+            "text": " So definitely two consecutive locations have to be written and if they were to be written in one machine cycle that means at once they have to be written."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 167.56,
+            "end": 179.76,
+            "text": " Then we use this combination a0 will be equal to zero in which case we will see that the even memory bank will be active and bhe bar will also be equal to zero."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 179.76,
+            "end": 188.44,
+            "text": " If bhe bar is equal to zero that means bhe is equal to one and that means that odd memory bank will be activated."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 188.86,
+            "end": 194.1,
+            "text": " So we will see how these two are activated in a short while but this is the table that we have already studied."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 194.1,
+            "end": 207.14,
+            "text": " Similarly if you just want to transfer the data at upper byte from and to odd address then in that case a0 will be 1 that means a0 will be deactivated."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 207.42,
+            "end": 211.34,
+            "text": " So we will see how a0 is 1 and it is deactivated."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 211.45999999999998,
+            "end": 222.01999999999998,
+            "text": " Actually this will be connected to the chip select of this particular bank and here you can see that this chip select is you know through this bubble symbol"
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 222.02,
+            "end": 225.96,
+            "text": " where we mean that whatever signal is applied here it is converted."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 226.5,
+            "end": 233.20000000000002,
+            "text": " So this bank can be activated when and only when you know a0 is equal to zero."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 233.20000000000002,
+            "end": 241.66000000000003,
+            "text": " So if a0 is equal to zero in that case this acts like a not gate and one signal will be transmitted inside this memory."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 241.8,
+            "end": 247.54000000000002,
+            "text": " So this memory will become activated and similarly this bubble symbol also operates for bhe bar."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 247.54,
+            "end": 253.32,
+            "text": " So when bhe bar signal is zero since it is an active low signal so we will say that this has been activated"
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 253.32,
+            "end": 259.09999999999997,
+            "text": " but this zero signal will be transmitted as one here so in that way this memory will become active."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 259.32,
+            "end": 262.0,
+            "text": " So this bubble here means it's a not gate."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 262.21999999999997,
+            "end": 269.36,
+            "text": " So when a0 is zero this bank will be activated and when bhe bar is zero this bhe signal is activated."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 269.92,
+            "end": 272.84,
+            "text": " So in that case this memory bank will become active right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 272.84,
+            "end": 288.03999999999996,
+            "text": " So if you want to transfer upper byte from and to odd address then we will be using this combination bhe bar will be zero that means odd bank will be selected and a0 will be equal to 1 which means that this bank will not be selected."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 288.32,
+            "end": 301.94,
+            "text": " Similarly 1 0 for lower byte from and to even address and 1 1 that means none of them will be activated because if you will apply 1 here this will be deactivated and if this is 1 here this will be deactivated right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 301.94,
+            "end": 306.94,
+            "text": " So that's what we are going to verify today but let's not begin with this big example."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 307.26,
+            "end": 312.5,
+            "text": " Let me take a smaller example and the smaller example is actually this."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 312.86,
+            "end": 317.18,
+            "text": " So assume here that we have this kind of memory right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 317.54,
+            "end": 321.46,
+            "text": " So first have a look at this particular side then we will come to this slide."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 321.94,
+            "end": 325.88,
+            "text": " So this is what is this these are addresses of memory locations right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 325.88,
+            "end": 329.56,
+            "text": " Every memory location is 1 byte that is 8 bits."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 330.12,
+            "end": 337.06,
+            "text": " So the address of first location is 0000 second is 0001 and so on and so forth."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 337.14,
+            "end": 338.96,
+            "text": " We have got total 16 locations."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 339.42,
+            "end": 343.44,
+            "text": " So addresses they begin from 0000 and they end at 15."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 343.6,
+            "end": 351.21999999999997,
+            "text": " So a total of 16 memory locations are there and addresses can be accommodated because of that in only 4 bits right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 351.22,
+            "end": 359.88000000000005,
+            "text": " So this is one way we can buy this kind of chip from the market and this kind of chip can be used for our processor."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 360.1,
+            "end": 364.04,
+            "text": " Not our processor because our processor will require 1 megabyte of memory."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 364.48,
+            "end": 367.0,
+            "text": " So here we only have 16 memory locations."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 367.32000000000005,
+            "end": 373.56,
+            "text": " Our processor will require 1 megabyte that is 2 raised to the power of 20 such memory locations."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 373.74,
+            "end": 376.04,
+            "text": " That means 20 address bits will be there."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 376.04,
+            "end": 383.8,
+            "text": " However this is a pilot example so we are just taking only 16 bit addressable sorry 4 bit addressable memory."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 383.96000000000004,
+            "end": 388.14000000000004,
+            "text": " It is a total of 16 locations will be there and each location is 1 byte."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 388.58000000000004,
+            "end": 396.36,
+            "text": " Now an alternative way of having the same kind of memory is you can have 2 chips."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 396.36,
+            "end": 402.86,
+            "text": " You can have 2 chips and each of the chip has only 8 addresses right 8 addresses."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 402.86,
+            "end": 407.06,
+            "text": " So total of 16 addresses will be there if you combine both of these chips."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 407.46000000000004,
+            "end": 414.0,
+            "text": " So in case inside the market this complete memory is not available which has got 16 addresses."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 414.22,
+            "end": 421.02000000000004,
+            "text": " So you can buy 2 RAM chips or 2 ROM chips which are having 8 address locations and you can combine both of them."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 421.42,
+            "end": 427.76,
+            "text": " Now this is not the primary reason why we use this even and odd banks right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 428.12,
+            "end": 430.8,
+            "text": " The primary reason I will make it clear a little bit later."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 430.8,
+            "end": 436.14,
+            "text": " But let us say that instead of using this single chip we are using a combination of 2 chips right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 436.54,
+            "end": 438.5,
+            "text": " And how is the combination being used?"
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 439.2,
+            "end": 444.3,
+            "text": " Let us say since we want to have finally the addresses of 4 bits only."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 444.3,
+            "end": 449.78000000000003,
+            "text": " Because ultimately by using these 2 chips we are trying to imitate these 4 bits right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 450.16,
+            "end": 455.46000000000004,
+            "text": " So let me keep all the even addresses shown in yellow in one chip."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 455.46,
+            "end": 460.71999999999997,
+            "text": " And all the all addresses shown in another chip which are shown in green color here right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 461.06,
+            "end": 466.46,
+            "text": " So 0 to 4, 6, 8 etc. will belong to this chip and in 4 bits in 4 bits."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 466.56,
+            "end": 471.06,
+            "text": " So this is not a part of the memory but I have just drawn it to illustrate you right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 471.5,
+            "end": 473.12,
+            "text": " The memory is only this."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 473.29999999999995,
+            "end": 477.5,
+            "text": " These are the 3 bit addresses and these are the 1 byte locations."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 477.84,
+            "end": 482.21999999999997,
+            "text": " Similarly here these are the 3 bit addresses and these are the 1 byte locations."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 482.22,
+            "end": 487.86,
+            "text": " But for the purposes of illustrations I have just transferred these yellow addresses in one chip"
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 487.86,
+            "end": 491.22,
+            "text": " and these green addresses in another chip right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 491.62,
+            "end": 498.42,
+            "text": " So that we can see that all the even addresses belong to one bank and all the odd addresses belong to other banks."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 498.56,
+            "end": 501.98,
+            "text": " So that is how they are named as even bank and odd bank right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 501.98,
+            "end": 509.44,
+            "text": " So however their actual physical addresses you can see they are of 3 bits and they are exactly the same."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 509.94,
+            "end": 518.44,
+            "text": " Now what we are now going to do is we are if you see a similarity 0001 0011."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 518.44,
+            "end": 527.1400000000001,
+            "text": " So if you see the first 3 bits if you see the first 3 bits first most significant 3 bits they are as good as the address of this chip."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 527.5,
+            "end": 535.0400000000001,
+            "text": " So if you notice any entry suppose 1001 here so the first 3 bits are 100 and 100 is the address of this."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 535.58,
+            "end": 543.24,
+            "text": " So in the odd memory bank these first 3 bits or the first 3 most significant bits they are as good as the address bits."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 543.24,
+            "end": 550.74,
+            "text": " And this is true for even bank also if you see the first 3 bits 001 here this is 001."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 550.84,
+            "end": 553.48,
+            "text": " So this is also true for this particular case."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 553.94,
+            "end": 561.88,
+            "text": " So whether it is odd bank or even bank the first 3 bits the first 3 bits are as good as the address bits of this chip."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 562.42,
+            "end": 567.24,
+            "text": " Note that the addresses of this are in order I mean 0 1 2 3 4 5 6 7."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 567.24,
+            "end": 577.96,
+            "text": " And similarly here also 0 1 2 3 4 5 6 7 which is very obvious because whenever you buy a memory from the market it will have addresses in their regular order."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 578.34,
+            "end": 578.4,
+            "text": " Right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 578.74,
+            "end": 591.22,
+            "text": " But the but by segregating this into even and odd banks we have got one very good thing that if you leave the last bit in either even or odd bank the first 3 bits they are as good as the address bits."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 591.22,
+            "end": 594.8000000000001,
+            "text": " Now let us utilize this to our advantage."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 595.38,
+            "end": 604.78,
+            "text": " Now this last bit that you see here which is 0 for every case in even bank let us use it as an activation signal to this particular chip."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 605.26,
+            "end": 611.9200000000001,
+            "text": " So obviously when a number is even its binary equivalent will have the least significant bit as 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 612.32,
+            "end": 612.48,
+            "text": " Right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 612.62,
+            "end": 614.02,
+            "text": " So this is even bank."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 614.26,
+            "end": 617.96,
+            "text": " So this is this will be activated whenever a 0 is equal to 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 618.32,
+            "end": 618.5400000000001,
+            "text": " Right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 618.54,
+            "end": 630.04,
+            "text": " And that's what we saw in table also in this table also whenever a 0 is 0 then the corresponding bank was activated because if a 0 is 0 in this case we were transferring the whole word."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 630.64,
+            "end": 635.4399999999999,
+            "text": " And if a 0 is 0 here we were transferring the lower byte from end to even address."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 635.74,
+            "end": 635.86,
+            "text": " Right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 636.2199999999999,
+            "end": 638.3,
+            "text": " So this is what we have seen in this case also."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 638.3,
+            "end": 647.14,
+            "text": " So whenever a 0 is 0 because of this not gate this IC will become this memory will become activated and that's what we want."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 647.14,
+            "end": 648.14,
+            "text": " So this is a 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 648.14,
+            "end": 648.22,
+            "text": " So this is a 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 648.52,
+            "end": 648.6999999999999,
+            "text": " Right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 649.06,
+            "end": 651.46,
+            "text": " Similarly if you see here here is a 1."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 651.76,
+            "end": 657.54,
+            "text": " So whenever a 0 will be equal to 1 we could have used that signal as an activation signal here."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 657.66,
+            "end": 661.12,
+            "text": " But instead of that we are using this BHE bar signal."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 661.56,
+            "end": 663.74,
+            "text": " So I will come to the logic of this in a short while."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 664.16,
+            "end": 667.8,
+            "text": " But this BHE bar signal it is called as bus high enable."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 668.18,
+            "end": 668.26,
+            "text": " Right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 668.26,
+            "end": 672.34,
+            "text": " Because addresses they begin from 0 0 0 0 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 672.34,
+            "end": 677.3,
+            "text": " So even is considered and we have considered this as the even bank."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 677.5,
+            "end": 687.06,
+            "text": " So obviously this is and if you use little endian storage format then if you want to store two bytes here."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 687.22,
+            "end": 687.64,
+            "text": " Two bytes."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 687.8199999999999,
+            "end": 693.88,
+            "text": " Suppose you have a content of AX register which is divided into this A higher and A lower."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 693.88,
+            "end": 704.04,
+            "text": " So obviously the higher order byte will contain higher order thing that means 0 0 0 1 will have the content of AH and 0 0 0 will have a content of AL."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 704.54,
+            "end": 710.3,
+            "text": " So in that order I mean this odd memory bank can be considered as higher order memory bank."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 710.42,
+            "end": 712.88,
+            "text": " So this is BHE bus high enable bar."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 712.88,
+            "end": 717.24,
+            "text": " So that is why it is called as bus high enable signal."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 717.48,
+            "end": 717.56,
+            "text": " Right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 717.64,
+            "end": 721.38,
+            "text": " Because odd memory bank is higher as compared to the even addresses."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 721.62,
+            "end": 724.22,
+            "text": " Because addresses begin from the even side."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 724.32,
+            "end": 728.52,
+            "text": " If we consider 0 as the even address then addresses begin from the even side."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 728.7,
+            "end": 732.4,
+            "text": " And because of this little endian format we have got this thing."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 732.76,
+            "end": 737.06,
+            "text": " This is the even bank is the lower order bank and odd bank is the higher order bank."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 737.4,
+            "end": 740.98,
+            "text": " And odd bank is not activated when A0 is equal to 1."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 740.98,
+            "end": 742.36,
+            "text": " Obviously it will be activated."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 742.62,
+            "end": 746.26,
+            "text": " Obviously it should be it can be activated when A0 is equal to 1."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 746.32,
+            "end": 748.38,
+            "text": " Because if you see the last bit is 1."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 748.52,
+            "end": 753.84,
+            "text": " But there is a purpose for this BHE bar which we will go into which we are going to discuss soon."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 754.1,
+            "end": 754.26,
+            "text": " Right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 754.5600000000001,
+            "end": 757.26,
+            "text": " So I think the activation thing is all clear to us."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 757.7,
+            "end": 764.3000000000001,
+            "text": " Now the next thing is to the even order bank we will connect only the lower byte of the data bus."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 764.46,
+            "end": 765.82,
+            "text": " That is D0 to D7."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 765.82,
+            "end": 771.8000000000001,
+            "text": " And to the odd order bank or to the higher order bank we will connect the higher order data bus."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 771.9000000000001,
+            "end": 773.4200000000001,
+            "text": " That is D8 to D15."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 773.6600000000001,
+            "end": 773.84,
+            "text": " Right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 773.9200000000001,
+            "end": 775.1400000000001,
+            "text": " For the obvious reasons."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 775.38,
+            "end": 777.2,
+            "text": " Because we are using little endian format."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 777.7600000000001,
+            "end": 785.48,
+            "text": " So if we want to keep the content of AX register which is a 2 byte register onto location 0000 and 0001."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 785.94,
+            "end": 790.98,
+            "text": " So 0001 will content A higher and 000 will content A lower."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 790.98,
+            "end": 794.8000000000001,
+            "text": " So obviously lower order content will be kept on lower order data bus."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 795.32,
+            "end": 799.36,
+            "text": " And since lower order data bus is used with these yellow things."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 799.8000000000001,
+            "end": 802.74,
+            "text": " So D0 to D7 will be applied to this particular chip."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 803.02,
+            "end": 806.04,
+            "text": " And D8 to D15 will be applied to this particular chip."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 806.46,
+            "end": 810.08,
+            "text": " So now you know whenever you buy a memory from the market."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 810.44,
+            "end": 814.54,
+            "text": " It only has pins for address lines as well as data lines."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 814.86,
+            "end": 819.9,
+            "text": " So you have to connect some data lines into the data pins and address lines into the address pins."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 819.9,
+            "end": 820.34,
+            "text": " Right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 820.72,
+            "end": 824.3,
+            "text": " So that is what we are going to do here."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 824.66,
+            "end": 825.48,
+            "text": " Now after that."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 826.26,
+            "end": 829.0799999999999,
+            "text": " After that let us come to the main point."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 829.3199999999999,
+            "end": 829.42,
+            "text": " Right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 829.4599999999999,
+            "end": 830.6,
+            "text": " Let us come to the main point."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 830.68,
+            "end": 832.9599999999999,
+            "text": " Suppose and now in this this slide."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 833.14,
+            "end": 837.48,
+            "text": " If you see that we want to write a whole word from and to even address."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 837.68,
+            "end": 837.86,
+            "text": " Right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 838.24,
+            "end": 842.5,
+            "text": " So since we are going to write a whole word that means a 2 byte data."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 842.5,
+            "end": 845.2,
+            "text": " So it will begin from even address."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 845.42,
+            "end": 847.78,
+            "text": " And it will also consume the next odd location."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 847.78,
+            "end": 850.88,
+            "text": " Because 2 bytes will be there in even and odd address."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 851.36,
+            "end": 854.12,
+            "text": " So definitely the value of A0 has to be 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 854.32,
+            "end": 856.42,
+            "text": " And the value of BHE bar has to be 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 856.54,
+            "end": 858.58,
+            "text": " For both of the banks to be activated."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 858.98,
+            "end": 859.1,
+            "text": " Right."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 859.54,
+            "end": 861.82,
+            "text": " So and the complete data bus will be used."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 862.0,
+            "end": 863.14,
+            "text": " From D0 to D15."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 863.28,
+            "end": 864.78,
+            "text": " Because we need to have 2 bytes."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 864.78,
+            "end": 867.0799999999999,
+            "text": " So now in this particular case."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 867.36,
+            "end": 869.24,
+            "text": " If you see here A0 will be 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 869.4,
+            "end": 870.5799999999999,
+            "text": " BHE bar will be 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 870.98,
+            "end": 873.02,
+            "text": " Both of the memory chips will be activated."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 873.4599999999999,
+            "end": 876.68,
+            "text": " So suppose we are trying to write something at an even address."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 877.54,
+            "end": 881.9599999999999,
+            "text": " Let us let us say we want to begin from 0 1 0 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 882.38,
+            "end": 885.1,
+            "text": " And the next location is 0 1 0 1."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 885.22,
+            "end": 887.8399999999999,
+            "text": " That means 4th and 5th location we want to write."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 887.84,
+            "end": 892.82,
+            "text": " So obviously we have applied A0 and BHE bar as per their table."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 893.38,
+            "end": 897.3000000000001,
+            "text": " And this since we are seeing the first 3 bits 0 1 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 897.62,
+            "end": 899.6600000000001,
+            "text": " In this A1 A2 A3."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 899.82,
+            "end": 902.84,
+            "text": " A0 has been attached as an activator signal."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 902.98,
+            "end": 904.1800000000001,
+            "text": " So A1 A2 A3."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 904.58,
+            "end": 906.22,
+            "text": " Here also A1 A2 A3."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 906.5600000000001,
+            "end": 908.76,
+            "text": " So if you see the first 3 bits of both the numbers."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 908.9,
+            "end": 910.6,
+            "text": " They are 0 1 0 and 0 1 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 910.96,
+            "end": 914.32,
+            "text": " So in this bank also this 0 1 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 914.5400000000001,
+            "end": 916.44,
+            "text": " So let us see where this 0 1 0 is."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 916.44,
+            "end": 918.7600000000001,
+            "text": " This is the 0 1 0 which corresponds to 4."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 919.24,
+            "end": 923.98,
+            "text": " And here also because of this A1 A2 and A3 0 1 0 will be seen."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 924.44,
+            "end": 926.5,
+            "text": " So this 5th location will be seen."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 926.8000000000001,
+            "end": 928.3800000000001,
+            "text": " So if both of them are activated."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 928.5600000000001,
+            "end": 932.6,
+            "text": " That means the data from both of the buses will be copied to these locations."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 932.74,
+            "end": 937.0600000000001,
+            "text": " Location number 4 and location number 5 in just one machine cycle."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 937.5600000000001,
+            "end": 939.48,
+            "text": " So I am underlining this complete sentence."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 939.96,
+            "end": 943.86,
+            "text": " You will be able to transfer the data on the complete data bus."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 943.86,
+            "end": 946.58,
+            "text": " That is D0 to D7 and D8 to D15."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 946.58,
+            "end": 949.22,
+            "text": " If both of these signals are activated."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 949.52,
+            "end": 953.0600000000001,
+            "text": " And you have selected the 0 1 0 and 0 1 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 953.16,
+            "end": 956.32,
+            "text": " So location number 4 and 5 are simultaneously selected."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 956.72,
+            "end": 962.6,
+            "text": " So you see here an even location and an odd location has been simultaneously selected by these two signals."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 962.6,
+            "end": 968.02,
+            "text": " And that is how you will be able to write one complete word."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 968.22,
+            "end": 972.78,
+            "text": " That is complete two bytes into location number 4 and location number 5."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 973.16,
+            "end": 974.94,
+            "text": " So first location number 4 will come."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 975.0600000000001,
+            "end": 976.48,
+            "text": " It will have lower order address."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 976.62,
+            "end": 977.86,
+            "text": " It will have lower order data."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 978.44,
+            "end": 981.28,
+            "text": " And higher order data will be kept on to the odd bank."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 981.4,
+            "end": 981.6,
+            "text": " Right?"
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 981.78,
+            "end": 982.74,
+            "text": " At the 5th location."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 982.74,
+            "end": 986.16,
+            "text": " So this is how we are able to write a complete word."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 986.36,
+            "end": 989.92,
+            "text": " And that is why we have segregation into odd and even banks."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 990.4,
+            "end": 994.34,
+            "text": " And that is why we do not have A0 as activation signal here."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 994.48,
+            "end": 997.78,
+            "text": " Because A0 can either be 1 or 0 at any time."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 998.1800000000001,
+            "end": 1001.4,
+            "text": " And if we want to activate both of the memories at the same time."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1001.46,
+            "end": 1006.16,
+            "text": " That is not possible if you supply A0 as activation to both of the signals."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1006.28,
+            "end": 1009.8,
+            "text": " That is why we have got this bus high enable here."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1010.52,
+            "end": 1010.8,
+            "text": " Right?"
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1010.8,
+            "end": 1012.8599999999999,
+            "text": " So let us come to the second part."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1013.02,
+            "end": 1014.28,
+            "text": " Let us come to the second part."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1014.66,
+            "end": 1016.92,
+            "text": " Where we have bus high enable as 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1017.3,
+            "end": 1022.4399999999999,
+            "text": " That means your high bus that is the odd bus will be activated."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1022.76,
+            "end": 1024.08,
+            "text": " And A0 is equal to 1."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1024.18,
+            "end": 1029.58,
+            "text": " That means the even order bus will even order memory will be deactivated."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1029.9199999999998,
+            "end": 1031.36,
+            "text": " So in this case what will happen?"
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1031.46,
+            "end": 1032.04,
+            "text": " Let us check."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1032.3799999999999,
+            "end": 1035.8799999999999,
+            "text": " So this is deactivated because A0 has become equal to 1."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1036.08,
+            "end": 1038.06,
+            "text": " So because of this it will become 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1038.18,
+            "end": 1039.34,
+            "text": " And this is deactivated."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1039.34,
+            "end": 1041.28,
+            "text": " Now here this thing is 0."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1041.4599999999998,
+            "end": 1043.62,
+            "text": " That means this thing is activated."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1043.9199999999998,
+            "end": 1045.3999999999999,
+            "text": " So if this thing is activated."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1045.86,
+            "end": 1048.12,
+            "text": " Obviously the higher order data bus."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1048.26,
+            "end": 1050.9399999999998,
+            "text": " That is higher order data or the upper byte of the data."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1051.1,
+            "end": 1053.3799999999999,
+            "text": " Will be transferred to the corresponding address."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1053.5,
+            "end": 1056.12,
+            "text": " Whatever address has been put on A1, A2 and A3."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1056.4599999999998,
+            "end": 1060.74,
+            "text": " That is why in the table you can see upper byte from and to odd address."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1061.08,
+            "end": 1061.1999999999998,
+            "text": " Right?"
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1061.52,
+            "end": 1063.9199999999998,
+            "text": " Similarly you can verify it for these two also."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1063.92,
+            "end": 1074.8400000000001,
+            "text": " You will be able to figure out that this segregation into odd and even memory banks have helped us to write a complete word into the memory at once."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1074.8400000000001,
+            "end": 1075.94,
+            "text": " If it is desired."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1076.3600000000001,
+            "end": 1080.96,
+            "text": " And even if you want to write only one byte into the memory."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1081.3400000000001,
+            "end": 1086.5600000000002,
+            "text": " So you can select either odd bank or even bank by selecting these appropriate signals."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1086.5600000000002,
+            "end": 1086.98,
+            "text": " Right?"
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1086.98,
+            "end": 1090.14,
+            "text": " So this is the advantage of using segregated memory."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1090.58,
+            "end": 1091.84,
+            "text": " The another advantage is."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1092.26,
+            "end": 1093.16,
+            "text": " You see here."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1093.28,
+            "end": 1095.56,
+            "text": " You have used D8 to D15 for this bank."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1095.9,
+            "end": 1098.4,
+            "text": " And D0 to D7 for this particular bank."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1098.74,
+            "end": 1100.42,
+            "text": " Now it would be very difficult."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1100.6,
+            "end": 1102.6200000000001,
+            "text": " It would be very difficult to do so here."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1102.8,
+            "end": 1103.0,
+            "text": " Why?"
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1103.32,
+            "end": 1106.6,
+            "text": " Because address lines A0, A1, A2, A3 are connected here."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1106.6,
+            "end": 1107.2,
+            "text": " Which is fine."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1107.2,
+            "end": 1114.66,
+            "text": " But this complete memory chip will have only you know 8 bits for data bus."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1114.98,
+            "end": 1115.1200000000001,
+            "text": " Right?"
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1115.48,
+            "end": 1117.78,
+            "text": " So which one of this should you connect?"
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1117.92,
+            "end": 1119.8600000000001,
+            "text": " D0 to D7 or D8 to D15?"
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1120.1200000000001,
+            "end": 1121.42,
+            "text": " If you want to make consecutive."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1121.8,
+            "end": 1125.02,
+            "text": " If you want to make alternate locations as odd and even."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1125.46,
+            "end": 1128.3,
+            "text": " Out of this memory chip only 8 bits will be there."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1128.4,
+            "end": 1132.52,
+            "text": " So the 16 bit data bus can never be connected here."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1132.52,
+            "end": 1136.1399999999999,
+            "text": " And since it will be different for alternate locations."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1136.1399999999999,
+            "end": 1137.26,
+            "text": " So that is not possible."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1137.4,
+            "end": 1141.96,
+            "text": " So this is the second advantage of using odd and even memory banks."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1142.34,
+            "end": 1144.76,
+            "text": " So this has to be done in 8086."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1144.94,
+            "end": 1146.98,
+            "text": " You cannot use this kind of memory there."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1147.52,
+            "end": 1153.12,
+            "text": " So odd and even memory bank is not because you have these short chips available in market."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1153.12,
+            "end": 1157.5,
+            "text": " It is primarily because you want to write complete word in one machine cycle."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1157.5,
+            "end": 1163.74,
+            "text": " And also you want to connect the complete this data bus to both of the chips."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1164.06,
+            "end": 1164.2,
+            "text": " Right?"
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1164.42,
+            "end": 1171.3,
+            "text": " So this is the advantage of using this odd and even memory banks in 8086."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1171.62,
+            "end": 1173.16,
+            "text": " Now this is a pilot example."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1173.42,
+            "end": 1179.06,
+            "text": " Let us see it for the bus that the memory that we have complete 1 megabyte memory."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1179.28,
+            "end": 1185.74,
+            "text": " So in the even memory bank you see you have got all even addresses 02468 and so on till the end."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1185.74,
+            "end": 1189.0,
+            "text": " And here you have got 1357 mine till end."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1189.4,
+            "end": 1192.72,
+            "text": " And the address lines that you have selected are A1 to A19."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1193.2,
+            "end": 1195.82,
+            "text": " Similarly the same address lines have been used here."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1196.14,
+            "end": 1200.64,
+            "text": " But the select signal here is A0 which is connected through this node gate to this chip."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1201.1,
+            "end": 1203.32,
+            "text": " And BHE bar which is again connected here."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1203.74,
+            "end": 1208.98,
+            "text": " So now this table will make sense to you in context of this particular diagram."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1208.98,
+            "end": 1216.7,
+            "text": " So this is what I wanted to discuss about this memory organization of 8086."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1216.7,
+            "end": 1218.96,
+            "text": " So this is it for this particular video."
+        },
+        {
+            "number": "10",
+            "title": "Video 20 - ODD and EVEN memory Banks in 8086",
+            "start": 1219.1,
+            "end": 1220.4,
+            "text": " I will see you in the next one."
+        }
+    ],
+    "text": " Hello and welcome to this lecture series on microprocessor and microcontroller and this is video number 20 and we are studying 8086 microprocessor. So in this particular video we are going to address a very short topic which is called as memory organization in 8086. So we will see that the externally interfaced memory which is of 1 megabyte is not used as a single chip rather it is used as a combination of two chips of size half MB each and they are organized into odd and even memory banks. So we will see what these even and odd banks are, how they are accessed, how the address and data buses are connected and when these signals are activated or deactivated. I mean odd and even memory bank it is not essential for them to be on for every time. Both of them are not on every time. Sometimes odd will be on, sometimes evil will be on and sometimes both of them might be on. So we will see all those issues but the primary advantage of using odd and even memory banks is since 8086 is a 16-bit microprocessor and if we want to write a word that is a 16-bit data inside the memory location then definitely we have to access two consecutive memory locations because every memory location is of one byte only. So if you want to write two bytes in one machine cycle then this odd even memory bank segregation will help us. So that's what this video is all about. So let me just quickly take you to the slides. Yeah so here let me first show you what we have already studied about this. We have already seen this table when we were studying the beginning lectures of architecture and pin diagrams. So here you see if your a0 is 0 and bhe bar is 0 right. So in that case whole word from and to even address will be transferred right. So what does this mean is since the externally interfaced memory that you see here this externally interfaced memory every location that you see is of one byte right. Every location is of one byte. So in this externally interfaced memory if you want to write one word then that will simply mean that you have got two bytes to write. So definitely two consecutive locations have to be written and if they were to be written in one machine cycle that means at once they have to be written. Then we use this combination a0 will be equal to zero in which case we will see that the even memory bank will be active and bhe bar will also be equal to zero. If bhe bar is equal to zero that means bhe is equal to one and that means that odd memory bank will be activated. So we will see how these two are activated in a short while but this is the table that we have already studied. Similarly if you just want to transfer the data at upper byte from and to odd address then in that case a0 will be 1 that means a0 will be deactivated. So we will see how a0 is 1 and it is deactivated. Actually this will be connected to the chip select of this particular bank and here you can see that this chip select is you know through this bubble symbol where we mean that whatever signal is applied here it is converted. So this bank can be activated when and only when you know a0 is equal to zero. So if a0 is equal to zero in that case this acts like a not gate and one signal will be transmitted inside this memory. So this memory will become activated and similarly this bubble symbol also operates for bhe bar. So when bhe bar signal is zero since it is an active low signal so we will say that this has been activated but this zero signal will be transmitted as one here so in that way this memory will become active. So this bubble here means it's a not gate. So when a0 is zero this bank will be activated and when bhe bar is zero this bhe signal is activated. So in that case this memory bank will become active right. So if you want to transfer upper byte from and to odd address then we will be using this combination bhe bar will be zero that means odd bank will be selected and a0 will be equal to 1 which means that this bank will not be selected. Similarly 1 0 for lower byte from and to even address and 1 1 that means none of them will be activated because if you will apply 1 here this will be deactivated and if this is 1 here this will be deactivated right. So that's what we are going to verify today but let's not begin with this big example. Let me take a smaller example and the smaller example is actually this. So assume here that we have this kind of memory right. So first have a look at this particular side then we will come to this slide. So this is what is this these are addresses of memory locations right. Every memory location is 1 byte that is 8 bits. So the address of first location is 0000 second is 0001 and so on and so forth. We have got total 16 locations. So addresses they begin from 0000 and they end at 15. So a total of 16 memory locations are there and addresses can be accommodated because of that in only 4 bits right. So this is one way we can buy this kind of chip from the market and this kind of chip can be used for our processor. Not our processor because our processor will require 1 megabyte of memory. So here we only have 16 memory locations. Our processor will require 1 megabyte that is 2 raised to the power of 20 such memory locations. That means 20 address bits will be there. However this is a pilot example so we are just taking only 16 bit addressable sorry 4 bit addressable memory. It is a total of 16 locations will be there and each location is 1 byte. Now an alternative way of having the same kind of memory is you can have 2 chips. You can have 2 chips and each of the chip has only 8 addresses right 8 addresses. So total of 16 addresses will be there if you combine both of these chips. So in case inside the market this complete memory is not available which has got 16 addresses. So you can buy 2 RAM chips or 2 ROM chips which are having 8 address locations and you can combine both of them. Now this is not the primary reason why we use this even and odd banks right. The primary reason I will make it clear a little bit later. But let us say that instead of using this single chip we are using a combination of 2 chips right. And how is the combination being used? Let us say since we want to have finally the addresses of 4 bits only. Because ultimately by using these 2 chips we are trying to imitate these 4 bits right. So let me keep all the even addresses shown in yellow in one chip. And all the all addresses shown in another chip which are shown in green color here right. So 0 to 4, 6, 8 etc. will belong to this chip and in 4 bits in 4 bits. So this is not a part of the memory but I have just drawn it to illustrate you right. The memory is only this. These are the 3 bit addresses and these are the 1 byte locations. Similarly here these are the 3 bit addresses and these are the 1 byte locations. But for the purposes of illustrations I have just transferred these yellow addresses in one chip and these green addresses in another chip right. So that we can see that all the even addresses belong to one bank and all the odd addresses belong to other banks. So that is how they are named as even bank and odd bank right. So however their actual physical addresses you can see they are of 3 bits and they are exactly the same. Now what we are now going to do is we are if you see a similarity 0001 0011. So if you see the first 3 bits if you see the first 3 bits first most significant 3 bits they are as good as the address of this chip. So if you notice any entry suppose 1001 here so the first 3 bits are 100 and 100 is the address of this. So in the odd memory bank these first 3 bits or the first 3 most significant bits they are as good as the address bits. And this is true for even bank also if you see the first 3 bits 001 here this is 001. So this is also true for this particular case. So whether it is odd bank or even bank the first 3 bits the first 3 bits are as good as the address bits of this chip. Note that the addresses of this are in order I mean 0 1 2 3 4 5 6 7. And similarly here also 0 1 2 3 4 5 6 7 which is very obvious because whenever you buy a memory from the market it will have addresses in their regular order. Right. But the but by segregating this into even and odd banks we have got one very good thing that if you leave the last bit in either even or odd bank the first 3 bits they are as good as the address bits. Now let us utilize this to our advantage. Now this last bit that you see here which is 0 for every case in even bank let us use it as an activation signal to this particular chip. So obviously when a number is even its binary equivalent will have the least significant bit as 0. Right. So this is even bank. So this is this will be activated whenever a 0 is equal to 0. Right. And that's what we saw in table also in this table also whenever a 0 is 0 then the corresponding bank was activated because if a 0 is 0 in this case we were transferring the whole word. And if a 0 is 0 here we were transferring the lower byte from end to even address. Right. So this is what we have seen in this case also. So whenever a 0 is 0 because of this not gate this IC will become this memory will become activated and that's what we want. So this is a 0. So this is a 0. Right. Similarly if you see here here is a 1. So whenever a 0 will be equal to 1 we could have used that signal as an activation signal here. But instead of that we are using this BHE bar signal. So I will come to the logic of this in a short while. But this BHE bar signal it is called as bus high enable. Right. Because addresses they begin from 0 0 0 0 0. So even is considered and we have considered this as the even bank. So obviously this is and if you use little endian storage format then if you want to store two bytes here. Two bytes. Suppose you have a content of AX register which is divided into this A higher and A lower. So obviously the higher order byte will contain higher order thing that means 0 0 0 1 will have the content of AH and 0 0 0 will have a content of AL. So in that order I mean this odd memory bank can be considered as higher order memory bank. So this is BHE bus high enable bar. So that is why it is called as bus high enable signal. Right. Because odd memory bank is higher as compared to the even addresses. Because addresses begin from the even side. If we consider 0 as the even address then addresses begin from the even side. And because of this little endian format we have got this thing. This is the even bank is the lower order bank and odd bank is the higher order bank. And odd bank is not activated when A0 is equal to 1. Obviously it will be activated. Obviously it should be it can be activated when A0 is equal to 1. Because if you see the last bit is 1. But there is a purpose for this BHE bar which we will go into which we are going to discuss soon. Right. So I think the activation thing is all clear to us. Now the next thing is to the even order bank we will connect only the lower byte of the data bus. That is D0 to D7. And to the odd order bank or to the higher order bank we will connect the higher order data bus. That is D8 to D15. Right. For the obvious reasons. Because we are using little endian format. So if we want to keep the content of AX register which is a 2 byte register onto location 0000 and 0001. So 0001 will content A higher and 000 will content A lower. So obviously lower order content will be kept on lower order data bus. And since lower order data bus is used with these yellow things. So D0 to D7 will be applied to this particular chip. And D8 to D15 will be applied to this particular chip. So now you know whenever you buy a memory from the market. It only has pins for address lines as well as data lines. So you have to connect some data lines into the data pins and address lines into the address pins. Right. So that is what we are going to do here. Now after that. After that let us come to the main point. Right. Let us come to the main point. Suppose and now in this this slide. If you see that we want to write a whole word from and to even address. Right. So since we are going to write a whole word that means a 2 byte data. So it will begin from even address. And it will also consume the next odd location. Because 2 bytes will be there in even and odd address. So definitely the value of A0 has to be 0. And the value of BHE bar has to be 0. For both of the banks to be activated. Right. So and the complete data bus will be used. From D0 to D15. Because we need to have 2 bytes. So now in this particular case. If you see here A0 will be 0. BHE bar will be 0. Both of the memory chips will be activated. So suppose we are trying to write something at an even address. Let us let us say we want to begin from 0 1 0 0. And the next location is 0 1 0 1. That means 4th and 5th location we want to write. So obviously we have applied A0 and BHE bar as per their table. And this since we are seeing the first 3 bits 0 1 0. In this A1 A2 A3. A0 has been attached as an activator signal. So A1 A2 A3. Here also A1 A2 A3. So if you see the first 3 bits of both the numbers. They are 0 1 0 and 0 1 0. So in this bank also this 0 1 0. So let us see where this 0 1 0 is. This is the 0 1 0 which corresponds to 4. And here also because of this A1 A2 and A3 0 1 0 will be seen. So this 5th location will be seen. So if both of them are activated. That means the data from both of the buses will be copied to these locations. Location number 4 and location number 5 in just one machine cycle. So I am underlining this complete sentence. You will be able to transfer the data on the complete data bus. That is D0 to D7 and D8 to D15. If both of these signals are activated. And you have selected the 0 1 0 and 0 1 0. So location number 4 and 5 are simultaneously selected. So you see here an even location and an odd location has been simultaneously selected by these two signals. And that is how you will be able to write one complete word. That is complete two bytes into location number 4 and location number 5. So first location number 4 will come. It will have lower order address. It will have lower order data. And higher order data will be kept on to the odd bank. Right? At the 5th location. So this is how we are able to write a complete word. And that is why we have segregation into odd and even banks. And that is why we do not have A0 as activation signal here. Because A0 can either be 1 or 0 at any time. And if we want to activate both of the memories at the same time. That is not possible if you supply A0 as activation to both of the signals. That is why we have got this bus high enable here. Right? So let us come to the second part. Let us come to the second part. Where we have bus high enable as 0. That means your high bus that is the odd bus will be activated. And A0 is equal to 1. That means the even order bus will even order memory will be deactivated. So in this case what will happen? Let us check. So this is deactivated because A0 has become equal to 1. So because of this it will become 0. And this is deactivated. Now here this thing is 0. That means this thing is activated. So if this thing is activated. Obviously the higher order data bus. That is higher order data or the upper byte of the data. Will be transferred to the corresponding address. Whatever address has been put on A1, A2 and A3. That is why in the table you can see upper byte from and to odd address. Right? Similarly you can verify it for these two also. You will be able to figure out that this segregation into odd and even memory banks have helped us to write a complete word into the memory at once. If it is desired. And even if you want to write only one byte into the memory. So you can select either odd bank or even bank by selecting these appropriate signals. Right? So this is the advantage of using segregated memory. The another advantage is. You see here. You have used D8 to D15 for this bank. And D0 to D7 for this particular bank. Now it would be very difficult. It would be very difficult to do so here. Why? Because address lines A0, A1, A2, A3 are connected here. Which is fine. But this complete memory chip will have only you know 8 bits for data bus. Right? So which one of this should you connect? D0 to D7 or D8 to D15? If you want to make consecutive. If you want to make alternate locations as odd and even. Out of this memory chip only 8 bits will be there. So the 16 bit data bus can never be connected here. And since it will be different for alternate locations. So that is not possible. So this is the second advantage of using odd and even memory banks. So this has to be done in 8086. You cannot use this kind of memory there. So odd and even memory bank is not because you have these short chips available in market. It is primarily because you want to write complete word in one machine cycle. And also you want to connect the complete this data bus to both of the chips. Right? So this is the advantage of using this odd and even memory banks in 8086. Now this is a pilot example. Let us see it for the bus that the memory that we have complete 1 megabyte memory. So in the even memory bank you see you have got all even addresses 02468 and so on till the end. And here you have got 1357 mine till end. And the address lines that you have selected are A1 to A19. Similarly the same address lines have been used here. But the select signal here is A0 which is connected through this node gate to this chip. And BHE bar which is again connected here. So now this table will make sense to you in context of this particular diagram. So this is what I wanted to discuss about this memory organization of 8086. So this is it for this particular video. I will see you in the next one."
+}

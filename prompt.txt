@@ -1,0 +1,12 @@
+I am teaching microprocessor 8086 in my course. Here are video 
+subtitle chunks containing video title, video number, start time and end time in seconds,
+, the text at that time:
+
+[{"title":"Video 18 - MAX mode of 8086","number":"8","start":56.22,"end":65.3,"text":" 8086 microprocessor. And that mode is called as maximum mode of 8086 microprocessor. So maximum"},{"title":"Video 21 - Memory Interfacing","number":"11","start":226.34,"end":231.34,"text":" Then we studied the two modes, maximum mode and minimum mode of operation for 8086."},{"title":"Video 21 - Memory Interfacing","number":"11","start":242.14,"end":248.34,"text":" And in maximum mode 8086 operates with other processors in the system, which might be another"},{"title":"Video 18 - MAX mode of 8086","number":"8","start":665.04,"end":675.06,"text":" So let me just go on to this maximum mode operation of 8086. So you see here, this is not the complete"},{"title":"Video 18 - MAX mode of 8086","number":"8","start":1626.96,"end":1636.4,"text":" right? So let me just show you the read operation of maximum mode in 8086. So this is the read operation"}]
+------------------------------------------------
+ what is max mode of 8086 microprocessor?
+User asked this question related to the video chunks, you have to answer in a human way(dont mention the above format, its just for you) where and how much
+content is taught in which video (in which video and at what timestamp) and and guide the user to go 
+to that particular video. If user asked unrelated question, tell him 
+that you can only answer questions related to the course
+give the exact timestamp of the instance in min:sec format

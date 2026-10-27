@@ -1,0 +1,2980 @@
+{
+    "chunks": [
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 0.0,
+            "end": 5.76,
+            "text": " Hello and welcome to this lecture series on microprocessor and microcontroller."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 6.36,
+            "end": 11.88,
+            "text": " And we are in 11th video of this particular lecture series and we are trying to study"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 11.88,
+            "end": 19.54,
+            "text": " 8086 microprocessor starting from this video onwards. So on 8086 microprocessor,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 19.76,
+            "end": 26.62,
+            "text": " this is our first video and we have completed 8085 microprocessor prior to that. So"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 26.62,
+            "end": 33.06,
+            "text": " the topic of today is going to be the architecture of this 8086 microprocessor."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 33.660000000000004,
+            "end": 40.38,
+            "text": " Now since we have already learned how 8085 microprocessor works, we have already seen its"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 40.38,
+            "end": 46.7,
+            "text": " architecture, pin diagram, then the interrupt structure, external memory structure and how"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 46.7,
+            "end": 54.1,
+            "text": " things happen within 8085 microprocessor. So obviously when we will study 8086 microprocessor,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 54.1,
+            "end": 63.86,
+            "text": " there will be a frequent comparison between 8086 and 8085 microprocessor, right? And 8086 being a"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 63.86,
+            "end": 70.08,
+            "text": " microprocessor which came after 8085. So it is also very obvious that it will be an advanced version."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 70.68,
+            "end": 77.76,
+            "text": " And the important thing about 8086 microprocessor is that it is a blueprint to all the processors"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 77.76,
+            "end": 85.54,
+            "text": " that came after it. Means after 8086 microprocessor, there were many microprocessors that this Intel"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 85.54,
+            "end": 93.58000000000001,
+            "text": " family has produced. But the popular among them were Pentium microprocessors. Then there was this"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 93.58000000000001,
+            "end": 101.74000000000001,
+            "text": " dual core, core to dual series and there were these i3, i5, i7, i9 etc. So the good thing about studying"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 101.74,
+            "end": 107.89999999999999,
+            "text": " 8086 microprocessor is, if you study this microprocessor, you have also studied all of them"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 107.89999999999999,
+            "end": 115.25999999999999,
+            "text": " to a certain extent, right? So they maintain backward compatibility and it all started from 8086,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 115.58,
+            "end": 122.0,
+            "text": " not from 8085. It is again a backward compatible in some sense, but 8086 can be thought of as"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 122.0,
+            "end": 131.02,
+            "text": " a very good blueprint of all the successors of this Intel family series, right? So let me begin this"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 131.02,
+            "end": 138.66,
+            "text": " 8086 discussion by just showing you what we have done up till now and what we are going to do."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 138.66,
+            "end": 144.84,
+            "text": " So up till now, we have covered 10 lectures. We have covered 10 lectures and in these 10 lectures,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 145.02,
+            "end": 151.58,
+            "text": " we have discussed 8085 microprocessor. So we covered the digital hardware logic,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 151.58,
+            "end": 157.08,
+            "text": " history and the difference between microprocessor and microcontroller in the first lecture,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 157.16000000000003,
+            "end": 163.24,
+            "text": " which was a generic lecture where we discussed what microprocessor and microcontroller is. Then"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 163.24,
+            "end": 169.58,
+            "text": " we saw the programming model of 8085, that is the portion of this microprocessor, which is accessible"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 169.58,
+            "end": 176.86,
+            "text": " to the user for interacting with it in the sense of programming. There we also saw the meaning of"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 176.86,
+            "end": 183.66000000000003,
+            "text": " programming. Programming simply means that out of the 74 instructions, which were available in 8085,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 183.66000000000003,
+            "end": 190.62,
+            "text": " two 46 patterns could be made and a permutation and combination, a logical permutation and combination"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 190.62,
+            "end": 197.14000000000001,
+            "text": " of those two 46 patterns is called as a program. So we studied how to make some basic programs in that."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 197.54000000000002,
+            "end": 203.72000000000003,
+            "text": " We then saw the architecture, pin diagram and then the interrupt structure. Then we saw machine cycles"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 203.72,
+            "end": 212.6,
+            "text": " set timing diagrams, input output and addressing modes and instruction set of 8085. So in the laboratory courses,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 212.6,
+            "end": 220.92,
+            "text": " in the laboratories, we have seen a lot of programs about 8085, etc. So on the same lines, this is the tentative."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 221.48,
+            "end": 227.82,
+            "text": " These are the tentative titles in which we will be reading 8086 microprocessor. So I will probably begin with"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 227.82,
+            "end": 233.66,
+            "text": " architecture of 8086, which is the topic of today. And in this lecture, we will also cover the points"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 233.66,
+            "end": 240.54,
+            "text": " of differences between 8085 and 8086. Although a mention of these points or differences will be"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 240.54,
+            "end": 246.7,
+            "text": " in the subsequent lectures also. But we will try to have a good comparison between the two microprocessors"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 246.7,
+            "end": 251.98,
+            "text": " in this lecture. We will then see the pin diagram, then the programming model. We will make some simple"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 251.98,
+            "end": 259.65999999999997,
+            "text": " programs. And then we will see the minimum and maximum mode of 8086. This is something which is absent in"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 259.65999999999997,
+            "end": 267.74,
+            "text": " 8085 microprocessors. So we will first of all discuss what these modes are and what are the advantages of these two"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 267.74,
+            "end": 278.38,
+            "text": " modes, right? So just to give you a brief idea, 8086 is again an integrated circuit. So that integrated circuit can be used"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 278.38,
+            "end": 284.62,
+            "text": " in two modes. One mode is where there is only one microprocessor and it is controlling all the other"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 284.62,
+            "end": 292.14,
+            "text": " peripherals. So there is only one control center, one microprocessor that is just doing every task in"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 292.14,
+            "end": 298.78,
+            "text": " the circuit. So that's what you mean by minimum mode of 8086. And maximum mode means there is a network"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 298.78,
+            "end": 306.3,
+            "text": " of various microprocessors, not 8086 only. There can be 8086, 8085, Pentium. Then there can be microprocessor from"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 306.3,
+            "end": 311.26,
+            "text": " other families like AMD, Qualcomm. So there are these multiple microprocessors which are connected in"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 311.26,
+            "end": 317.42,
+            "text": " the network and they are trying to interact with each other. So that's what we mean by maximum mode. So"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 317.42,
+            "end": 326.14,
+            "text": " this IC of 8086, it operates in these two particular ways, minimum mode and maximum mode. Then we will see"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 326.14,
+            "end": 333.26,
+            "text": " instruction template and memory organization plus some miscellaneous topics of 8086. Then we will study,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 333.26,
+            "end": 338.62,
+            "text": " of course, the addressing modes, instruction set and we will dedicate some time for programming. So this is"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 338.62,
+            "end": 345.42,
+            "text": " a tentative list of topics that we are going to cover in depth and I might just change them or shuffle"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 345.42,
+            "end": 350.7,
+            "text": " their order of appearance depending upon the need of the course. So that's what we are going to do here."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 350.7,
+            "end": 357.42,
+            "text": " Right. So now let me just begin you and let me just begin this topic by showing you the actual"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 357.42,
+            "end": 369.34000000000003,
+            "text": " architecture of this 8086 microprocessor. So this is the architecture of 8086 microprocessor and"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 370.06,
+            "end": 378.06,
+            "text": " let us first have a look at this architecture and let us see if we are seeing some familiar components"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 378.06,
+            "end": 386.06,
+            "text": " here in comparison to 8085. Right. So although we do not know anything about this as of now, but let us"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 386.06,
+            "end": 393.66,
+            "text": " see if we can just figure out some components which look similar to 8085. So here you can see that the"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 393.66,
+            "end": 403.26,
+            "text": " arithmetic logical unit is of 16 bits. There in 8085 we had a 16 bit, sorry, 8 bit arithmetic logic unit."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 403.26,
+            "end": 411.26,
+            "text": " And on that note, it was called as a 8 bit microprocessor. So the first point is that 8086 microprocessor is a"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 411.26,
+            "end": 420.53999999999996,
+            "text": " 16 bit microprocessor. Right. So this is arithmetic logic unit. Then we also see flags here. Flags are also of 16"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 420.53999999999996,
+            "end": 428.94,
+            "text": " bits here. Earlier in 8085 microprocessor, they were of 8 bits. Right. Out of which three were don't care conditions."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 428.94,
+            "end": 438.46,
+            "text": " And we had carry, parity, auxiliary carry, then sign and zero. Sorry. So flag registers are also"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 438.46,
+            "end": 445.9,
+            "text": " little bit familiar to us. Then there is timing and control circuit, which was also there in 8085 microprocessor."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 445.9,
+            "end": 452.7,
+            "text": " Then we have a decoding circuit, which we have also seen there. We have this stack of registers. So"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 452.7,
+            "end": 463.97999999999996,
+            "text": " if we talk about 8085 microprocessor, we had A, B, C, D, E, H, L and M registers. Here you see that"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 463.97999999999996,
+            "end": 471.18,
+            "text": " the nomenclature has changed. You have AX, BX, CX, DX registers, and they are divided into these two parts,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 471.18,
+            "end": 480.14,
+            "text": " A, H, A, L, B, H, B, L, C, H, C, L, and D, H, D, L. So what are these? So if you think about this A, H register,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 480.14,
+            "end": 487.82,
+            "text": " this is the higher order byte of this AX register. AX register is a complete 16 bit register. And"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 489.02,
+            "end": 496.14,
+            "text": " it is divided into two parts, A, H and A, L, A higher and A lower. So A, L is the lower byte of AX register,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 496.14,
+            "end": 503.09999999999997,
+            "text": " and A, H is the higher byte of A register. So you can use these registers either in 16 bit mode. I mean,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 503.09999999999997,
+            "end": 508.94,
+            "text": " if you can use AX completely, which will be a 16 bit register, or you can break them in parts. You"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 508.94,
+            "end": 515.02,
+            "text": " can use that as A, H register or A, L register. So this facility was not available in 8085. There was"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 515.02,
+            "end": 520.62,
+            "text": " only A, B, C, D, A, L registers. And at one time, you can use one register completely. Half register"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 520.62,
+            "end": 526.22,
+            "text": " cannot be used there. Or even if you have to use it, you have to write specific programs for that."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 526.22,
+            "end": 530.78,
+            "text": " So direct commands were not available in the instruction set. But here in the instruction"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 530.78,
+            "end": 536.38,
+            "text": " set, we will see that there are commands where A, L, A, H, and A, X can be used as three separate"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 536.38,
+            "end": 543.1,
+            "text": " entities. Similarly, B, C, A, X, and A registers, they are also bifurcated into two parts. They all are"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 543.1,
+            "end": 552.14,
+            "text": " of 16 bit. And half-half registers can also be used. Now, like in the case of 8085 microprocessor,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 552.14,
+            "end": 558.62,
+            "text": " we call A register as the accumulator. So here also, AX register is called as the accumulator register."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 558.62,
+            "end": 567.02,
+            "text": " Now, like in 8085, A register was responsible for default calculations. And it was also presented"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 567.02,
+            "end": 573.34,
+            "text": " in some default command. The same will apply here also. But you know, the involvement of this"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 573.34,
+            "end": 581.42,
+            "text": " particular register now in default calculation is less as compared to 8085. I mean, in 8085,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 581.42,
+            "end": 588.3,
+            "text": " if you see the subtraction command, one operand was fixed to be A register and other could be anything"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 588.3,
+            "end": 593.66,
+            "text": " else. It could be data or another 8-bit register. However, in this subtraction command, we'll have"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 594.2199999999999,
+            "end": 599.5799999999999,
+            "text": " two parts on which it will operate and none of them will be by default considered as AX. So that is"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 599.5799999999999,
+            "end": 605.66,
+            "text": " also one point of different. But still, we call this as accumulator register. It is of 16 bits. And this"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 605.66,
+            "end": 613.74,
+            "text": " is the primary reason why this 8086 microprocessor is a 16-bit microprocessor. Right. Now, so apart from"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 613.74,
+            "end": 619.98,
+            "text": " these registers, we have got stack pointer, we have got base pointer, source index, and destination index."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 619.98,
+            "end": 628.38,
+            "text": " So, SP stands for stack pointer. This was also there in 8085 microprocessor. And here, this register is"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 628.38,
+            "end": 635.1800000000001,
+            "text": " completely of 16 bits. Similarly, base pointer, source index, and destination index, they are also of 16 bits."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 635.1800000000001,
+            "end": 640.38,
+            "text": " Now, they have got some very specific purposes, which we will study when we will come to the details of"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 640.38,
+            "end": 645.82,
+            "text": " these registers. But at this point, all I can say is, you should have this general information that"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 645.82,
+            "end": 652.0600000000001,
+            "text": " C register is usually used as counter. It is by default used as counter with some very specific"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 652.0600000000001,
+            "end": 657.74,
+            "text": " commands. And we will see that when we will do programming that C register is by default used as"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 657.74,
+            "end": 666.3000000000001,
+            "text": " counter register. Right. Similarly, A is the accumulator. And then, you know, these registers"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 666.3000000000001,
+            "end": 671.58,
+            "text": " also have special purpose source index, destination index. So, when the time will come, we will come to"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 671.58,
+            "end": 677.58,
+            "text": " know what are their special purposes. So, this is a register stack, which is also something which is"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 677.58,
+            "end": 684.38,
+            "text": " familiar, which looks familiar. Then, now, if you see the upper portion of this particular circuit,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 684.38,
+            "end": 693.0200000000001,
+            "text": " now, you can see that there are other registers also CS, DS, ES, SS, and IP. So, now, this is called as"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 693.0200000000001,
+            "end": 700.3000000000001,
+            "text": " code segment, data segment, extra segment, stack segment, and then instruction pointer. So, this instruction"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 700.3,
+            "end": 708.54,
+            "text": " pointer is similar to program counter in 8085. So, it will hold the address of next instruction to be"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 708.54,
+            "end": 714.8599999999999,
+            "text": " executed. But the statement that I have just made is not completely true. It is partially true."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 714.8599999999999,
+            "end": 721.9,
+            "text": " It will hold the instruction, it will hold the address of next instruction to be executed. But that is not"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 721.9,
+            "end": 731.42,
+            "text": " the complete address. Because in this 8086 microprocessor, the addressing mechanism is little bit different"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 731.42,
+            "end": 738.62,
+            "text": " as compared to addressing mechanism of 8085. Because the externally interfaced memory that we connect to"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 738.62,
+            "end": 746.54,
+            "text": " this particular microprocessor, it is segmented. I mean, in 8085 microprocessor, you just had one memory."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 746.54,
+            "end": 753.8199999999999,
+            "text": " That one memory was having a size of 64 kilobytes. And inside that, you could put your data somewhere,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 753.8199999999999,
+            "end": 759.66,
+            "text": " you could put your code somewhere, and you could begin any operation from anywhere, right? So, there"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 759.66,
+            "end": 766.62,
+            "text": " might be a situation where, suppose you have kept your data somewhere. And prior to that location, you have"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 766.62,
+            "end": 771.98,
+            "text": " started writing your program. Some locations before that data, you have started writing your program. But"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 771.98,
+            "end": 778.7,
+            "text": " what happens is your program becomes so long that it overwrites the data. So, to avoid that in 8086,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 778.7,
+            "end": 784.7,
+            "text": " we have segmented memory. There is a separate section for code, there is a separate section for data,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 784.7,
+            "end": 790.94,
+            "text": " there is a separate section for extra activities, and there is a separate section for stack. So,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 791.5,
+            "end": 797.02,
+            "text": " the externally interfaced memory, it has got these four different sections. And these four different"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 797.02,
+            "end": 803.34,
+            "text": " sections, their addresses are kept in this code segment, data segment, extra segment, and stack"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 803.34,
+            "end": 810.14,
+            "text": " segment. The names are similar. These are the pointer registers that you have got here. These will be"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 810.14,
+            "end": 815.02,
+            "text": " pointing to the necessary locations in the external memory. So, you will have code segment, data segment,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 815.02,
+            "end": 821.74,
+            "text": " extra segment, and stack segment in the external memory. And their base addresses will be kept in CS,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 821.74,
+            "end": 826.62,
+            "text": " DS, ES, and SS register, right? So, these are called as segment registers, not the pointer registers,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 827.18,
+            "end": 832.46,
+            "text": " these are called as segment registers. So, segment registers are internal to microprocessor,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 832.46,
+            "end": 838.86,
+            "text": " but the segments, they are actually externally placed inside the external interfaced memory of"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 838.86,
+            "end": 844.86,
+            "text": " microprocessors, right? So, one more information, the externally interfaced memory in this case"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 846.22,
+            "end": 855.02,
+            "text": " is your 1 megabyte, 1 MB. How is that possible? Because this microprocessor is a 16-bit microprocessor. So,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 855.02,
+            "end": 861.74,
+            "text": " the data bus automatically has to be of 16 bits, right? Since this microprocessor is a 16-bit microprocessor,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 861.74,
+            "end": 870.78,
+            "text": " so the internal data bus has to be of 16 bits. And the address bus of this microprocessor is of 20 bits."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 870.78,
+            "end": 878.62,
+            "text": " The address bus of this microprocessor, as you see here, it starts from 80-0 to 80-15, and then A16 to A19. I mean,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 878.62,
+            "end": 886.3,
+            "text": " in totality, it starts from 0 index to 19 index, which means that it has a total of 20 bits. So,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 886.3,
+            "end": 892.86,
+            "text": " the address bus is of 20 bits. And 2 raised to the power of 20 is nothing but 1 megabyte. So,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 892.86,
+            "end": 899.26,
+            "text": " to this particular microprocessor, you can always connect an externally interfaced memory, which has"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 899.9,
+            "end": 907.9,
+            "text": " got a maximum of 2 raised to the power of 20, that means 1 megabyte locations. And inside that memory,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 907.9,
+            "end": 914.38,
+            "text": " you have got various segments. So, those segments are code segment, data segment, extra segment,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 914.38,
+            "end": 920.86,
+            "text": " and stack segment. And to keep the base address of those four different sections, inside this"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 920.86,
+            "end": 926.3000000000001,
+            "text": " microprocessor, you have got this segment register. So, that is the relevance of these segments."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 927.34,
+            "end": 933.5,
+            "text": " So, this also makes it very clear that this microprocessor, since it is 16-bit microprocessor,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 933.5,
+            "end": 940.22,
+            "text": " data bus is of 16 bits and the address bus is of 20 bits. Let us see then again some more"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 941.42,
+            "end": 947.1800000000001,
+            "text": " components which look familiar. Now, this is an adder, address conversion mechanism adder. So,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 947.18,
+            "end": 954.06,
+            "text": " this was not present in 8085. Now, what is the purpose of this? An important point to note here"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 954.06,
+            "end": 960.3,
+            "text": " is that the CS, DS, ES and SS, these segment registers are also of 16 bits each. Similarly,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 960.3,
+            "end": 967.5,
+            "text": " instruction pointer is also of 16-bit. So, and we said that the externally interfaced memory"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 967.5,
+            "end": 977.82,
+            "text": " will have at max 2-20 locations in it. So, it can address 1 megabyte of memory. And each location"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 977.82,
+            "end": 985.18,
+            "text": " will be of 1 byte again. It's not that 1 memory location will consume 16 bytes. At every memory"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 985.18,
+            "end": 996.94,
+            "text": " location is... Sorry. You still have a 8-bit storage capacity. So, you have 2-20 locations. Each location has"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 996.94,
+            "end": 1004.3000000000001,
+            "text": " got a 8-bit capacity. This is 1 byte capacity. So, now, if you see the address of every location could"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1005.1,
+            "end": 1011.0200000000001,
+            "text": " be of 20 bits. Its address has to be of 20 bits. But these registers, you see code segment, data segment,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1011.0200000000001,
+            "end": 1017.1800000000001,
+            "text": " extra segment, stack segment, they are of 16 bits. And I told you that in the externally interfaced memory,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1018.1400000000001,
+            "end": 1023.82,
+            "text": " the base address, not the actual physical address, the base address is kept in code segment, data segment,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1023.82,
+            "end": 1029.1000000000001,
+            "text": " extra segment and stack segment. So, what is this base address? This base address has to be of 16 bits"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1029.1000000000001,
+            "end": 1034.6200000000001,
+            "text": " only. And what is this base address? And how is it converted to the actual 20-bit physical address?"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1034.6200000000001,
+            "end": 1040.06,
+            "text": " We will come to know when we will study the relevant topic. So, these are of 16-bit registers,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1040.06,
+            "end": 1046.78,
+            "text": " but do not get confused. The externally interfaced memory can be addressed by 20 bits only. But still,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1046.78,
+            "end": 1051.9,
+            "text": " the base addresses, there is something called as base address, which is kept in these registers."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1051.9,
+            "end": 1057.1000000000001,
+            "text": " So, base address plus something else will make the actual physical address. We will see how that"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1057.1000000000001,
+            "end": 1062.38,
+            "text": " conversion is done. And that conversion is done through this particular adder. So, this is adder"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1062.38,
+            "end": 1070.8600000000001,
+            "text": " conversion mechanism, address conversion mechanism. So, this entire thing is done here. Although there is"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1070.8600000000001,
+            "end": 1076.7800000000002,
+            "text": " an adder in this ALU in itself for performing mathematical calculations, but just for address part,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1076.78,
+            "end": 1083.34,
+            "text": " you have this separate adder here. Then there is a new thing that we see here, which is called as this"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1083.34,
+            "end": 1093.18,
+            "text": " instruction byte queue, which is of 6 bytes. So, now this instruction queue was not there in 8085."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1093.18,
+            "end": 1098.46,
+            "text": " Of 6 bytes, it was not there. There was just one instruction register. From where what we were doing"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1098.46,
+            "end": 1104.54,
+            "text": " is from the externally interfaced memory, we read the code byte by byte. And then it gets processed. Once"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1104.54,
+            "end": 1110.3,
+            "text": " one byte gets processed, the next byte is entered and it gets processed and so on. But here what happens"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1110.3,
+            "end": 1120.1399999999999,
+            "text": " is, while this ALU is processing something, this instruction queue is loaded with 6 bytes from the"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1120.1399999999999,
+            "end": 1126.94,
+            "text": " externally interfaced memory. Right? So, suppose if 2 bytes are consumed in this particular thing. So,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1126.94,
+            "end": 1133.42,
+            "text": " it will again take 2 bytes from the externally interfaced memory and keep them here. So, that the execution"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1133.42,
+            "end": 1140.6200000000001,
+            "text": " part is separated from this fetching of instruction part. If you are fetching instructions from the"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1140.6200000000001,
+            "end": 1147.74,
+            "text": " external memory inside the microprocessor and then concurrently executing it. So, what will happen if"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1147.74,
+            "end": 1152.8600000000001,
+            "text": " you fetch one instruction, execute it. Then when it gets completed, you fetch the next instruction. This"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1152.8600000000001,
+            "end": 1160.0600000000002,
+            "text": " was what was happening in 8085. But here, once you fetch this complete queue, you start executing some"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1160.06,
+            "end": 1166.46,
+            "text": " instructions from some bytes from here and this queue never gets empty. Right? It keeps on fetching the"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1166.46,
+            "end": 1173.1799999999998,
+            "text": " instructions so that this fetching part does not interfere with the execution part. So, these two"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1173.1799999999998,
+            "end": 1178.86,
+            "text": " units of the microprocessor, the upper unit and the lower unit, they operate independent of each other."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1178.86,
+            "end": 1186.46,
+            "text": " I mean, it does not matter. In this lower unit, it is called as execution unit and the upper unit is called"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1186.46,
+            "end": 1191.42,
+            "text": " as the bus interface unit. Because most of the things that you will see on the upper side,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1191.42,
+            "end": 1197.42,
+            "text": " they correspond to either address generation or taking the data from external memory into the"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1197.42,
+            "end": 1203.82,
+            "text": " instruction queue and so on. So, the functioning of this bus interface unit is independent of this"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1203.82,
+            "end": 1210.46,
+            "text": " execution unit. In execution unit, actual control signals are generated by using this timing and control"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1210.46,
+            "end": 1214.06,
+            "text": " circuit arithmetic logic unit. So, the automatic logic unit performs its calculation and so on."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1214.78,
+            "end": 1220.7,
+            "text": " So, this execution unit should not wait for the fact that it is executing one instruction. Then when"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1220.7,
+            "end": 1227.82,
+            "text": " it will complete, then only it will instruct the external memory to fetch one more byte. So, it does not"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1227.82,
+            "end": 1233.98,
+            "text": " perform this way in 8086. In 8086, this instruction queue of six bytes is there and"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1233.98,
+            "end": 1242.3,
+            "text": " this queue usually remains full and once two bytes of this are empty. Suppose one and two instructions"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1242.3,
+            "end": 1249.34,
+            "text": " are used, so this 6534 will shift downwards and two locations from here will become empty and then the"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1249.34,
+            "end": 1257.98,
+            "text": " fetching part will start in concurrently with this particular execution unit. So, this unit has never to"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1257.98,
+            "end": 1263.26,
+            "text": " wait for fetching of instructions. It is already available in this instruction queue. And why is the"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1263.26,
+            "end": 1270.3,
+            "text": " size of this six bytes? The size of this is six bytes because instruction which can take maximum number"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1270.3,
+            "end": 1275.98,
+            "text": " of bytes in 8086 is of six bytes. So, it is call instruction and we will see it when we will come to the"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1275.98,
+            "end": 1283.1,
+            "text": " appropriate programming part, maybe in the lectures or laboratory. So, this phenomena is called as pipelining."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1283.1,
+            "end": 1292.1399999999999,
+            "text": " I mean, you are keeping the working of bus interface unit or BIU for short and execution unit or EU for"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1292.1399999999999,
+            "end": 1298.54,
+            "text": " short independent of each other. So, this phenomena is called as pipelining and pipelining is also"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1298.54,
+            "end": 1307.98,
+            "text": " responsible for faster speed of 8086. Although, the clock that this microprocessor uses is of 5 megahertz,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1307.98,
+            "end": 1316.3,
+            "text": " right? Its frequency. Its frequency is 5 megahertz but it has got its variance also which will be using"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1316.3,
+            "end": 1321.98,
+            "text": " 8 megahertz frequency and 12 megahertz frequency but the version that we are studying will use 5 megahertz"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1321.98,
+            "end": 1328.14,
+            "text": " frequency. That is the primary version and that 5 megahertz frequency is obviously higher than the 3"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1328.14,
+            "end": 1334.78,
+            "text": " megahertz frequency that 8085 was using. So, obviously, this microprocessor is faster but then the second fact"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1334.78,
+            "end": 1341.82,
+            "text": " that adds to its speed is it has independence in operations of execution unit and the bus interface"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1341.82,
+            "end": 1348.46,
+            "text": " unit. So, that whenever these they perform their operation execution unit does not depend on this bus"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1348.46,
+            "end": 1355.82,
+            "text": " interface unit for waiting for instructions. They are always available in this instruction byte queue,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1357.26,
+            "end": 1363.02,
+            "text": " right? So, rest portions as you see are familiar to you. This is the internal DESA bus, this is C bus,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1363.02,
+            "end": 1369.5,
+            "text": " this is A bus. If it is A bus, it is meant for the execution unit. C bus is meant for this particular"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1369.5,
+            "end": 1374.62,
+            "text": " bus interface unit. You can see that it is also written here bus interface unit and execution unit,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1374.62,
+            "end": 1381.58,
+            "text": " right? So, then you have this memory address and data bus interface. Obviously, there will be some pins"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1381.58,
+            "end": 1388.3799999999999,
+            "text": " and here also this address and data pins are multiplexed with each other. So, we will see when we will study"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1388.38,
+            "end": 1395.0200000000002,
+            "text": " the appropriate diagram, pin diagram and how these are interfaced, how these are, you know,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1395.0200000000002,
+            "end": 1401.98,
+            "text": " multiplied with each other and what latching mechanism like 8085 is used here, right? So, this is"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1402.8600000000001,
+            "end": 1411.3400000000001,
+            "text": " more or less the internal architecture of 8086 microprocessor and now we will discuss this in little"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1411.3400000000001,
+            "end": 1416.5400000000002,
+            "text": " more detail. We will see the structure of these flag registers as well as we will see the structure of the"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1416.54,
+            "end": 1425.82,
+            "text": " external memory and the clock, the kind of clock that is required, right? So, let me just first show you"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1425.82,
+            "end": 1432.78,
+            "text": " the structure of memory. So, here what happens is we already know that it has got 2 raised to the power"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1432.78,
+            "end": 1439.6599999999999,
+            "text": " of 20 possible addresses because the address bus of this 8086 microprocessor is of 20 bits. So, it can"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1439.6599999999999,
+            "end": 1445.82,
+            "text": " address a maximum of 2 raised to the power of 20 address location, right? So, that 2 raised to the power of 20"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1445.82,
+            "end": 1463.6599999999999,
+            "text": " 1 megabyte. So, here you will find 2 raised to the power of 20 locations. Now, as discussed earlier,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1464.3799999999999,
+            "end": 1471.1,
+            "text": " this complete memory is divided into four different segments. Code segment CS, data segment DS,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1471.1,
+            "end": 1481.26,
+            "text": " extra segment DS, extra segment ES and stat segment SS. And each of this segment is of 64 kilobytes. That"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1481.26,
+            "end": 1486.9399999999998,
+            "text": " is 2 raised to the power of 16 bytes. This is also 2 raised to the power of 16 bytes. This is also 2 raised to"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1486.9399999999998,
+            "end": 1495.58,
+            "text": " the power of 16 bytes and so on. So, 64 kilobytes, if you sum it for four times, you will"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1495.58,
+            "end": 1505.1,
+            "text": " just get 256 kilobytes. Now, four segments, they consume 256 kilobytes and the total memory is of"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1505.1,
+            "end": 1511.34,
+            "text": " one megabyte. So, three-fourth of the memory still remains. Three-fourth of the memory still remains"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1511.34,
+            "end": 1516.78,
+            "text": " if you have made these four segments. Although, it appears that these four segments are completely"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1516.78,
+            "end": 1523.8999999999999,
+            "text": " covering this entire memory, but this is not a diagram which is proved to scale. So, if you see the 64 and 64"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1523.9,
+            "end": 1530.6200000000001,
+            "text": " kilobytes, these are four sections. So, the complete memory that these sections occupy is 256 kilobytes"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1530.6200000000001,
+            "end": 1537.42,
+            "text": " and since the complete memory in 8086 is one megabyte, so still three-fourth of the memory remains"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1537.42,
+            "end": 1544.46,
+            "text": " apart from these segments that you see here. So, what do we do with that remaining memory? So, in that"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1544.46,
+            "end": 1551.74,
+            "text": " remaining memory, some programs which are used to start that microprocessor are written. So, in modern"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1551.74,
+            "end": 1556.86,
+            "text": " terminology, we call it as an operating system. Whenever you install any operating system into"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1556.86,
+            "end": 1562.22,
+            "text": " your computer, if you talk about Windows operating system, then in C drive, some of the space is taken."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1562.22,
+            "end": 1567.02,
+            "text": " So, similarly, in this microprocessor, in the remaining portion, we write some programs which"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1567.02,
+            "end": 1574.38,
+            "text": " are used to start this microprocessor and which have got some interesting subroutines of what should"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1574.38,
+            "end": 1580.5400000000002,
+            "text": " happen when an interrupt occurs or some interesting subroutines are written there, right? So, now,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1580.5400000000002,
+            "end": 1586.7800000000002,
+            "text": " is it necessary that whenever we have this external memory of one megabyte, we should have all of these"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1586.7800000000002,
+            "end": 1593.18,
+            "text": " four segments in our program? No, it is not necessary. For example, your program might require code segment"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1593.18,
+            "end": 1599.3400000000001,
+            "text": " only. You don't have huge data to keep, so you won't be using data segment. You don't have extra tasks in"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1599.34,
+            "end": 1604.6999999999998,
+            "text": " your program. So, you won't be using extra segment. You won't be using stack segment. So, it might be"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1604.6999999999998,
+            "end": 1609.4199999999998,
+            "text": " possible that some of the programs might only require code segment. So, you will be just designing"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1609.4199999999998,
+            "end": 1615.34,
+            "text": " this code segment inside memory. It's not fixed that code segment will start from this particular"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1615.34,
+            "end": 1621.58,
+            "text": " memory location and end in that particular memory location. That is left to the programmer. I mean, you can"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1621.58,
+            "end": 1626.78,
+            "text": " choose to start your code segment from anywhere in the memory and it will consume 64 kilobytes."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1626.78,
+            "end": 1656.7,
+            "text": " So, it will contain 5 hexadecimal digits. So, out of that, it is mandatory that the starting of any"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1656.7,
+            "end": 1663.26,
+            "text": " of these segments that you see here, the last hexadecimal digits should also, should always be 0."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1663.82,
+            "end": 1670.6200000000001,
+            "text": " I mean, if you see the hexadecimal representation of the actual 20-bit physical address, it will be of 5"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1671.26,
+            "end": 1677.9,
+            "text": " hexadecimal digits. And it is mandatory for the starting section of code segment, data segment,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1677.9,
+            "end": 1685.5800000000002,
+            "text": " extra segment or stack segment to have that least significant hexadecimal digit as 0. Or alternatively,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1685.58,
+            "end": 1690.54,
+            "text": " you can say that if you are seeing it in binary, if you are seeing the 20-bit physical address in"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1690.54,
+            "end": 1699.74,
+            "text": " binary, then the last 4 bits or the least significant 4 bits have to be 0. So, that is a condition for the"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1699.74,
+            "end": 1705.1,
+            "text": " starting address of this code, data, extra and stack segment. And we will come to know why this condition"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1705.1,
+            "end": 1710.62,
+            "text": " is there. And from that particular location, you can start your code segment, data segment,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1710.62,
+            "end": 1715.02,
+            "text": " extra segment and stack segment. So, it is not necessary that all of these should be there in"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1715.02,
+            "end": 1723.1799999999998,
+            "text": " your program. You might use 1 or 2 or a combination. Now, is it possible that you can have 2 data segments"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1723.1799999999998,
+            "end": 1729.58,
+            "text": " in your program? Yes, it is also possible. So, I mean, in your program, you can have 1 code segment and"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1729.58,
+            "end": 1736.3,
+            "text": " you might initialize 2 data segments. You might initialize 2 data segments somewhere. Because,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1736.3,
+            "end": 1742.3,
+            "text": " ultimately, you have got a huge memory which is 1 megabyte and 3 fourth portion is still remaining."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1742.3,
+            "end": 1747.98,
+            "text": " So, in that 3 fourth portion, not complete 3 fourth portion is used for writing the operating system."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1747.98,
+            "end": 1752.86,
+            "text": " Although, operating system is a new terminology, it was not used at that particular time. So,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1752.86,
+            "end": 1758.6999999999998,
+            "text": " instructions which are used for keeping this microprocessor working are written in that remaining"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1758.7,
+            "end": 1764.06,
+            "text": " 3 fourth memory. But, that 3 fourth memory is not used completely by those instructions."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1764.06,
+            "end": 1770.54,
+            "text": " That is still vacant. Most of the memory is vacant. So, you can define 2 data segment or might be 2 extra"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1770.54,
+            "end": 1777.42,
+            "text": " segment in your externally interfaced memory through programming depending upon your need. And we will"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1777.42,
+            "end": 1784.8600000000001,
+            "text": " do it when we will come to the programming part. So, this is a very elegant way of actually keeping your"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1784.86,
+            "end": 1790.1399999999999,
+            "text": " code section, data segment, extra segment and stack segment separately. Now, this extra segment can be"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1790.1399999999999,
+            "end": 1796.3,
+            "text": " used for any general purpose. You can implement, you can keep some data into it, you can keep code into it,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1796.3,
+            "end": 1802.3,
+            "text": " you can also write some stack into it. Right? So, that is also there. So, this is a general introduction to"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1802.3,
+            "end": 1813.26,
+            "text": " the externally interfaced memory of 8086 which is 1 megabyte in its complete extent. So, now, let us also come to"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1813.26,
+            "end": 1819.18,
+            "text": " the structure of the structure of the flag register. Now, let me just show you first of all the architecture again."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1820.86,
+            "end": 1828.46,
+            "text": " Here you have got these flag registers. So, these flag registers are of 16 bits. In 8085, they were of 8 bits."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1828.46,
+            "end": 1836.46,
+            "text": " Now, let us see how the flag register looks like in 8086 microprocessor. So, here you see, if you see the least"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1836.46,
+            "end": 1845.66,
+            "text": " significant 8 bits. So, they are same. They are same and they are exactly same as 8085. Carry, parity, auxiliary"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1845.66,
+            "end": 1853.98,
+            "text": " carry, zero and then sign. Right? So, this portion is exactly same as 8085. So, this maintains a downward"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1853.98,
+            "end": 1862.8600000000001,
+            "text": " and upward compatibility. So, programs which will work in 8085 might also work in 8086 if you use appropriate"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1862.86,
+            "end": 1867.6599999999999,
+            "text": " commands because there is no change of this flag structure as you can see here. Right? So, this"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1867.6599999999999,
+            "end": 1874.06,
+            "text": " sort of maintains upward and backward compatibility here and these three don't cares are also placed at"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1874.06,
+            "end": 1880.3,
+            "text": " the exact same locations as it was in 8085. Now, let us talk about the bits after sign because we"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1880.3,
+            "end": 1885.9799999999998,
+            "text": " already know what is the meaning of carry, parity, auxiliary carry and then zero and then sign flag. Right?"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1885.9799999999998,
+            "end": 1891.74,
+            "text": " So, in case you have forgotten them, you can see the appropriate lecture in 8085 and get the meaning of these."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1891.74,
+            "end": 1898.86,
+            "text": " Now, there are some extra flags which is called a strap flag, interrupt flag, direction flag and overflow flag."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1899.82,
+            "end": 1905.98,
+            "text": " So, trap. Why is trap used? So, in programming what happens is usually when you are typing your program"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1905.98,
+            "end": 1913.74,
+            "text": " onto an editor, you would like to debug it line by line. So, that facility is inbuilt into this microprocessor"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1913.74,
+            "end": 1921.26,
+            "text": " 8086 and for that you have this trap flag. So, if you just make the value of this trap flag as 1"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1922.22,
+            "end": 1928.94,
+            "text": " then what will happen is you will be able to execute your program line by line or instruction by"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1928.94,
+            "end": 1933.9,
+            "text": " instruction. Right? So, that is used for that particular purpose. Then you have got interrupt"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1933.9,
+            "end": 1943.5,
+            "text": " flag. So, this interrupt flag, it is used in the same way as we had that interrupt flag in 8085 but it was"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1943.5,
+            "end": 1950.38,
+            "text": " not a part of this status register. However, this has been included as a part of this status register here."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1950.86,
+            "end": 1958.94,
+            "text": " And then you have direction flag. This direction flag, it shows in 8086 instruction set. There are"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1958.94,
+            "end": 1965.34,
+            "text": " certain instructions which will deal with string operations. By string operations, we mean like in C"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1965.34,
+            "end": 1972.3,
+            "text": " programming language you all must have been printing hello world onto the screen or taking a string from"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1972.3,
+            "end": 1979.82,
+            "text": " the user as input. So, for those string instructions, if the string is kept in externally interfaced memory of"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1979.82,
+            "end": 1986.78,
+            "text": " 8086. So, do you have to read the string in forward order? That means in the increasing order of addresses"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1986.78,
+            "end": 1993.02,
+            "text": " or in the reverse order? That is in the decreasing order of the addresses. So, in whichever direction you"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1993.02,
+            "end": 1999.1,
+            "text": " keep your string that can be set by this direction flag. If the value of this d bit is 0, in that case"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 1999.74,
+            "end": 2005.98,
+            "text": " with the increasing addresses you will keep your string. And if this flag becomes 1, then in that case"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2005.98,
+            "end": 2013.5,
+            "text": " you will be keeping the string in reverse order of memory. Means now you will be keeping the addresses from"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2013.5,
+            "end": 2019.9,
+            "text": " higher address to the lower address. So, that is used for that particular purpose direction flag. And this overflow"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2019.9,
+            "end": 2027.5,
+            "text": " flag is used when there is an overflow in your calculation. So, these flags are also available to"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2027.5,
+            "end": 2034.7800000000002,
+            "text": " the programmer through various commands. Like in 8085 we have also seen that we can temper with these"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2034.7800000000002,
+            "end": 2041.5800000000002,
+            "text": " values by taking the flag register into your accumulator and then actually changing it and then actually"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2041.5800000000002,
+            "end": 2048.62,
+            "text": " putting it again into the flag registers. So, that kind of thing can also be done here. But additionally,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2048.62,
+            "end": 2055.1,
+            "text": " these flags that is trap, interrupt, direction and overflow flag, they appear in the instruction set"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2055.1,
+            "end": 2061.5,
+            "text": " in various command to set or reset them. And then these four bits are kept as don't care conditions."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2061.5,
+            "end": 2067.8199999999997,
+            "text": " They do not have any usage. They are reserved for future microprocessors. So, if you study any microprocessor"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2067.8199999999997,
+            "end": 2073.58,
+            "text": " that is after that, it is probable that these four bits will also be used for some purposes. So, this is"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2073.58,
+            "end": 2082.86,
+            "text": " the structure of complete 16-bit flag that we have in microprocessor 8086. Now, let us talk about the"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2082.86,
+            "end": 2090.7,
+            "text": " structure of the clock that we have in 8086 microprocessor. So, obviously, you have to use a pulse"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2090.7,
+            "end": 2100.06,
+            "text": " in clock circuit and the kind of pulse that we are using in this 8086 microprocessor is very specific."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2100.06,
+            "end": 2108.22,
+            "text": " It has to be a pulse which is on for 33% of times and for rest of the times it is off. That means,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2108.22,
+            "end": 2117.18,
+            "text": " alternatively, we can say that we need a pulse that's whose duty cycle is 33%. Whose duty cycle is 33%."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2118.7799999999997,
+            "end": 2125.58,
+            "text": " All of you might be aware of this terminology. Duty cycle simply means that in one period of this periodic"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2125.58,
+            "end": 2133.58,
+            "text": " pulse, the time for which that pulse remains on or the T on. T on of this pulse is 33% of the times of"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2133.58,
+            "end": 2142.38,
+            "text": " the entire period. So, that's what we mean by duty cycle and for 8085, we use a pulse which has a 33%"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2142.38,
+            "end": 2150.06,
+            "text": " duty cycle and the frequency of that to begin with is 5 megahertz. The basic variant of 8085"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2150.06,
+            "end": 2158.06,
+            "text": " will be using a frequency of 5 megahertz. So, we have three versions for 8086. One is 8086,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2158.06,
+            "end": 2169.66,
+            "text": " another is 8086-1, another is 8086-2. So, 8086 uses 5 megahertz, 8086-1 uses 10 megahertz, 8086-2 uses"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2169.66,
+            "end": 2177.5,
+            "text": " 8 megahertz frequency. So, 5 megahertz, 10 megahertz and 8 megahertz. Like in today's time, we have,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2178.14,
+            "end": 2185.58,
+            "text": " if we talk about Intel's i5 processor. So, i5 comes in various generations, right? So, we similarly have"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2185.58,
+            "end": 2193.42,
+            "text": " an older terminology where we have 8086 which operates on 5 megahertz, 8086-1 which operates on 10 megahertz"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2193.42,
+            "end": 2199.02,
+            "text": " and 8086-2 which operates on 8 megahertz. But in this course, we will restrict ourselves to the base"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2199.02,
+            "end": 2205.66,
+            "text": " variant which is called as 8086 and which operates on 5 megahertz. And the speciality of the pulse that we"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2205.66,
+            "end": 2212.46,
+            "text": " need for operating this is, it has to have a 33 percent duty cycle. So, to be able to generate this"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2212.46,
+            "end": 2218.2999999999997,
+            "text": " pulse through a crystal oscillator, we have a specific IC for that and we will see the structure of that"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2218.3,
+            "end": 2225.26,
+            "text": " IC when we will study that clock completely in details, right? So, this kind of thing is needed"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2225.26,
+            "end": 2231.6600000000003,
+            "text": " there. Now, let us again just rewind the definition of microprocessor. We have already seen this"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2231.6600000000003,
+            "end": 2239.5800000000004,
+            "text": " definition. The microprocessor is the brain of a computer. It is multipurpose clock driven register"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2239.58,
+            "end": 2247.18,
+            "text": " based programmable digital integrated circuit which takes binary input, processes the binary input"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2247.18,
+            "end": 2253.8199999999997,
+            "text": " according to instructions already stored inside it and then produces binary output. So, we are already"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2253.8199999999997,
+            "end": 2261.66,
+            "text": " aware of this definition of microprocessor. So, this definition is just there for revision. And let me now"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2261.66,
+            "end": 2267.5,
+            "text": " just point out some important points that we have discussed up till now or maybe some of the points would"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2267.5,
+            "end": 2275.34,
+            "text": " have been skipped. So, they are summarized here for this particular lecture. So, this 8086 microprocessor"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2275.34,
+            "end": 2283.66,
+            "text": " is a 16-bit microprocessor because the data bus of this microprocessor is of 16 bits, right? So, address"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2283.66,
+            "end": 2290.06,
+            "text": " bus is obviously of 20 bits which we will discuss later. So, now, four 16-bit general purpose registers are"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2290.06,
+            "end": 2297.34,
+            "text": " available AX, BX, CX and DX. This is also what we have seen. Then, we have got eight"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2297.5,
+            "end": 2305.34,
+            "text": " eight bit general purpose registers. That is A lower, A higher, B lower, B higher, C lower, C higher, D lower and D higher."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2305.34,
+            "end": 2313.1,
+            "text": " So, this is not I. This is actually L. I have written it in small. It should have been capital L. So, A lower, A higher and similarly, there are"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2313.1,
+            "end": 2319.34,
+            "text": " variants of every register. And you can use any combination. It's not necessary that if you are using DX register,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2319.34,
+            "end": 2326.38,
+            "text": " then you have to use C also in 16-bit mode. So, you have to use CX register. No, it is not that. You can use DX register."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2326.38,
+            "end": 2333.34,
+            "text": " You can use CH register in some program. And it is also possible that you are using DX register. And you are also"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2333.34,
+            "end": 2340.7000000000003,
+            "text": " treating this DL and DH independently. So, any combination of these registers can be used according to your need."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2340.7,
+            "end": 2350.2999999999997,
+            "text": " So, since the registers are given in 16 and 8-bit modes. So, you will be able to write programs for 8-bit and 16-bit operations both."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2350.2999999999997,
+            "end": 2359.8999999999996,
+            "text": " So, obviously, the instruction set will be such that there will be some 16-bit operations mainly. And some operations are also there for 8-bit calculations."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2359.8999999999996,
+            "end": 2370.22,
+            "text": " One good thing about 8086 is that unlike 8085 microprocessor, you will notice that in the instruction set, there are commands for multiplication and division as well."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2370.22,
+            "end": 2377.98,
+            "text": " However, in 8085 these commands were absent. So, the instruction set of 8086 microprocessor is richer"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2377.98,
+            "end": 2386.54,
+            "text": " as compared to 8085 microprocessor. In 8085 microprocessor, we had 74 instructions. However,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2386.54,
+            "end": 2394.22,
+            "text": " in this 8086 microprocessor, we will have near about 117 instructions. And if you talk about combinations,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2394.22,
+            "end": 2403.98,
+            "text": " many, many combinations of that can be made. In 8085, you only had 74 instructions whose 246 combinations were there."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2403.98,
+            "end": 2420.22,
+            "text": " Right? So, here we have 117 instructions near about. And we can make many, many combinations of those instructions. Right? So, this is also one point of difference. That is, the instruction set of 8086 is much richer as compared to 8085."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2420.22,
+            "end": 2429.66,
+            "text": " 8085. Because there are direct commands for multiplication, deviation. And you will see a lot of other operations will be very easy. They can be done by a single line command."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2429.66,
+            "end": 2441.98,
+            "text": " Earlier in 8085, we had to write separate programs for that. So, that is not the case here. Then, the externally interfaced memory is of 1 megabyte, which we already know because the address bus is of 20 bit."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2441.98,
+            "end": 2452.94,
+            "text": " So, 20 bit. So, 20 bit address bus will be able to address 2 raised to the power of 20. That is 1 megabyte. 1 mega stands for total number of locations that will be there in memory."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2452.94,
+            "end": 2462.94,
+            "text": " And byte stands for total number of bytes. And byte stands for total number of bytes. And byte stands for the fact that every location is of 1 byte. That means 8 bits. So, we have 1 megabyte storage, which is external storage."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2462.94,
+            "end": 2482.94,
+            "text": " And, you know, this external storage is divided into four sections. Extra segment, code segment, then you have data segment, and then you have stack segment. Right? So, these all segments are there. Apart from there, 3 fourths memory remains in which there are some special programs which are"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2482.94,
+            "end": 2498.94,
+            "text": " written to keep the microprocessor working. And also, a lot of portion remains vacant there. So, we can duplicate these slots there and we can use them. Although, theoretically, when this microprocessor was designed, it was advised that you should have one section for code, one section of data."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2498.94,
+            "end": 2510.94,
+            "text": " But now, you know, people often have a habit of making this two code segments or sometimes multiple other segments also. So, ideally, it is recommended that you should use one segment."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2510.94,
+            "end": 2525.94,
+            "text": " It means one code segment, one extra segment, one data segment, one stack segment. But if it is required in programming, you can have multiple of them in your program. You only have to keep track of where one section begins and where one section ends. Right?"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2525.94,
+            "end": 2545.94,
+            "text": " So, 16-bit data bus is known to us. 20-bit address bus is also known to us. It has a 6-byte instruction queue. So, this is one point which is necessary for us to understand that this 6-byte instruction queue, it makes the working of execution unit and your bus interface unit independent of each other."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2545.94,
+            "end": 2561.94,
+            "text": " So, this is the second part. So, this is the second part. So, this is the second reason for making 8086 microprocessor perform better as compared to 8085 because the fetching of the instruction part is separate from execution of the instruction part."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2561.94,
+            "end": 2584.94,
+            "text": " In 8085, first fetching happens, then decoding happens, then execution happens, then again fetching happens, decoding happens, and execution happens. Here what is happening is fetching is separate. It is happening depending upon the vacancy in this queue. If two bytes of this queue are vacant, fetching will happen irrespective of what is happening inside the execution unit."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2584.94,
+            "end": 2594.94,
+            "text": " So, the operation of these two units is independent. So, the operation of these two units is independent. Since this microprocessor is separated into these two units, it is performing in a more efficient way."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2594.94,
+            "end": 2611.94,
+            "text": " So, this 6-byte instruction queue is very helpful in that. So, its speed is high. Now, you have got a 16-bit arithmetic logic unit which is very obvious because it is a 16-bit microprocessor. So, most of the instructions are designed to work on 16-bit data."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2611.94,
+            "end": 2624.94,
+            "text": " And the primary reason is we have a 16-bit data bus. Other reasons for calling it a 16-bit microprocessor is that the ALU is of 16-bit and most of the instructions are also of 16-bit."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2624.94,
+            "end": 2643.94,
+            "text": " So, it has got segmented memory, segmented external memory, not memory. Memory is not present inside this 8086 microprocessor. It has to be externally interfaced. So, this externally interfaced memory of one megabyte is segmented. It is divided into code section data, code segment, data segment, stats segment, and extra segment."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2643.94,
+            "end": 2661.94,
+            "text": " And their corresponding base addresses. We will come to know what base addresses are. So, these base addresses are stored inside the microprocessor in the corresponding registers with the same name. This is CS, DS, SS, and ES. This is not X. This is ES."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2661.94,
+            "end": 2673.94,
+            "text": " So, code segment, data segment, extra segment, and stack segment are external to the microprocessor in the external memory. And the corresponding segment registers of 16-bit are inside the microprocessor."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2673.94,
+            "end": 2692.04,
+            "text": " So, here it is. It also makes it clear that why these registers are of 16-bits because I already told you that inside the memory, the starting address of these different segments have to be such that the last hexadecimal digit should always be 0."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2692.42,
+            "end": 2700.7200000000003,
+            "text": " That means only first 16-bits or the first 4 hexadecimal digits of addresses will vary. The last 4-bits are by default understood to be 0."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2700.72,
+            "end": 2713.54,
+            "text": " So, the base address means the starting address of these segments. And it is of 16-bits only because last 4-bits are always assumed to be 0. So, that is why these have a size of 16-bit only."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2713.74,
+            "end": 2721.4599999999996,
+            "text": " So, this makes it clear here itself. And we will discuss it when we will understand the address conversion logic in the subsequent lectures."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2721.9599999999996,
+            "end": 2727.3999999999996,
+            "text": " So, these individual segments are of 64 kilobyte each and they are in the external memory. Right?"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2727.4,
+            "end": 2734.56,
+            "text": " So, now there are these pointer registers. Instruction pointer, we have already known. It is a replica of program counter there."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2734.98,
+            "end": 2740.1600000000003,
+            "text": " Then you have stack pointer. You have base pointer. You have source index. You have destination index."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2740.6600000000003,
+            "end": 2747.5,
+            "text": " Then there is a clock of 5 MHz frequency with duty cycle of 33% in base variant."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2747.5,
+            "end": 2755.22,
+            "text": " In 886-1, we use a clock of 10 MHz and in 886-2, we use a clock of 8 MHz again. Right?"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2755.64,
+            "end": 2760.1,
+            "text": " So, this is a quick summary of this 8086 microprocessor."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2760.6,
+            "end": 2766.6,
+            "text": " Let us now also discuss some important points of differences between 8085 and 8086."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2766.76,
+            "end": 2767.64,
+            "text": " I will just brush up."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2767.64,
+            "end": 2774.7999999999997,
+            "text": " So, 8085 has got 16-bit address lines. So, 8086 has got 20-bit address lines."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2774.92,
+            "end": 2776.2,
+            "text": " So, this is very clear to us."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2777.06,
+            "end": 2780.54,
+            "text": " 8085, it has 256 input-output devices."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2780.8199999999997,
+            "end": 2785.92,
+            "text": " When we were studying 8085, we said that there are two ways for addressing."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2786.48,
+            "end": 2791.46,
+            "text": " I mean, you could have IO-mapped input-output or memory-mapped input-output."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2791.46,
+            "end": 2798.2400000000002,
+            "text": " So, in IO-mapped input-output, we were only making the usage of the data bus, not the complete address bus."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2798.58,
+            "end": 2805.58,
+            "text": " So, the lower order address bus was considered as data bus and it was duplicated there."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2805.94,
+            "end": 2814.38,
+            "text": " So, since it has its data bus size is 8 bits, so it can address 2 raised to the power of 8, that means 256 input-output devices."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2814.38,
+            "end": 2825.4,
+            "text": " However, by the same logic in 8086 microprocessor, since it has got an address bus of size, sorry, it has got a data bus of size 16 bits,"
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2825.7200000000003,
+            "end": 2831.2000000000003,
+            "text": " so it can address 2 raised to the power of 16, that is 64 kilo input-output devices."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2831.42,
+            "end": 2834.1800000000003,
+            "text": " 64 kilo. 64 kilo does not mean kilogram."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2834.78,
+            "end": 2837.2000000000003,
+            "text": " Kilo is just a suffix that you are using."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2837.6600000000003,
+            "end": 2840.42,
+            "text": " So, kilo means you have got 1024."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2840.42,
+            "end": 2844.8,
+            "text": " So, 64 kilo input-output devices can be theoretically connected to it."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2845.2000000000003,
+            "end": 2851.02,
+            "text": " We already know what is the operating frequency, 3 megahertz and 5 megahertz for 8085 and 8086 respectively."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2851.7400000000002,
+            "end": 2857.78,
+            "text": " Then, one important point is this 8086 IC can operate in maximum and minimum mode."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2858.0,
+            "end": 2863.04,
+            "text": " However, 8085 IC can operate in only single mode and that's not given any name."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2863.04,
+            "end": 2870.8,
+            "text": " So, 8086, when it is alone working as a processor in a big network, it will be operating as in minimum mode."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2870.9,
+            "end": 2875.46,
+            "text": " However, if there are multiple processors, then it will be operating in maximum mode operations."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2875.88,
+            "end": 2875.98,
+            "text": " Right."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2876.56,
+            "end": 2883.2799999999997,
+            "text": " So, we have got segmented memory in 8086 and in 8085 we do not have segmented memory."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2883.28,
+            "end": 2883.76,
+            "text": " Right."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2883.76,
+            "end": 2891.84,
+            "text": " Now, program status word as we saw in 8085, it was a combination of accumulator and the flag bytes."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2892.3,
+            "end": 2892.44,
+            "text": " Right."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2892.92,
+            "end": 2901.9,
+            "text": " So, in 8085, program status word meant a combination of accumulator as the higher byte and flag register as the lower byte."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2902.0600000000004,
+            "end": 2908.0400000000004,
+            "text": " However, in 8086, the program status word will simply mean the flag register only."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2908.5,
+            "end": 2911.52,
+            "text": " So, flag register and program status word are the same."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2911.52,
+            "end": 2913.92,
+            "text": " You do not have to club accumulator with them."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2914.2,
+            "end": 2914.36,
+            "text": " Right."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2914.86,
+            "end": 2920.34,
+            "text": " So, if you see the flag structure of this, let me again show you that slide."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2920.7,
+            "end": 2923.74,
+            "text": " Let me just bring that slide of flag register for you."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2924.86,
+            "end": 2929.2,
+            "text": " So, if you see the flag register of this, here there are three flags."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2929.38,
+            "end": 2932.1,
+            "text": " That is direction, trap and interrupt."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2932.28,
+            "end": 2934.3,
+            "text": " Direction, trap and interrupt."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2934.74,
+            "end": 2938.16,
+            "text": " So, these three flags are also called as control flags."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2938.54,
+            "end": 2941.06,
+            "text": " Direction flag, interrupt flag and trap flag."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2941.06,
+            "end": 2945.02,
+            "text": " These are called as your control flags."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2945.46,
+            "end": 2950.2999999999997,
+            "text": " However, in this 8085, these control flags are not available."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2950.72,
+            "end": 2955.72,
+            "text": " So, these control flags are available to the programmer directly through various commands for programming."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2955.88,
+            "end": 2957.94,
+            "text": " And we will see that, how that works."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2958.34,
+            "end": 2958.44,
+            "text": " Right."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2958.88,
+            "end": 2964.02,
+            "text": " Pipelining is obviously available in 8086, but not available in 8085."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2964.02,
+            "end": 2969.06,
+            "text": " So, these are some points of differences to begin with 8086."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2969.06,
+            "end": 2975.88,
+            "text": " And if you look at the architecture of 8086 again, you are already familiar with this."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2975.98,
+            "end": 2982.02,
+            "text": " The only point of difference was the bifurcation of this into bus interface unit and execution unit."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2982.02,
+            "end": 2994.14,
+            "text": " And also, there were certain new components which were introduced like these segment registers, which are used to keep the address of various sections of the externally interfaced memory."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2994.2599999999998,
+            "end": 2996.4,
+            "text": " Then there is this instruction queue of six bytes."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2996.4,
+            "end": 2999.4,
+            "text": " So, we also know that this is also different."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 2999.98,
+            "end": 3005.64,
+            "text": " This adder is additionally placed here for address generation logic, which we are going to study soon."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 3006.12,
+            "end": 3014.1800000000003,
+            "text": " Then this flag register is of 16 bits, which contains some additional 8 bits, which represents different other flags also."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 3014.32,
+            "end": 3017.8,
+            "text": " And this flag register is called as program status word only."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 3017.8,
+            "end": 3025.34,
+            "text": " So, I guess this is a fairly good introduction to the architecture of this 8086 microprocessor."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 3025.82,
+            "end": 3029.6600000000003,
+            "text": " In the next lecture, we are again going to see the pin diagram for that."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 3029.6600000000003,
+            "end": 3041.7000000000003,
+            "text": " And pin diagram is a way by which we can know that how the externally interfaced world interacts with the microprocessor and what signals are generated at what time."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 3041.8,
+            "end": 3044.98,
+            "text": " So, that's what we are going to see in the next lecture."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 3044.98,
+            "end": 3048.56,
+            "text": " And this is it for today's lecture, I guess."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 3048.64,
+            "end": 3050.66,
+            "text": " I will see you in the next video."
+        },
+        {
+            "number": "1",
+            "title": "Video 11 - 8086 Microprocessor Architecture",
+            "start": 3050.76,
+            "end": 3052.12,
+            "text": " Thank you very much for watching this."
+        }
+    ],
+    "text": "Hello and welcome to this lecture series on microprocessor and microcontroller. And we are in 11th video of this particular lecture series and we are trying to study 8086 microprocessor starting from this video onwards. So on 8086 microprocessor, this is our first video and we have completed 8085 microprocessor prior to that. So the topic of today is going to be the architecture of this 8086 microprocessor. Now since we have already learned how 8085 microprocessor works, we have already seen its architecture, pin diagram, then the interrupt structure, external memory structure and how things happen within 8085 microprocessor. So obviously when we will study 8086 microprocessor, there will be a frequent comparison between 8086 and 8085 microprocessor, right? And 8086 being a microprocessor which came after 8085. So it is also very obvious that it will be an advanced version. And the important thing about 8086 microprocessor is that it is a blueprint to all the processors that came after it. Means after 8086 microprocessor, there were many microprocessors that this Intel family has produced. But the popular among them were Pentium microprocessors. Then there was this dual core, core to dual series and there were these i3, i5, i7, i9 etc. So the good thing about studying 8086 microprocessor is, if you study this microprocessor, you have also studied all of them to a certain extent, right? So they maintain backward compatibility and it all started from 8086, not from 8085. It is again a backward compatible in some sense, but 8086 can be thought of as a very good blueprint of all the successors of this Intel family series, right? So let me begin this 8086 discussion by just showing you what we have done up till now and what we are going to do. So up till now, we have covered 10 lectures. We have covered 10 lectures and in these 10 lectures, we have discussed 8085 microprocessor. So we covered the digital hardware logic, history and the difference between microprocessor and microcontroller in the first lecture, which was a generic lecture where we discussed what microprocessor and microcontroller is. Then we saw the programming model of 8085, that is the portion of this microprocessor, which is accessible to the user for interacting with it in the sense of programming. There we also saw the meaning of programming. Programming simply means that out of the 74 instructions, which were available in 8085, two 46 patterns could be made and a permutation and combination, a logical permutation and combination of those two 46 patterns is called as a program. So we studied how to make some basic programs in that. We then saw the architecture, pin diagram and then the interrupt structure. Then we saw machine cycles set timing diagrams, input output and addressing modes and instruction set of 8085. So in the laboratory courses, in the laboratories, we have seen a lot of programs about 8085, etc. So on the same lines, this is the tentative. These are the tentative titles in which we will be reading 8086 microprocessor. So I will probably begin with architecture of 8086, which is the topic of today. And in this lecture, we will also cover the points of differences between 8085 and 8086. Although a mention of these points or differences will be in the subsequent lectures also. But we will try to have a good comparison between the two microprocessors in this lecture. We will then see the pin diagram, then the programming model. We will make some simple programs. And then we will see the minimum and maximum mode of 8086. This is something which is absent in 8085 microprocessors. So we will first of all discuss what these modes are and what are the advantages of these two modes, right? So just to give you a brief idea, 8086 is again an integrated circuit. So that integrated circuit can be used in two modes. One mode is where there is only one microprocessor and it is controlling all the other peripherals. So there is only one control center, one microprocessor that is just doing every task in the circuit. So that's what you mean by minimum mode of 8086. And maximum mode means there is a network of various microprocessors, not 8086 only. There can be 8086, 8085, Pentium. Then there can be microprocessor from other families like AMD, Qualcomm. So there are these multiple microprocessors which are connected in the network and they are trying to interact with each other. So that's what we mean by maximum mode. So this IC of 8086, it operates in these two particular ways, minimum mode and maximum mode. Then we will see instruction template and memory organization plus some miscellaneous topics of 8086. Then we will study, of course, the addressing modes, instruction set and we will dedicate some time for programming. So this is a tentative list of topics that we are going to cover in depth and I might just change them or shuffle their order of appearance depending upon the need of the course. So that's what we are going to do here. Right. So now let me just begin you and let me just begin this topic by showing you the actual architecture of this 8086 microprocessor. So this is the architecture of 8086 microprocessor and let us first have a look at this architecture and let us see if we are seeing some familiar components here in comparison to 8085. Right. So although we do not know anything about this as of now, but let us see if we can just figure out some components which look similar to 8085. So here you can see that the arithmetic logical unit is of 16 bits. There in 8085 we had a 16 bit, sorry, 8 bit arithmetic logic unit. And on that note, it was called as a 8 bit microprocessor. So the first point is that 8086 microprocessor is a 16 bit microprocessor. Right. So this is arithmetic logic unit. Then we also see flags here. Flags are also of 16 bits here. Earlier in 8085 microprocessor, they were of 8 bits. Right. Out of which three were don't care conditions. And we had carry, parity, auxiliary carry, then sign and zero. Sorry. So flag registers are also little bit familiar to us. Then there is timing and control circuit, which was also there in 8085 microprocessor. Then we have a decoding circuit, which we have also seen there. We have this stack of registers. So if we talk about 8085 microprocessor, we had A, B, C, D, E, H, L and M registers. Here you see that the nomenclature has changed. You have AX, BX, CX, DX registers, and they are divided into these two parts, A, H, A, L, B, H, B, L, C, H, C, L, and D, H, D, L. So what are these? So if you think about this A, H register, this is the higher order byte of this AX register. AX register is a complete 16 bit register. And it is divided into two parts, A, H and A, L, A higher and A lower. So A, L is the lower byte of AX register, and A, H is the higher byte of A register. So you can use these registers either in 16 bit mode. I mean, if you can use AX completely, which will be a 16 bit register, or you can break them in parts. You can use that as A, H register or A, L register. So this facility was not available in 8085. There was only A, B, C, D, A, L registers. And at one time, you can use one register completely. Half register cannot be used there. Or even if you have to use it, you have to write specific programs for that. So direct commands were not available in the instruction set. But here in the instruction set, we will see that there are commands where A, L, A, H, and A, X can be used as three separate entities. Similarly, B, C, A, X, and A registers, they are also bifurcated into two parts. They all are of 16 bit. And half-half registers can also be used. Now, like in the case of 8085 microprocessor, we call A register as the accumulator. So here also, AX register is called as the accumulator register. Now, like in 8085, A register was responsible for default calculations. And it was also presented in some default command. The same will apply here also. But you know, the involvement of this particular register now in default calculation is less as compared to 8085. I mean, in 8085, if you see the subtraction command, one operand was fixed to be A register and other could be anything else. It could be data or another 8-bit register. However, in this subtraction command, we'll have two parts on which it will operate and none of them will be by default considered as AX. So that is also one point of different. But still, we call this as accumulator register. It is of 16 bits. And this is the primary reason why this 8086 microprocessor is a 16-bit microprocessor. Right. Now, so apart from these registers, we have got stack pointer, we have got base pointer, source index, and destination index. So, SP stands for stack pointer. This was also there in 8085 microprocessor. And here, this register is completely of 16 bits. Similarly, base pointer, source index, and destination index, they are also of 16 bits. Now, they have got some very specific purposes, which we will study when we will come to the details of these registers. But at this point, all I can say is, you should have this general information that C register is usually used as counter. It is by default used as counter with some very specific commands. And we will see that when we will do programming that C register is by default used as counter register. Right. Similarly, A is the accumulator. And then, you know, these registers also have special purpose source index, destination index. So, when the time will come, we will come to know what are their special purposes. So, this is a register stack, which is also something which is familiar, which looks familiar. Then, now, if you see the upper portion of this particular circuit, now, you can see that there are other registers also CS, DS, ES, SS, and IP. So, now, this is called as code segment, data segment, extra segment, stack segment, and then instruction pointer. So, this instruction pointer is similar to program counter in 8085. So, it will hold the address of next instruction to be executed. But the statement that I have just made is not completely true. It is partially true. It will hold the instruction, it will hold the address of next instruction to be executed. But that is not the complete address. Because in this 8086 microprocessor, the addressing mechanism is little bit different as compared to addressing mechanism of 8085. Because the externally interfaced memory that we connect to this particular microprocessor, it is segmented. I mean, in 8085 microprocessor, you just had one memory. That one memory was having a size of 64 kilobytes. And inside that, you could put your data somewhere, you could put your code somewhere, and you could begin any operation from anywhere, right? So, there might be a situation where, suppose you have kept your data somewhere. And prior to that location, you have started writing your program. Some locations before that data, you have started writing your program. But what happens is your program becomes so long that it overwrites the data. So, to avoid that in 8086, we have segmented memory. There is a separate section for code, there is a separate section for data, there is a separate section for extra activities, and there is a separate section for stack. So, the externally interfaced memory, it has got these four different sections. And these four different sections, their addresses are kept in this code segment, data segment, extra segment, and stack segment. The names are similar. These are the pointer registers that you have got here. These will be pointing to the necessary locations in the external memory. So, you will have code segment, data segment, extra segment, and stack segment in the external memory. And their base addresses will be kept in CS, DS, ES, and SS register, right? So, these are called as segment registers, not the pointer registers, these are called as segment registers. So, segment registers are internal to microprocessor, but the segments, they are actually externally placed inside the external interfaced memory of microprocessors, right? So, one more information, the externally interfaced memory in this case is your 1 megabyte, 1 MB. How is that possible? Because this microprocessor is a 16-bit microprocessor. So, the data bus automatically has to be of 16 bits, right? Since this microprocessor is a 16-bit microprocessor, so the internal data bus has to be of 16 bits. And the address bus of this microprocessor is of 20 bits. The address bus of this microprocessor, as you see here, it starts from 80-0 to 80-15, and then A16 to A19. I mean, in totality, it starts from 0 index to 19 index, which means that it has a total of 20 bits. So, the address bus is of 20 bits. And 2 raised to the power of 20 is nothing but 1 megabyte. So, to this particular microprocessor, you can always connect an externally interfaced memory, which has got a maximum of 2 raised to the power of 20, that means 1 megabyte locations. And inside that memory, you have got various segments. So, those segments are code segment, data segment, extra segment, and stack segment. And to keep the base address of those four different sections, inside this microprocessor, you have got this segment register. So, that is the relevance of these segments. So, this also makes it very clear that this microprocessor, since it is 16-bit microprocessor, data bus is of 16 bits and the address bus is of 20 bits. Let us see then again some more components which look familiar. Now, this is an adder, address conversion mechanism adder. So, this was not present in 8085. Now, what is the purpose of this? An important point to note here is that the CS, DS, ES and SS, these segment registers are also of 16 bits each. Similarly, instruction pointer is also of 16-bit. So, and we said that the externally interfaced memory will have at max 2-20 locations in it. So, it can address 1 megabyte of memory. And each location will be of 1 byte again. It's not that 1 memory location will consume 16 bytes. At every memory location is... Sorry. You still have a 8-bit storage capacity. So, you have 2-20 locations. Each location has got a 8-bit capacity. This is 1 byte capacity. So, now, if you see the address of every location could be of 20 bits. Its address has to be of 20 bits. But these registers, you see code segment, data segment, extra segment, stack segment, they are of 16 bits. And I told you that in the externally interfaced memory, the base address, not the actual physical address, the base address is kept in code segment, data segment, extra segment and stack segment. So, what is this base address? This base address has to be of 16 bits only. And what is this base address? And how is it converted to the actual 20-bit physical address? We will come to know when we will study the relevant topic. So, these are of 16-bit registers, but do not get confused. The externally interfaced memory can be addressed by 20 bits only. But still, the base addresses, there is something called as base address, which is kept in these registers. So, base address plus something else will make the actual physical address. We will see how that conversion is done. And that conversion is done through this particular adder. So, this is adder conversion mechanism, address conversion mechanism. So, this entire thing is done here. Although there is an adder in this ALU in itself for performing mathematical calculations, but just for address part, you have this separate adder here. Then there is a new thing that we see here, which is called as this instruction byte queue, which is of 6 bytes. So, now this instruction queue was not there in 8085. Of 6 bytes, it was not there. There was just one instruction register. From where what we were doing is from the externally interfaced memory, we read the code byte by byte. And then it gets processed. Once one byte gets processed, the next byte is entered and it gets processed and so on. But here what happens is, while this ALU is processing something, this instruction queue is loaded with 6 bytes from the externally interfaced memory. Right? So, suppose if 2 bytes are consumed in this particular thing. So, it will again take 2 bytes from the externally interfaced memory and keep them here. So, that the execution part is separated from this fetching of instruction part. If you are fetching instructions from the external memory inside the microprocessor and then concurrently executing it. So, what will happen if you fetch one instruction, execute it. Then when it gets completed, you fetch the next instruction. This was what was happening in 8085. But here, once you fetch this complete queue, you start executing some instructions from some bytes from here and this queue never gets empty. Right? It keeps on fetching the instructions so that this fetching part does not interfere with the execution part. So, these two units of the microprocessor, the upper unit and the lower unit, they operate independent of each other. I mean, it does not matter. In this lower unit, it is called as execution unit and the upper unit is called as the bus interface unit. Because most of the things that you will see on the upper side, they correspond to either address generation or taking the data from external memory into the instruction queue and so on. So, the functioning of this bus interface unit is independent of this execution unit. In execution unit, actual control signals are generated by using this timing and control circuit arithmetic logic unit. So, the automatic logic unit performs its calculation and so on. So, this execution unit should not wait for the fact that it is executing one instruction. Then when it will complete, then only it will instruct the external memory to fetch one more byte. So, it does not perform this way in 8086. In 8086, this instruction queue of six bytes is there and this queue usually remains full and once two bytes of this are empty. Suppose one and two instructions are used, so this 6534 will shift downwards and two locations from here will become empty and then the fetching part will start in concurrently with this particular execution unit. So, this unit has never to wait for fetching of instructions. It is already available in this instruction queue. And why is the size of this six bytes? The size of this is six bytes because instruction which can take maximum number of bytes in 8086 is of six bytes. So, it is call instruction and we will see it when we will come to the appropriate programming part, maybe in the lectures or laboratory. So, this phenomena is called as pipelining. I mean, you are keeping the working of bus interface unit or BIU for short and execution unit or EU for short independent of each other. So, this phenomena is called as pipelining and pipelining is also responsible for faster speed of 8086. Although, the clock that this microprocessor uses is of 5 megahertz, right? Its frequency. Its frequency is 5 megahertz but it has got its variance also which will be using 8 megahertz frequency and 12 megahertz frequency but the version that we are studying will use 5 megahertz frequency. That is the primary version and that 5 megahertz frequency is obviously higher than the 3 megahertz frequency that 8085 was using. So, obviously, this microprocessor is faster but then the second fact that adds to its speed is it has independence in operations of execution unit and the bus interface unit. So, that whenever these they perform their operation execution unit does not depend on this bus interface unit for waiting for instructions. They are always available in this instruction byte queue, right? So, rest portions as you see are familiar to you. This is the internal DESA bus, this is C bus, this is A bus. If it is A bus, it is meant for the execution unit. C bus is meant for this particular bus interface unit. You can see that it is also written here bus interface unit and execution unit, right? So, then you have this memory address and data bus interface. Obviously, there will be some pins and here also this address and data pins are multiplexed with each other. So, we will see when we will study the appropriate diagram, pin diagram and how these are interfaced, how these are, you know, multiplied with each other and what latching mechanism like 8085 is used here, right? So, this is more or less the internal architecture of 8086 microprocessor and now we will discuss this in little more detail. We will see the structure of these flag registers as well as we will see the structure of the external memory and the clock, the kind of clock that is required, right? So, let me just first show you the structure of memory. So, here what happens is we already know that it has got 2 raised to the power of 20 possible addresses because the address bus of this 8086 microprocessor is of 20 bits. So, it can address a maximum of 2 raised to the power of 20 address location, right? So, that 2 raised to the power of 20 1 megabyte. So, here you will find 2 raised to the power of 20 locations. Now, as discussed earlier, this complete memory is divided into four different segments. Code segment CS, data segment DS, extra segment DS, extra segment ES and stat segment SS. And each of this segment is of 64 kilobytes. That is 2 raised to the power of 16 bytes. This is also 2 raised to the power of 16 bytes. This is also 2 raised to the power of 16 bytes and so on. So, 64 kilobytes, if you sum it for four times, you will just get 256 kilobytes. Now, four segments, they consume 256 kilobytes and the total memory is of one megabyte. So, three-fourth of the memory still remains. Three-fourth of the memory still remains if you have made these four segments. Although, it appears that these four segments are completely covering this entire memory, but this is not a diagram which is proved to scale. So, if you see the 64 and 64 kilobytes, these are four sections. So, the complete memory that these sections occupy is 256 kilobytes and since the complete memory in 8086 is one megabyte, so still three-fourth of the memory remains apart from these segments that you see here. So, what do we do with that remaining memory? So, in that remaining memory, some programs which are used to start that microprocessor are written. So, in modern terminology, we call it as an operating system. Whenever you install any operating system into your computer, if you talk about Windows operating system, then in C drive, some of the space is taken. So, similarly, in this microprocessor, in the remaining portion, we write some programs which are used to start this microprocessor and which have got some interesting subroutines of what should happen when an interrupt occurs or some interesting subroutines are written there, right? So, now, is it necessary that whenever we have this external memory of one megabyte, we should have all of these four segments in our program? No, it is not necessary. For example, your program might require code segment only. You don't have huge data to keep, so you won't be using data segment. You don't have extra tasks in your program. So, you won't be using extra segment. You won't be using stack segment. So, it might be possible that some of the programs might only require code segment. So, you will be just designing this code segment inside memory. It's not fixed that code segment will start from this particular memory location and end in that particular memory location. That is left to the programmer. I mean, you can choose to start your code segment from anywhere in the memory and it will consume 64 kilobytes. So, it will contain 5 hexadecimal digits. So, out of that, it is mandatory that the starting of any of these segments that you see here, the last hexadecimal digits should also, should always be 0. I mean, if you see the hexadecimal representation of the actual 20-bit physical address, it will be of 5 hexadecimal digits. And it is mandatory for the starting section of code segment, data segment, extra segment or stack segment to have that least significant hexadecimal digit as 0. Or alternatively, you can say that if you are seeing it in binary, if you are seeing the 20-bit physical address in binary, then the last 4 bits or the least significant 4 bits have to be 0. So, that is a condition for the starting address of this code, data, extra and stack segment. And we will come to know why this condition is there. And from that particular location, you can start your code segment, data segment, extra segment and stack segment. So, it is not necessary that all of these should be there in your program. You might use 1 or 2 or a combination. Now, is it possible that you can have 2 data segments in your program? Yes, it is also possible. So, I mean, in your program, you can have 1 code segment and you might initialize 2 data segments. You might initialize 2 data segments somewhere. Because, ultimately, you have got a huge memory which is 1 megabyte and 3 fourth portion is still remaining. So, in that 3 fourth portion, not complete 3 fourth portion is used for writing the operating system. Although, operating system is a new terminology, it was not used at that particular time. So, instructions which are used for keeping this microprocessor working are written in that remaining 3 fourth memory. But, that 3 fourth memory is not used completely by those instructions. That is still vacant. Most of the memory is vacant. So, you can define 2 data segment or might be 2 extra segment in your externally interfaced memory through programming depending upon your need. And we will do it when we will come to the programming part. So, this is a very elegant way of actually keeping your code section, data segment, extra segment and stack segment separately. Now, this extra segment can be used for any general purpose. You can implement, you can keep some data into it, you can keep code into it, you can also write some stack into it. Right? So, that is also there. So, this is a general introduction to the externally interfaced memory of 8086 which is 1 megabyte in its complete extent. So, now, let us also come to the structure of the structure of the flag register. Now, let me just show you first of all the architecture again. Here you have got these flag registers. So, these flag registers are of 16 bits. In 8085, they were of 8 bits. Now, let us see how the flag register looks like in 8086 microprocessor. So, here you see, if you see the least significant 8 bits. So, they are same. They are same and they are exactly same as 8085. Carry, parity, auxiliary carry, zero and then sign. Right? So, this portion is exactly same as 8085. So, this maintains a downward and upward compatibility. So, programs which will work in 8085 might also work in 8086 if you use appropriate commands because there is no change of this flag structure as you can see here. Right? So, this sort of maintains upward and backward compatibility here and these three don't cares are also placed at the exact same locations as it was in 8085. Now, let us talk about the bits after sign because we already know what is the meaning of carry, parity, auxiliary carry and then zero and then sign flag. Right? So, in case you have forgotten them, you can see the appropriate lecture in 8085 and get the meaning of these. Now, there are some extra flags which is called a strap flag, interrupt flag, direction flag and overflow flag. So, trap. Why is trap used? So, in programming what happens is usually when you are typing your program onto an editor, you would like to debug it line by line. So, that facility is inbuilt into this microprocessor 8086 and for that you have this trap flag. So, if you just make the value of this trap flag as 1 then what will happen is you will be able to execute your program line by line or instruction by instruction. Right? So, that is used for that particular purpose. Then you have got interrupt flag. So, this interrupt flag, it is used in the same way as we had that interrupt flag in 8085 but it was not a part of this status register. However, this has been included as a part of this status register here. And then you have direction flag. This direction flag, it shows in 8086 instruction set. There are certain instructions which will deal with string operations. By string operations, we mean like in C programming language you all must have been printing hello world onto the screen or taking a string from the user as input. So, for those string instructions, if the string is kept in externally interfaced memory of 8086. So, do you have to read the string in forward order? That means in the increasing order of addresses or in the reverse order? That is in the decreasing order of the addresses. So, in whichever direction you keep your string that can be set by this direction flag. If the value of this d bit is 0, in that case with the increasing addresses you will keep your string. And if this flag becomes 1, then in that case you will be keeping the string in reverse order of memory. Means now you will be keeping the addresses from higher address to the lower address. So, that is used for that particular purpose direction flag. And this overflow flag is used when there is an overflow in your calculation. So, these flags are also available to the programmer through various commands. Like in 8085 we have also seen that we can temper with these values by taking the flag register into your accumulator and then actually changing it and then actually putting it again into the flag registers. So, that kind of thing can also be done here. But additionally, these flags that is trap, interrupt, direction and overflow flag, they appear in the instruction set in various command to set or reset them. And then these four bits are kept as don't care conditions. They do not have any usage. They are reserved for future microprocessors. So, if you study any microprocessor that is after that, it is probable that these four bits will also be used for some purposes. So, this is the structure of complete 16-bit flag that we have in microprocessor 8086. Now, let us talk about the structure of the clock that we have in 8086 microprocessor. So, obviously, you have to use a pulse in clock circuit and the kind of pulse that we are using in this 8086 microprocessor is very specific. It has to be a pulse which is on for 33% of times and for rest of the times it is off. That means, alternatively, we can say that we need a pulse that's whose duty cycle is 33%. Whose duty cycle is 33%. All of you might be aware of this terminology. Duty cycle simply means that in one period of this periodic pulse, the time for which that pulse remains on or the T on. T on of this pulse is 33% of the times of the entire period. So, that's what we mean by duty cycle and for 8085, we use a pulse which has a 33% duty cycle and the frequency of that to begin with is 5 megahertz. The basic variant of 8085 will be using a frequency of 5 megahertz. So, we have three versions for 8086. One is 8086, another is 8086-1, another is 8086-2. So, 8086 uses 5 megahertz, 8086-1 uses 10 megahertz, 8086-2 uses 8 megahertz frequency. So, 5 megahertz, 10 megahertz and 8 megahertz. Like in today's time, we have, if we talk about Intel's i5 processor. So, i5 comes in various generations, right? So, we similarly have an older terminology where we have 8086 which operates on 5 megahertz, 8086-1 which operates on 10 megahertz and 8086-2 which operates on 8 megahertz. But in this course, we will restrict ourselves to the base variant which is called as 8086 and which operates on 5 megahertz. And the speciality of the pulse that we need for operating this is, it has to have a 33 percent duty cycle. So, to be able to generate this pulse through a crystal oscillator, we have a specific IC for that and we will see the structure of that IC when we will study that clock completely in details, right? So, this kind of thing is needed there. Now, let us again just rewind the definition of microprocessor. We have already seen this definition. The microprocessor is the brain of a computer. It is multipurpose clock driven register based programmable digital integrated circuit which takes binary input, processes the binary input according to instructions already stored inside it and then produces binary output. So, we are already aware of this definition of microprocessor. So, this definition is just there for revision. And let me now just point out some important points that we have discussed up till now or maybe some of the points would have been skipped. So, they are summarized here for this particular lecture. So, this 8086 microprocessor is a 16-bit microprocessor because the data bus of this microprocessor is of 16 bits, right? So, address bus is obviously of 20 bits which we will discuss later. So, now, four 16-bit general purpose registers are available AX, BX, CX and DX. This is also what we have seen. Then, we have got eight eight bit general purpose registers. That is A lower, A higher, B lower, B higher, C lower, C higher, D lower and D higher. So, this is not I. This is actually L. I have written it in small. It should have been capital L. So, A lower, A higher and similarly, there are variants of every register. And you can use any combination. It's not necessary that if you are using DX register, then you have to use C also in 16-bit mode. So, you have to use CX register. No, it is not that. You can use DX register. You can use CH register in some program. And it is also possible that you are using DX register. And you are also treating this DL and DH independently. So, any combination of these registers can be used according to your need. So, since the registers are given in 16 and 8-bit modes. So, you will be able to write programs for 8-bit and 16-bit operations both. So, obviously, the instruction set will be such that there will be some 16-bit operations mainly. And some operations are also there for 8-bit calculations. One good thing about 8086 is that unlike 8085 microprocessor, you will notice that in the instruction set, there are commands for multiplication and division as well. However, in 8085 these commands were absent. So, the instruction set of 8086 microprocessor is richer as compared to 8085 microprocessor. In 8085 microprocessor, we had 74 instructions. However, in this 8086 microprocessor, we will have near about 117 instructions. And if you talk about combinations, many, many combinations of that can be made. In 8085, you only had 74 instructions whose 246 combinations were there. Right? So, here we have 117 instructions near about. And we can make many, many combinations of those instructions. Right? So, this is also one point of difference. That is, the instruction set of 8086 is much richer as compared to 8085. 8085. Because there are direct commands for multiplication, deviation. And you will see a lot of other operations will be very easy. They can be done by a single line command. Earlier in 8085, we had to write separate programs for that. So, that is not the case here. Then, the externally interfaced memory is of 1 megabyte, which we already know because the address bus is of 20 bit. So, 20 bit. So, 20 bit address bus will be able to address 2 raised to the power of 20. That is 1 megabyte. 1 mega stands for total number of locations that will be there in memory. And byte stands for total number of bytes. And byte stands for total number of bytes. And byte stands for the fact that every location is of 1 byte. That means 8 bits. So, we have 1 megabyte storage, which is external storage. And, you know, this external storage is divided into four sections. Extra segment, code segment, then you have data segment, and then you have stack segment. Right? So, these all segments are there. Apart from there, 3 fourths memory remains in which there are some special programs which are written to keep the microprocessor working. And also, a lot of portion remains vacant there. So, we can duplicate these slots there and we can use them. Although, theoretically, when this microprocessor was designed, it was advised that you should have one section for code, one section of data. But now, you know, people often have a habit of making this two code segments or sometimes multiple other segments also. So, ideally, it is recommended that you should use one segment. It means one code segment, one extra segment, one data segment, one stack segment. But if it is required in programming, you can have multiple of them in your program. You only have to keep track of where one section begins and where one section ends. Right? So, 16-bit data bus is known to us. 20-bit address bus is also known to us. It has a 6-byte instruction queue. So, this is one point which is necessary for us to understand that this 6-byte instruction queue, it makes the working of execution unit and your bus interface unit independent of each other. So, this is the second part. So, this is the second part. So, this is the second reason for making 8086 microprocessor perform better as compared to 8085 because the fetching of the instruction part is separate from execution of the instruction part. In 8085, first fetching happens, then decoding happens, then execution happens, then again fetching happens, decoding happens, and execution happens. Here what is happening is fetching is separate. It is happening depending upon the vacancy in this queue. If two bytes of this queue are vacant, fetching will happen irrespective of what is happening inside the execution unit. So, the operation of these two units is independent. So, the operation of these two units is independent. Since this microprocessor is separated into these two units, it is performing in a more efficient way. So, this 6-byte instruction queue is very helpful in that. So, its speed is high. Now, you have got a 16-bit arithmetic logic unit which is very obvious because it is a 16-bit microprocessor. So, most of the instructions are designed to work on 16-bit data. And the primary reason is we have a 16-bit data bus. Other reasons for calling it a 16-bit microprocessor is that the ALU is of 16-bit and most of the instructions are also of 16-bit. So, it has got segmented memory, segmented external memory, not memory. Memory is not present inside this 8086 microprocessor. It has to be externally interfaced. So, this externally interfaced memory of one megabyte is segmented. It is divided into code section data, code segment, data segment, stats segment, and extra segment. And their corresponding base addresses. We will come to know what base addresses are. So, these base addresses are stored inside the microprocessor in the corresponding registers with the same name. This is CS, DS, SS, and ES. This is not X. This is ES. So, code segment, data segment, extra segment, and stack segment are external to the microprocessor in the external memory. And the corresponding segment registers of 16-bit are inside the microprocessor. So, here it is. It also makes it clear that why these registers are of 16-bits because I already told you that inside the memory, the starting address of these different segments have to be such that the last hexadecimal digit should always be 0. That means only first 16-bits or the first 4 hexadecimal digits of addresses will vary. The last 4-bits are by default understood to be 0. So, the base address means the starting address of these segments. And it is of 16-bits only because last 4-bits are always assumed to be 0. So, that is why these have a size of 16-bit only. So, this makes it clear here itself. And we will discuss it when we will understand the address conversion logic in the subsequent lectures. So, these individual segments are of 64 kilobyte each and they are in the external memory. Right? So, now there are these pointer registers. Instruction pointer, we have already known. It is a replica of program counter there. Then you have stack pointer. You have base pointer. You have source index. You have destination index. Then there is a clock of 5 MHz frequency with duty cycle of 33% in base variant. In 886-1, we use a clock of 10 MHz and in 886-2, we use a clock of 8 MHz again. Right? So, this is a quick summary of this 8086 microprocessor. Let us now also discuss some important points of differences between 8085 and 8086. I will just brush up. So, 8085 has got 16-bit address lines. So, 8086 has got 20-bit address lines. So, this is very clear to us. 8085, it has 256 input-output devices. When we were studying 8085, we said that there are two ways for addressing. I mean, you could have IO-mapped input-output or memory-mapped input-output. So, in IO-mapped input-output, we were only making the usage of the data bus, not the complete address bus. So, the lower order address bus was considered as data bus and it was duplicated there. So, since it has its data bus size is 8 bits, so it can address 2 raised to the power of 8, that means 256 input-output devices. However, by the same logic in 8086 microprocessor, since it has got an address bus of size, sorry, it has got a data bus of size 16 bits, so it can address 2 raised to the power of 16, that is 64 kilo input-output devices. 64 kilo. 64 kilo does not mean kilogram. Kilo is just a suffix that you are using. So, kilo means you have got 1024. So, 64 kilo input-output devices can be theoretically connected to it. We already know what is the operating frequency, 3 megahertz and 5 megahertz for 8085 and 8086 respectively. Then, one important point is this 8086 IC can operate in maximum and minimum mode. However, 8085 IC can operate in only single mode and that's not given any name. So, 8086, when it is alone working as a processor in a big network, it will be operating as in minimum mode. However, if there are multiple processors, then it will be operating in maximum mode operations. Right. So, we have got segmented memory in 8086 and in 8085 we do not have segmented memory. Right. Now, program status word as we saw in 8085, it was a combination of accumulator and the flag bytes. Right. So, in 8085, program status word meant a combination of accumulator as the higher byte and flag register as the lower byte. However, in 8086, the program status word will simply mean the flag register only. So, flag register and program status word are the same. You do not have to club accumulator with them. Right. So, if you see the flag structure of this, let me again show you that slide. Let me just bring that slide of flag register for you. So, if you see the flag register of this, here there are three flags. That is direction, trap and interrupt. Direction, trap and interrupt. So, these three flags are also called as control flags. Direction flag, interrupt flag and trap flag. These are called as your control flags. However, in this 8085, these control flags are not available. So, these control flags are available to the programmer directly through various commands for programming. And we will see that, how that works. Right. Pipelining is obviously available in 8086, but not available in 8085. So, these are some points of differences to begin with 8086. And if you look at the architecture of 8086 again, you are already familiar with this. The only point of difference was the bifurcation of this into bus interface unit and execution unit. And also, there were certain new components which were introduced like these segment registers, which are used to keep the address of various sections of the externally interfaced memory. Then there is this instruction queue of six bytes. So, we also know that this is also different. This adder is additionally placed here for address generation logic, which we are going to study soon. Then this flag register is of 16 bits, which contains some additional 8 bits, which represents different other flags also. And this flag register is called as program status word only. So, I guess this is a fairly good introduction to the architecture of this 8086 microprocessor. In the next lecture, we are again going to see the pin diagram for that. And pin diagram is a way by which we can know that how the externally interfaced world interacts with the microprocessor and what signals are generated at what time. So, that's what we are going to see in the next lecture. And this is it for today's lecture, I guess. I will see you in the next video. Thank you very much for watching this."
+}
